@@ -1,0 +1,28 @@
+@import "compass/css3"
+//variables
+$brown: #5A3338
+$orange: #f8d7ad
+$gray: #999
+$yellow: #fffdea
+// gradients for ie
+$experimental-support-for-svg: true
+// global sprites
+$icons: sprite-map("icons/*.png", $spacing: 10px)
+//extends
+
+//%hide-text
+//  font: 0/0 a
+//  text-shadow: none
+//  color: transparent
+////mixins
+@mixin image-size($path)
+  width: image-width($path)
+  height: image-height($path)
+@mixin sized-sprite($map, $sprite)
+  background: sprite($map, $sprite) no-repeat
+  @include image-size(sprite-file($map, $sprite))
+
+
+	
+
+		

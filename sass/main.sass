@@ -1,0 +1,63 @@
+@import "base"
+//main styles
+//enter
+.main
+	.logo
+		float: none
+		width: 410px
+		margin: 0 auto
+		overflow: hidden		
+.title	
+	margin-bottom: 15px
+	text-align: center
+	span
+		position: relative
+		padding-left: 35px
+		font-size: 24px
+		color: $brown	
+		font-weight: 700
+		&:before
+			content: ""
+			position: absolute
+			top: 2px
+			left: 0
+			+sized-sprite($icons, enter)
+.enter
+	width: 410px
+	margin: 0 auto	
+	border: 1px solid $orange
+	+box-shadow($orange 0 0 5px inset)
+	+border-radius(3px)
+.enter__fields
+	padding: 12px 0 3px 18px	
+	label
+		display: block
+		margin-bottom: 3px
+		font-size: 14px
+		color: $brown
+	input
+		width: 361px
+		height: 26px
+		margin-bottom: 15px
+		padding: 0 5px
+		border: 1px solid $gray
+		+border-radius(3px)	
+.enter__bottom		
+	border-top: 1px solid $orange 
+	overflow: hidden
+.enter__btn
+	padding: 14px 0 12px 15px 
+	background: $yellow 	
+	margin-top: -5px 
+	+border-radius(0 0 3px 3px)
+	+box-shadow($orange 0 0 5px inset)
+	input
+		height: 28px
+		padding: 0 15px
+		background: #D35306
+		+background-image(linear-gradient(top, #D4973B 0%, #D49E6F 9%, #D47227 49%, #D45507 50%, #C42B00 85%, #D47924 100%))
+		+border-radius(16px)
+		border: 2px solid #8f1900
+		
+
+	
