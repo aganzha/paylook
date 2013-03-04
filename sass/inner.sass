@@ -1,2 +1,130 @@
 @import "base"
 //styles for inner pages
+//top	
+.top
+	margin-bottom: 30px
+	overflow: hidden
+.top__title
+	position: relative
+	float: left
+	padding: 0 0 5px 50px	
+	font-size: 24px
+	font-weight: 700 
+	color: $brown 
+	cursor: pointer
+	&:before
+		content: ""
+		position: absolute
+		top: 0px
+		left: 12px
+		@include sized-sprite($icons, add-site)
+	span
+		position: relative
+		padding-right: 13px
+		border-bottom: 1px dashed $brown 
+		&:after
+			content: ""
+			position: absolute
+			top: 15px
+			right: 0
+			@include sized-sprite($icons, arr)
+.top__nav
+	float: right
+	li
+		float: left
+	a
+		display: block
+		height: 25px
+		padding: 0 10px
+		line-height: 25px
+		font-size: 17px
+		color: $brown 
+		&.active
+			background: #9B5E43
+			+background-image(linear-gradient(top, #9B5E43 0%, #9B2E12 100%))
+			+box-shadow(rgba(71,56,56,0.75) 0 0 5px inset)
+			+border-radius(12px)
+		&.disabled
+			color: #AC999B
+			cursor: default 
+//add-site
+.add-site
+	margin-top: -15px
+.add-site__btn
+	position: relative
+	padding: 17px 12px 15px 12px
+	margin-bottom: 75px
+	border: 1px solid $orange
+	background: #FFF 
+	font-size: 0
+	&:before
+		content: ""
+		position: absolute
+		top: -5px
+		left: 20px
+		width: 10px
+		height: 10px
+		+box-shadow($orange 1px -1px 0 0) 
+		background: #FFF 
+		+rotate(-45) 
+	span, button
+		display: inline-block
+	span
+		height: 25px
+		margin-right: 10px
+		line-height: 25px 
+		font-size: 14px 
+.add-site__info
+	margin-bottom: 50px
+	text-align: center
+	span
+		font-weight: 400 
+.add-site__form
+	margin-bottom: 50px
+	padding-top: 24px
+	border: 1px solid $orange
+	+border-radius(5px)
+	fieldset
+		overflow: hidden
+	label, input, textarea
+		float: left
+	label
+		width: 125px
+		margin: 2px 20px 0 25px
+		color: $brown
+		text-align: right
+	input, textarea
+		width: 367px	
+		margin-bottom: 28px	
+		border: 1px solid $gray
+		+border-radius(3px)
+	input
+		height: 20px
+		padding: 0 5px		
+	textarea
+		height: 56px
+		padding: 5px
+	span
+		position: relative 
+		top: -20px
+		display: block
+		margin: 0 0 7px 170px 
+		clear: both
+.add-site__bottom
+	padding: 10px 10px 10px 170px
+	background: $yellow 
+	border-top: 1px solid $orange 
+	+border-radius(0 0 5px 5px)
+	overflow: hidden
+	a, button
+		float: left
+	button
+		margin-right: 13px
+	a
+		height: 32px
+		line-height: 32px
+		text-decoration: underline
+		
+
+	
+	

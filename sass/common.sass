@@ -8,7 +8,9 @@ html, body
 body
 	font-family: 'PT Sans', Arial, Tahoma, sans-serif
 	font-weight: normal
-	font-size: 11px
+	font-size: 14px
+	color: #231F20 
+	line-height: 1
 	//-webkit-transform: translate3d(0,0,0);
 	//-weblit-backface-visibility: hidden;
 // resets
@@ -17,6 +19,8 @@ a img, fieldset
 a
 	color: #37559a
 	text-decoration: none
+p
+	line-height: 1.2
 li 
 	list-style: none
 input, textarea, button 
@@ -30,14 +34,14 @@ table
 	border-spacing: 0
 	border-collapse: collapse
 // common styles
-.wrap 
-	width: 1280px
+.wrap
+	width: 960px
 	min-height: 100%
 	height: auto !important
 	height: 100%
 	margin: 0 auto -100px
-.main
-	width: 410px
+.container
+	width: 960px
 	margin: 0 auto
 .push
 	height: 100px
@@ -45,6 +49,7 @@ table
 //header
 .header 
 	padding: 25px 0 30px 0
+	overflow: hidden
 .logo
 	float: left
 	height: 68px
@@ -57,8 +62,282 @@ table
 		color: $brown
 	i 
 		@include sized-sprite($icons, logo)
+.user-link
+	float: right
+	margin-top: 10px
+	text-align: right
+	li
+		margin-top: 10px
+	a
+		position: relative
+		font-size: 16px
+		text-decoration: underline
+.user-link__out, .user-link__mail
+	&:before
+		content: ""
+		position: absolute
+		left: 0 
+.user-link__out
+	padding-left: 17px	
+	&:before
+		top: 2px
+		@include sized-sprite($icons, out)
+.user-link__mail
+	padding-left: 19px
+	&:before
+		top: 3px
+		@include sized-sprite($icons, user)
 //footer
 .footer
 	border-top: 1px solid $orange
-	height: 99px
-
+	height: 85px
+	padding-top: 14px
+	.container
+		overflow: hidden
+.footer__info
+	float: left
+	p
+		font-size: 16px
+		&:last-child
+			margin-top: 10px
+	a
+		text-decoration: underline
+.copyright
+	float: right
+	font-size: 16px
+//general
+.title	
+	margin-bottom: 15px
+	text-align: center
+	span
+		position: relative
+		padding-left: 35px
+		font-size: 24px
+		color: $brown	
+		font-weight: 700
+		&:before
+			content: ""
+			position: absolute
+			top: 2px
+			left: 0
+			+sized-sprite($icons, enter)
+//buttons
+.btn
+	background: #D497AC
+	+background-image(linear-gradient(top, #D497AC 0%, #D35306 46%, #8F1900 100%))
+	+box-shadow(rgba(80,80,80,0.5) 0 1px 1px)	
+	strong
+		display: block
+		background: #D35306
+		+background-image(linear-gradient(top, #D4973B 0%, #D49E6F 9%, #D47227 49%, #D45507 50%, #C42B00 90%, #D47924 100%))
+		color: #FFF
+		text-shadow: rgba(73,49,32,0.75) 0 -1px 0
+	&:hover		
+		strong
+			background: #D4973B
+			+background-image(linear-gradient(top, #D4973B 0%, #D49E6F 9%, #D47227 49%, #D45507 50%, #CC5011 67%, #D47924 100%))
+	&:active
+		background: #823822 
+		+box-shadow(none)
+		strong
+			+box-shadow(#823822 0 0 20px inset)
+	&.disabled
+		background: #D497AC
+		+background-image(linear-gradient(top, #D7D7D7 0%, #9C9C9C 46%, #656565 100%))
+		+box-shadow(rgba(80,80,80,0.5) 0 1px 1px)	
+		strong
+			background: #c9c8c8
+			+background-image(linear-gradient(top, #c9c8c8 0%, #D4D4D4 9%, #B2B2B2 49%, #9E9E9E 50%, #808080 67%, #B6B6B6 100%))
+			+box-shadow(none)
+			text-shadow: rgba(95,95,95,0.75) 0 -1px 0	
+			cursor: default		
+.btn-big
+	padding: 2px
+	+border-radius(17px)
+	@extend .btn
+	strong		
+		height: 28px
+		padding: 0 10px		
+		+border-radius(15px)
+		line-height: 28px
+		font-size: 15px
+		font-weight: 700 		
+.btn-middle
+	padding: 2px
+	+border-radius(3px)
+	@extend .btn
+	strong		
+		height: 21px
+		padding: 0 8px		
+		+border-radius(1px)
+		line-height: 21px
+		font-size: 14px
+		font-weight: 700 
+.btn-small
+	padding: 1px
+	+border-radius(3px)
+	@extend .btn
+	strong		
+		height: 19px
+		padding: 0 5px		
+		+border-radius(1px)
+		line-height: 19px
+		font-size: 14px
+		font-weight: 400 
+.btn-edit
+	padding: 1px
+	+border-radius(3px)
+	@extend .btn
+	i	
+		display: block
+		@include sized-sprite($icons, edit)	
+		&:hover, &:active
+			@include sized-sprite($icons, edit)
+.btn-remove, .btn-delete
+	padding: 1px
+	+border-radius(3px)
+	background: #E381CE
+	+background-image(linear-gradient(top, #E381CE 0%, #E33D28 46%, #E31A22 100%))
+	+box-shadow(rgba(255,54,62,0.5) 0 1px 1px)	
+	i
+		display: block
+		@include sized-sprite($icons, remove)
+	strong
+		display: block
+		+border-radius(2px)
+		background: #D35306
+		+background-image(linear-gradient(top, #E3815D 0%, #E38891 9%, #E35C49 49%, #E33F29 50%, #E31A22 85%, #E36346 100%))
+		color: #FFF
+		text-shadow: rgba(73,49,32,0.75) 0 -1px 0
+		font-weight: 400 
+	&:hover		
+		strong
+			background: #D4973B
+			+background-image(linear-gradient(top, #E3815D 0%, #E38891 9%, #E35C49 49%, #E33F29 50%, #E35257 67%, #E36346 100%))
+	&:active
+		background: #962b2d
+		+box-shadow(none)
+		strong
+			+box-shadow(#962b2d 0 0 20px inset)
+	&.disabled
+		background: #D497AC
+		+background-image(linear-gradient(top, #D7D7D7 0%, #9C9C9C 46%, #656565 100%))
+		+box-shadow(rgba(80,80,80,0.5) 0 1px 1px)	
+		strong
+			background: #c9c8c8
+			+background-image(linear-gradient(top, #c9c8c8 0%, #D4D4D4 9%, #B2B2B2 49%, #9E9E9E 50%, #808080 67%, #B6B6B6 100%))
+			+box-shadow(none)
+			text-shadow: rgba(95,95,95,0.75) 0 -1px 0	
+			cursor: default	
+.btn-delete
+	strong
+		background: #FFF 
+	&:hover, &:active, &.disabled
+		strong
+			background: #FFF 
+			+box-shadow(none)
+	&.disabled
+		i		
+			@include sized-sprite($icons, remove-dis)
+//link
+.link	
+	&.active
+		background: #9B5E43
+		+background-image(linear-gradient(top, #9B5E43 0%, #9B2E12 100%))
+		+box-shadow(rgba(71,56,56,0.75) 0 0 5px inset)
+		+border-radius(12px)
+	&.disabled
+		color: #AC999B
+		cursor: default 
+//messages
+.message-success, .message-attention, .message-recommed, .message-error
+	position: relative
+	height: 27px
+	margin-bottom: 20px
+	padding: 0 28px 0 10px 
+	border-width: 1px
+	border-style: solid
+	+border-radius(3px)
+	line-height: 27px
+	strong
+		margin-right: 5px
+	button
+		position: absolute
+		top: 8px
+		right: 9px		
+.message-success
+	border-color: $green
+	strong
+		color: $green 
+	button
+		+sized-sprite($icons, message-success)
+.message-attention
+	border-color: #f5a000
+	strong
+		color: #f5a000
+	button
+		+sized-sprite($icons, message-attention)
+.message-recommed
+	border-color: #009be0
+	strong
+		color: #009be0
+	button
+		+sized-sprite($icons, message-recommed)
+.message-error
+	border-color: $red
+	strong
+		color: $red
+	button
+		+sized-sprite($icons, message-error)
+//table
+.table
+	width: 100%
+	margin-bottom: 20px
+	thead
+		background: $yellow
+		text-align: left
+	th, td
+		padding: 10px
+		vertical-align: top
+	th
+		font-weight: 400  
+		border-bottom: 1px solid $orange 
+		color: $brown 		
+		&.active
+			background: #ffe6c2 
+			border-color: #ffe6c2 
+			text-shadow: #fff 0 1px 0
+	a, span 
+		height: 21px
+		line-height: 21px
+	a
+		display: inline-block		
+		text-decoration: underline
+	.table__info
+		height: auto
+		line-height: 1 
+	.error
+		a, span
+			color: $red 
+.table__site	
+	min-width: 190px
+	a
+		position: relative
+		padding-left: 30px
+		max-width: 160px		
+		white-space: nowrap
+		text-overflow: ellipsis 
+		overflow: hidden		
+		&:before
+			content: ""
+			position: absolute
+			top: 3px
+			left: 0
+			+sized-sprite($icons, graph)	
+.table__info
+	display: block
+	max-width: 100px 
+	margin-top: 3px
+	font-size: 12px
+	color: $brown
+	

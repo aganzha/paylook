@@ -2,26 +2,21 @@
 //main styles
 //enter
 .main
+	margin-bottom: 20px
 	.logo
 		float: none
 		width: 410px
 		margin: 0 auto
-		overflow: hidden		
-.title	
-	margin-bottom: 15px
-	text-align: center
-	span
-		position: relative
-		padding-left: 35px
-		font-size: 24px
-		color: $brown	
-		font-weight: 700
-		&:before
-			content: ""
-			position: absolute
-			top: 2px
-			left: 0
-			+sized-sprite($icons, enter)
+		overflow: hidden	
+		span 
+			float: left
+			margin-top: 33px
+			font-size: 28px
+			font-weight: 700
+			color: $brown
+		i 
+			float: right
+			@include sized-sprite($icons, logo)	
 .enter
 	width: 410px
 	margin: 0 auto	
@@ -29,11 +24,20 @@
 	+box-shadow($orange 0 0 5px inset)
 	+border-radius(3px)
 .enter__fields
-	padding: 12px 0 3px 18px	
+	padding: 12px 18px 3px 18px	
+	fieldset
+		p
+			display: none
+		&.error
+			p
+				display: block
+			label
+				color: $red
+			input
+				border-color: $red 
 	label
 		display: block
-		margin-bottom: 3px
-		font-size: 14px
+		margin-bottom: 5px
 		color: $brown
 	input
 		width: 361px
@@ -42,6 +46,15 @@
 		padding: 0 5px
 		border: 1px solid $gray
 		+border-radius(3px)	
+	p		
+		margin-bottom: 10px
+	strong
+		margin-right: 5px
+.enter__info 
+	margin: -8px 0 8px 0
+	a 
+		color: $blue		
+		text-decoration: underline
 .enter__bottom		
 	border-top: 1px solid $orange 
 	overflow: hidden
@@ -51,13 +64,17 @@
 	margin-top: -5px 
 	+border-radius(0 0 3px 3px)
 	+box-shadow($orange 0 0 5px inset)
-	input
-		height: 28px
-		padding: 0 15px
-		background: #D35306
-		+background-image(linear-gradient(top, #D4973B 0%, #D49E6F 9%, #D47227 49%, #D45507 50%, #C42B00 85%, #D47924 100%))
-		+border-radius(16px)
-		border: 2px solid #8f1900
-		
+	overflow: hidden
+	button, a, span 
+		float: left
+	button
+		margin-right: 13px 
+	a
+		margin-top: 8px 
+		color: $blue 
+		text-decoration: underline
+	span
+		margin: 8px 5px 0 5px
+		font-weight: normal 
 
 	

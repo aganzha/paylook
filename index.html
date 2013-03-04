@@ -14,7 +14,7 @@
 </head>
 <body>
 <!-- BEGIN .wrap -->
-<div class="wrap">
+<section class="wrap">
 	<!-- BEGIN .main -->
 	<div class="main">
 		<!-- BEGIN .header -->
@@ -25,15 +25,114 @@
 		<div class="title"><span>Регистрация аккаунта</span></div>
 		<form class="enter" action="">
 			<div class="enter__fields">
-				<label for="enter-mail">Емейл</label>
-				<input id="enter-mail" type="text">
-				<label for="enter-pass">Пароль</label>
-				<input id="enter-pass" type="text">
+				<fieldset>
+					<label for="enter-mail">Емейл</label>
+					<p><strong>Ошибка:</strong>пожалуйста введите корректный адрес электронной почты.</p>
+					<input id="enter-mail" type="text">
+				</fieldset>
+				<fieldset>
+					<label for="enter-pass">Пароль</label>
+					<p><strong>Ошибка:</strong>пожалуйста введите корректный пароль.</p>
+					<input id="enter-pass" type="text">
+				</fieldset>				
 			</div>			
 			<div class="enter__bottom">
 				<div class="enter__btn">
-					<input type="submit">
+					<button class="btn-big" type="submit"><strong>Зарегистрироваться</strong></button>
 					<a href="#">Войти</a>
+				</div>				
+			</div>
+		</form>
+	</div>
+	<!-- END .main -->
+	<!-- BEGIN .main -->
+	<div class="main">
+		<!-- BEGIN .header -->
+		<header class="header">
+			<div class="logo"><span>Кабинет клиента</span><i></i></div>
+		</header>
+		<!-- END .header -->	
+		<div class="title"><span>Вход</span></div>
+		<form class="enter" action="">
+			<div class="enter__fields">
+				<fieldset>
+					<label for="enter-mail">Емейл</label>
+					<p><strong>Ошибка:</strong>пожалуйста введите корректный адрес электронной почты.</p>
+					<input id="enter-mail" type="text">
+				</fieldset>
+				<fieldset>
+					<label for="enter-pass">Пароль</label>
+					<p><strong>Ошибка:</strong>пожалуйста введите корректный пароль.</p>
+					<input id="enter-pass" type="text">
+				</fieldset>	
+				<div class="enter__info">
+					<a href="#">Восстановить забытый пароль</a>
+				</div>				
+			</div>			
+			<div class="enter__bottom">
+				<div class="enter__btn">
+					<button class="btn-big" type="submit"><strong>Войти</strong></button>
+					<a href="#">Регистрация нового пользователя</a>
+				</div>				
+			</div>
+		</form>
+	</div>
+	<!-- END .main -->
+	<!-- BEGIN .main -->
+	<div class="main">
+		<!-- BEGIN .header -->
+		<header class="header">
+			<div class="logo"><span>Кабинет клиента</span><i></i></div>
+		</header>
+		<!-- END .header -->	
+		<div class="title"><span>Восстановление пароля по адресу электронной почты</span></div>
+		<form class="enter" action="">
+			<div class="enter__fields">
+				<fieldset>
+					<label for="enter-mail">Емейл</label>
+					<p><strong>Ошибка:</strong>пожалуйста введите корректный адрес электронной почты.</p>
+					<input id="enter-mail" type="text">
+				</fieldset>
+				<div class="enter__info">
+					<p>Введите адрес электронной почты, который вы указали при регистрации и нажмите кнопку «Восстановить пароль». Через несколько минут вам придет письмо с забытым паролем.</p>
+				</div>
+			</div>			
+			<div class="enter__bottom">
+				<div class="enter__btn">
+					<button class="btn-big" type="submit"><strong>Восстановить пароль</strong></button>
+					<a href="#">Войти</a><span>или</span><a href="#">зарегистрироваться</a>
+				</div>				
+			</div>
+		</form>
+	</div>
+	<!-- BEGIN .main -->
+	<div class="main">
+		<!-- BEGIN .header -->
+		<header class="header">
+			<div class="logo"><span>Кабинет клиента</span><i></i></div>
+		</header>
+		<!-- END .header -->	
+		<div class="title"><span>Вход</span></div>
+		<form class="enter" action="">
+			<div class="enter__fields">
+				<fieldset class="error">
+					<label for="enter-mail">Емейл</label>
+					<p><strong>Ошибка:</strong>пожалуйста введите корректный адрес электронной почты.</p>
+					<input id="enter-mail" type="text">
+				</fieldset>
+				<fieldset class="error">
+					<label for="enter-pass">Пароль</label>
+					<p><strong>Ошибка:</strong>пожалуйста введите корректный пароль.</p>
+					<input id="enter-pass" type="text">
+				</fieldset>	
+				<div class="enter__info">
+					<a href="#">Восстановить забытый пароль</a>
+				</div>				
+			</div>			
+			<div class="enter__bottom">
+				<div class="enter__btn">
+					<button class="btn-big" type="submit"><strong>Войти</strong></button>
+					<a href="#">Регистрация нового пользователя</a>
 				</div>				
 			</div>
 		</form>
@@ -42,12 +141,19 @@
 	<!-- BEGIN .push -->
 	<div class="push"></div>
 	<!-- END .push -->
-</div>
+</section>
 <!-- END .wrap -->
 <!-- BEGIN .footer -->
-<div class="footer">
-	
-</div>
+<footer class="footer">
+	<div class="container">
+		<div class="footer__info">
+			<p>Продажи – <a href="mailto:sale@paylook.ru">sale@paylook.ru</a></p>
+			<p>Техподдержка – <a href="mailto:support@paylook.ru">support@paylook.ru</a></p>
+			<p><a href="#">Публичная оферта</a></p>
+		</div>
+		<div class="copyright">2012, © Paylook</div>
+	</div>
+</footer>
 <!-- END .footer -->
 </body>
 </html>

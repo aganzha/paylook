@@ -1,0 +1,36 @@
+.top { margin-bottom: 30px; overflow: hidden; }
+
+.top__title { position: relative; float: left; padding: 0 0 5px 50px; font-size: 24px; font-weight: 700; color: #5a3338; cursor: pointer; }
+.top__title:before { content: ""; position: absolute; top: 0px; left: 12px; background: url('../img/icons-sc73e3c3e9a.png') 0 -78px no-repeat; width: 28px; height: 27px; }
+.top__title span { position: relative; padding-right: 13px; border-bottom: 1px dashed #5a3338; }
+.top__title span:after { content: ""; position: absolute; top: 15px; right: 0; background: url('../img/icons-sc73e3c3e9a.png') 0 -373px no-repeat; width: 6px; height: 5px; }
+
+.top__nav { float: right; }
+.top__nav li { float: left; }
+.top__nav a { display: block; height: 25px; padding: 0 10px; line-height: 25px; font-size: 17px; color: #5a3338; }
+.top__nav a.active { background: #9b5e43; background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzliNWU0MyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzliMmUxMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='); background-size: 100%; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #9b5e43), color-stop(100%, #9b2e12)); background-image: -webkit-linear-gradient(top, #9b5e43 0%, #9b2e12 100%); background-image: -moz-linear-gradient(top, #9b5e43 0%, #9b2e12 100%); background-image: -o-linear-gradient(top, #9b5e43 0%, #9b2e12 100%); background-image: linear-gradient(top, #9b5e43 0%, #9b2e12 100%); -webkit-box-shadow: rgba(71, 56, 56, 0.75) 0 0 5px inset; -moz-box-shadow: rgba(71, 56, 56, 0.75) 0 0 5px inset; box-shadow: rgba(71, 56, 56, 0.75) 0 0 5px inset; -webkit-border-radius: 12px; -moz-border-radius: 12px; -ms-border-radius: 12px; -o-border-radius: 12px; border-radius: 12px; }
+.top__nav a.disabled { color: #ac999b; cursor: default; }
+
+.add-site { margin-top: -15px; }
+
+.add-site__btn { position: relative; padding: 17px 12px 15px 12px; margin-bottom: 75px; border: 1px solid #f8d7ad; background: white; font-size: 0; }
+.add-site__btn:before { content: ""; position: absolute; top: -5px; left: 20px; width: 10px; height: 10px; -webkit-box-shadow: #f8d7ad 1px -1px 0 0; -moz-box-shadow: #f8d7ad 1px -1px 0 0; box-shadow: #f8d7ad 1px -1px 0 0; background: white; -moz-transform: rotate(-45deg); -o-transform: rotate(-45deg); -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg); }
+.add-site__btn span, .add-site__btn button { display: inline-block; }
+.add-site__btn span { height: 25px; margin-right: 10px; line-height: 25px; font-size: 14px; }
+
+.add-site__info { margin-bottom: 50px; text-align: center; }
+.add-site__info span { font-weight: 400; }
+
+.add-site__form { margin-bottom: 50px; padding-top: 24px; border: 1px solid #f8d7ad; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
+.add-site__form fieldset { overflow: hidden; }
+.add-site__form label, .add-site__form input, .add-site__form textarea { float: left; }
+.add-site__form label { width: 125px; margin: 2px 20px 0 25px; color: #5a3338; text-align: right; }
+.add-site__form input, .add-site__form textarea { width: 367px; margin-bottom: 28px; border: 1px solid #999999; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; }
+.add-site__form input { height: 20px; padding: 0 5px; }
+.add-site__form textarea { height: 56px; padding: 5px; }
+.add-site__form span { position: relative; top: -20px; display: block; margin: 0 0 7px 170px; clear: both; }
+
+.add-site__bottom { padding: 10px 10px 10px 170px; background: #fffdea; border-top: 1px solid #f8d7ad; -webkit-border-radius: 0 0 5px 5px; -moz-border-radius: 0 0 5px 5px; -ms-border-radius: 0 0 5px 5px; -o-border-radius: 0 0 5px 5px; border-radius: 0 0 5px 5px; overflow: hidden; }
+.add-site__bottom a, .add-site__bottom button { float: left; }
+.add-site__bottom button { margin-right: 13px; }
+.add-site__bottom a { height: 32px; line-height: 32px; text-decoration: underline; }
