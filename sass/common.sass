@@ -23,7 +23,7 @@ p
 	line-height: 1.2
 li 
 	list-style: none
-input, textarea, button 
+input, textarea, button, select 
 	border: none
 	outline: none
 	font-family: 'PT Sans', Arial, Tahoma, sans-serif
@@ -87,6 +87,9 @@ table
 	&:before
 		top: 3px
 		@include sized-sprite($icons, user)
+	&.edit
+		text-decoration: none
+		color: #000 
 //footer
 .footer
 	border-top: 1px solid $orange
@@ -121,6 +124,24 @@ table
 			top: 2px
 			left: 0
 			+sized-sprite($icons, enter)
+//breadcrumps
+.breadcrumps
+	margin: 0 0 20px 10px
+	overflow: hidden
+	a, span
+		float: left
+		font-size: 18px
+		color: $brown
+	a
+		position: relative
+		margin-right: 24px
+		text-decoration: underline
+		&:after
+			content: ""
+			position: absolute
+			top: 4px
+			right: -16px
+			+sized-sprite($icons, arr1)
 //buttons
 .btn
 	background: #D497AC
@@ -291,8 +312,9 @@ table
 		+sized-sprite($icons, message-error)
 //table
 .table
-	width: 100%
 	margin-bottom: 20px
+	table
+		width: 100%
 	thead
 		background: $yellow
 		text-align: left
@@ -307,6 +329,8 @@ table
 			background: #ffe6c2 
 			border-color: #ffe6c2 
 			text-shadow: #fff 0 1px 0
+			&:after
+				content: "↓" 
 	a, span 
 		height: 21px
 		line-height: 21px
@@ -336,8 +360,64 @@ table
 			+sized-sprite($icons, graph)	
 .table__info
 	display: block
-	max-width: 100px 
+	width: 100px 
 	margin-top: 3px
 	font-size: 12px
 	color: $brown
-	
+.table__nav
+	height: 21px
+	padding: 6px 10px 7px 10px
+	background: $yellow
+	border-top: 1px solid $orange   
+	line-height: 21px
+	overflow: hidden
+	a
+		&.active			
+			background: #9B5E43
+			+background-image(linear-gradient(top, #9B5E43 0%, #9B2E12 100%))
+			+box-shadow(rgba(71,56,56,0.75) 0 0 5px inset)
+			+border-radius(11px)			
+			color: #fff
+.table__view
+	float: left
+	strong, a
+		float: left
+	strong
+		margin-right: 8px 		
+		color: $brown 
+		font-weight: 400 
+	a
+		margin-right: 4px
+		color: $blue
+		text-decoration: none
+		&.active
+			padding: 0 8px
+			span
+				border: none
+	span
+		height: auto
+		border-bottom: 1px dashed $blue 
+		line-height: 1 
+.table__pagination
+	float: right
+	a
+		float: left
+		margin-right: 2px
+		padding: 0 6px 
+		&:first-child, &:last-child
+			font-weight: 700
+			text-decoration: none 
+		&:first-child
+			margin-right: 14px
+		&:last-child
+			margin-left: 14px
+		&.disabled
+			color: #B1B3B6
+			cursor: default 
+			span
+				text-decoration: none
+		&.active
+			text-decoration: none
+	span
+		text-decoration: underline
+

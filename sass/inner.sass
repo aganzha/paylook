@@ -4,6 +4,10 @@
 .top
 	margin-bottom: 30px
 	overflow: hidden
+	.title
+		float: left
+		height: 27px
+		line-height: 27px
 .top__title
 	position: relative
 	float: left
@@ -30,6 +34,7 @@
 			@include sized-sprite($icons, arr)
 .top__nav
 	float: right
+	margin-top: 5px
 	li
 		float: left
 	a
@@ -44,6 +49,7 @@
 			+background-image(linear-gradient(top, #9B5E43 0%, #9B2E12 100%))
 			+box-shadow(rgba(71,56,56,0.75) 0 0 5px inset)
 			+border-radius(12px)
+			color: #FFF 
 		&.disabled
 			color: #AC999B
 			cursor: default 
@@ -79,7 +85,8 @@
 	text-align: center
 	span
 		font-weight: 400 
-.add-site__form
+//some-form
+.some-form
 	margin-bottom: 50px
 	padding-top: 24px
 	border: 1px solid $orange
@@ -104,13 +111,25 @@
 	textarea
 		height: 56px
 		padding: 5px
-	span
+	p
 		position: relative 
 		top: -20px
 		display: block
+		width: 380px
 		margin: 0 0 7px 170px 
 		clear: both
-.add-site__bottom
+.some-form__pass
+	position: relative
+	padding-left: 26px	
+	span
+		border-bottom: 1px dashed $blue 
+	&:before
+		content: ""
+		position: absolute
+		top: 3px
+		left: 0
+		+sized-sprite($icons, eye)
+.some-form__bottom
 	padding: 10px 10px 10px 170px
 	background: $yellow 
 	border-top: 1px solid $orange 
@@ -124,7 +143,138 @@
 		height: 32px
 		line-height: 32px
 		text-decoration: underline
+//settings
+.setting-chenged
+	margin: 100px 0
+	text-align: center
+	span
+		font-size: 24px
+		font-weight: 400 
+		color: $brown 
+	p
+		margin: 15px 0
+	a
+		font-size: 16px
+		color: $blue
+		text-decoration: underline 
+//form-nav
+.form-nav	
+	margin-bottom: 26px
+	overflow: hidden
+	ul
+		position: relative
+		float: left
+		margin-left: 10px
+		padding-right: 10px
+		background: #E8DFD3
+		+background-image(linear-gradient(top, #fff 0%, #E8DFD3 100%))	
+		&:after, &:before
+			content: ""
+			position: absolute
+			top: -1px			
+			z-index: 15 
+		&:after
+			right: -3px
+			width: 2px
+			border-width: 11px 5px
+			border-style: solid
+			border-color: #fff #fff #fff transparent
+		&:before
+			left: 0px
+			width: 2px
+			border-width: 11px 5px
+			border-style: solid
+			border-color: transparent transparent transparent #fff
+	li
+		float: left
+		padding-right: 6px 
+	a
+		position: relative
+		display: block
+		margin-right: -6px 
+		border-style: solid
+		border-width: 1px 0 1px 0
+		border-color: #edcda4
+		color: $brown
+		z-index: 5
+		&:before, &:after
+			content: ""
+			position: absolute
+			top: -1px
+			width: 20px
+			height: 20px
+			+box-shadow(#edcda4 1px -1px 0)
+			-webkit-transform: rotate(45deg) skew(20deg, 20deg)
+			-moz-transform: rotate(45deg) skew(20deg, 20deg)
+			-o-transform: rotate(45deg) skew(20deg, 20deg) 
+			-ms-transform: rotate(45deg) skew(20deg, 20deg)
+			transform: rotate(45deg) skew(20deg, 20deg)	
+		&:before
+			left: -14px
+		&:after
+			right: -6px
+		&.active
+			border-color: #d5966d
+			z-index: 10			
+			&:before	
+				+box-shadow(#C6734A 7px -7px 5px)
+			&:after
+				+box-shadow(#C6734A -5px 5px 5px inset)
+			span
+				+box-shadow(#C6734A 0 -8px 8px -6px inset, rgba(198,115,74,0.75) 0 8px 8px -6px inset)
+		&.disabled
+			border-color: #cfcfcf
+			cursor: default
+			z-index: 10
+			&:before, &:after
+				+box-shadow(#cfcfcf 1px -1px 0)
+			span
+				color: #808080
+	span
+		display: block
+		height: 19px
+		padding: 0 10px 
+		margin-left: 5px
+		line-height: 19px
+//form
+.form
+	padding-top: 28px
+	border: 1px solid $orange
+	+border-radius(4px)
+	fieldset
+		margin-bottom: 28px
+		overflow: hidden
+		label, input, select
+			float: left
+		label
+			width: 130px
+			padding: 0 20px
+			margin-top: 3px
+			color: $brown
+			text-align: right
+		input, select			
+			padding: 0 5px
+			border: 1px solid $gray
+			+border-radius(2px) 
+		input
+			width: 290px
+			height: 20px
+		select
+			width: 220px
+			height: 22px
+			padding: 1px
+.form__actions
+	overflow: hidden
+	li
+		float: left
+		width: 206px
+		padding: 7px
+		margin-right: 20px
+		min-height: 36px
+		border: 1px solid $orange
+		+border-radius(6px)
+		cursor: pointer
+	strong
+		display: block
 		
-
-	
-	
+		E8DFD3

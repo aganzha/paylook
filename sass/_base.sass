@@ -19,6 +19,12 @@ $icons: sprite-map("icons/*.png", $spacing: 10px)
   -ms-transform: rotate($deg+ deg)
   transform: rotate($deg+ deg)
 
+@mixin matrix($m1, $m2, $m3, $m4, $m5, $m6)
+  -moz-transform: matrix($m1, $m2, $m3, $m4, $m5, $m6)
+  -webkit-transform: matrix($m1, $m2, $m3, $m4, $m5, $m6)
+  -o-transform: matrix($m1, $m2, $m3, $m4, $m5, $m6)
+  -ms-transform: matrix($m1, $m2, $m3, $m4, $m5, $m6)
+
 @mixin image-size($path)
   width: image-width($path)
   height: image-height($path)
