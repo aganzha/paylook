@@ -1,0 +1,403 @@
+<!doctype html>
+<!--[if lte IE 8]><html lang="ru-RU" class="lteie8"><![endif]-->
+<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+<![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+<!-- BEGIN .wrap -->
+<section class="wrap">
+	<!-- BEGIN .header -->
+	<header class="header">
+		<div class="logo"><span>Кабинет клиента</span><i></i></div>
+		<ul class="user-link">
+			<li><a class="user-link__out" href="#">Выход</a></li>
+			<li><a class="user-link__mail" href="mailto:trendbender@gmail.com"><strong>trendbender</strong>@gmail.com</a></li>			
+		</ul>
+	</header>
+	<!-- END .header -->	
+	<!-- BEGIN .top -->
+	<div class="top">
+		<div class="top__title"><span>Tanchoo.ru</span></div>
+		<nav class="top__nav">
+			<ul>
+				<li><a href="#">Статистика</a></li>
+				<li><a class="active" href="#">Управление акциями</a></li>
+				<li><a href="#">Настройки сайта</a></li>
+				<li><a href="#">Баланс</a></li>
+				<li><a href="#">Помощь</a></li>
+			</ul>
+		</nav>
+	</div>
+	<!-- END .top -->
+	<!-- BEGIN .breadcrumps -->
+	<div class="breadcrumps">
+		<a href="#">Управление акциями</a>
+		<span><strong>Создание акции</strong> «Новогодняя скидка»</span>
+	</div>
+	<!-- END .breadcrumps -->
+	<!-- BEGIN .form-nav -->
+	<nav class="form-nav">
+		<ul>
+			<li><a href="#"><span>Выбор типа акции и поощрений</span></a></li>
+			<li><a class="active" href="#"><span>Виджет</span></a></li>
+			<li><a href="#"><span>Посты</span></a></li>
+			<li><a href="#"><span>Попапы</span></a></li>
+			<li><a href="#"><span>Емейлы</span></a></li>
+			<li><a class="disabled" href="#"><span>Купоны</span></a></li>
+			<li><a href="#"><span>Скрипт для вставки на сайт</span></a></li>
+		</ul>
+	</nav>
+	<!-- END .form-nav -->
+	<!-- BEGIN .form -->
+	<form action="" class="form">
+		<fieldset>
+			<label class="form__label">Название акции</label>
+			<div class="form__block">
+				<div class="form__tabs">
+					<ul>
+						<li class="active">Кнопка</li>
+						<li>Кнопка с пояснением</li>
+						<li>Любой HTML-контент</li>
+					</ul>
+				</div>
+			</div>
+		</fieldset>
+		<!-- BEGIN .form__cols -->		
+		<div class="form__cols">
+			<div class="form__col1">
+				<fieldset>
+					<label for="input1" class="form__label">Текст кнопки до получения купона</label>
+					<div class="form__block">
+						<input class="input-text input-text_wide" id="input1" type="text" value="Получить скидку #sale-amount">
+						<p class="text">#sale-amount – размер скидки</p>
+					</div>
+				</fieldset>				
+			</div>
+			<div class="form__col2">
+				<p class="text">Вид виджета до получения купона</p>
+				<!-- BEGIN .widget -->
+				<div class="widget">
+					<div class="widget__inner">
+						<a href="#">Получить скидку 3%</a>
+						<ul>
+							<li><a class="widget__vk" href="#"></a></li>
+							<li><a class="widget__fb" href="#"></a></li>
+							<li><a class="widget__ok" href="#"></a></li>
+							<li><a class="widget__tw" href="#"></a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- END .widget -->					
+			</div>
+		</div>
+		<!-- END .form__cols -->
+		<!-- BEGIN .form__cols -->		
+		<div class="form__cols">
+			<div class="form__col1">
+				<fieldset>
+					<label for="input4" class="form__label">Текст кнопки после получения</label>
+					<div class="form__block">
+						<input class="input-text input-text_wide" id="input4" type="text" value="Посмотреть код купона на #sale-amount">
+						<p class="text">#sale-amount – размер скидки</p>
+					</div>
+				</fieldset>		
+				<fieldset>
+					<label for="input1" class="form__label">Размер</label>
+					<div class="form__block">
+						<label class="label"><input class="input-checkbox" type="checkbox">
+							<span>Крупный виджет</span>
+						</label>
+					</div>
+				</fieldset>
+				<fieldset>
+					<label for="input1" class="form__label">Цвет виджета</label>
+					<div class="form__block">
+						<ul class="form__color">
+							<li class="active"><i></i></li>
+							<li><i></i></li>
+						</ul>
+					</div>
+				</fieldset>						
+			</div>
+			<div class="form__col2">
+				<div class="form__widget">
+					<p class="text">Вид виджета после получения купона</p>
+					<!-- BEGIN .widget -->
+					<div class="widget widget_got">
+						<a href="#">Посмотреть код купона на 3%</a>
+					</div>
+					<!-- END .widget -->	
+					<div class="form__link">
+						<a href="#">Посмотреть пример использования</a>
+					</div>							
+				</div>					
+			</div>
+		</div>
+		<!-- END .form__cols -->		
+		<div class="form__bottom">
+			<div class="form__back">
+				<a href="#">Назад</a>
+			</div>
+			<div class="form__next">
+				<button class="btn-big" type="submit"><strong>Назад<b>→</b></strong></button>
+			</div>
+		</div>
+	</form>
+	<!-- END .form -->
+	<!-- BEGIN .form -->
+	<form action="" class="form">
+		<fieldset>
+			<label class="form__label">Название акции</label>
+			<div class="form__block">
+				<div class="form__tabs">
+					<ul>
+						<li>Кнопка</li>
+						<li class="active">Кнопка с пояснением</li>
+						<li>Любой HTML-контент</li>
+					</ul>
+				</div>
+			</div>
+		</fieldset>
+		<!-- BEGIN .form__cols -->		
+		<div class="form__cols">
+			<div class="form__col1">
+				<fieldset>
+					<label for="input5" class="form__label">Текст кнопки до получения купона</label>
+					<div class="form__block">
+						<input class="input-text input-text_wide" id="input5" type="text" value="Получить скидку #sale-amount">
+						<p class="text">#sale-amount – размер скидки</p>
+					</div>
+				</fieldset>	
+				<fieldset>
+					<label for="textarea" class="form__label">Текст заголовка</label>
+					<div class="form__block">
+						<textarea class="textarea" id="textarea">Новогодняя скидка</textarea>
+					</div>
+				</fieldset>							
+				<fieldset>
+					<label for="textarea1" class="form__label">Текст подписи</label>
+					<div class="form__block">
+						<textarea class="textarea" id="textarea1">Разместите пост в соцсети получите скидку!</textarea>
+					</div>
+				</fieldset>
+			</div>
+			<div class="form__col2">
+				<p class="text">Вид виджета до получения купона</p>
+				<!-- BEGIN .widget -->
+				<div class="widget-container">
+					<strong>Новогодняя скидка</strong>
+					<p>Разместите пост в соцсети получите скидку!</p>
+					<div class="widget">
+						<a href="#">Получить скидку 3%</a>
+						<ul>
+							<li><a class="widget__vk" href="#"></a></li>
+							<li><a class="widget__fb" href="#"></a></li>
+							<li><a class="widget__ok" href="#"></a></li>
+							<li><a class="widget__tw" href="#"></a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- END .widget -->	
+				<div class="form__link">
+					<a href="#">Посмотреть пример использования</a>
+				</div>				
+			</div>
+		</div>
+		<!-- END .form__cols -->
+		<!-- BEGIN .form__cols -->		
+		<div class="form__cols">
+			<div class="form__col1">
+				<fieldset>
+					<label for="input5" class="form__label">Текст кнопки после получения</label>
+					<div class="form__block">
+						<input class="input-text input-text_wide" id="input5" type="text" value="Посмотреть код купона на #sale-amount">
+						<p class="text">#sale-amount – размер скидки</p>
+					</div>
+				</fieldset>
+				<fieldset>
+					<label for="textarea" class="form__label">Текст заголовка</label>
+					<div class="form__block">
+						<textarea class="textarea" id="textarea">Новогодняя скидка</textarea>
+					</div>
+				</fieldset>							
+				<fieldset>
+					<label for="textarea1" class="form__label">Текст подписи</label>
+					<div class="form__block">
+						<textarea class="textarea" id="textarea1">Спасибо за ваш пост!</textarea>
+					</div>
+				</fieldset>		
+				<fieldset>
+					<label class="form__label">Размер</label>
+					<div class="form__block">
+						<div class="form__tabs">
+							<ul>
+								<li class="active">Нормальный</li>
+								<li>Крупный</li>
+							</ul>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset>
+					<label class="form__label">Рамка</label>
+					<div class="form__block">
+						<div class="form__tabs">
+							<ul>
+								<li class="active">С рамкой</li>
+								<li>Без рамки</li>
+							</ul>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset>
+					<label for="input1" class="form__label">Цвет виджета</label>
+					<div class="form__block">
+						<ul class="form__color">
+							<li class="active"><i></i></li>
+							<li><i></i></li>
+						</ul>
+					</div>
+				</fieldset>						
+			</div>
+			<div class="form__col2">
+				<div class="form__widget">
+					<p class="text">Вид виджета после получения купона</p>
+					<!-- BEGIN .widget -->
+					<div class="widget-container">
+						<strong>Новогодняя скидка</strong>
+						<p>Спасибо за ваш пост!</p>
+						<div class="widget widget_got">
+							<a href="#">Посмотреть код купона на 3%</a>
+						</div>
+					</div>
+					<!-- END .widget -->		
+				</div>					
+			</div>
+		</div>
+		<!-- END .form__cols -->		
+		<div class="form__bottom">
+			<div class="form__back">
+				<a href="#">Назад</a>
+			</div>
+			<div class="form__next">
+				<button class="btn-big" type="submit"><strong>Назад<b>→</b></strong></button>
+			</div>
+		</div>
+	</form>
+	<!-- END .form -->
+	<!-- BEGIN .form -->
+	<form action="" class="form">
+		<fieldset>
+			<label class="form__label">Название акции</label>
+			<div class="form__block">
+				<div class="form__tabs">
+					<ul>
+						<li>Кнопка</li>
+						<li>Кнопка с пояснением</li>
+						<li class="active">Любой HTML-контент</li>
+					</ul>
+				</div>
+			</div>
+		</fieldset>
+		<fieldset>
+			<label class="form__label"><strong>Внимание!</strong></label>
+			<div class="form__block">
+				<p>Тег &lt;a class="paylook-btn-goPost" href=""&gt; является обязательным.</p>
+			</div>
+		</fieldset>
+		<!-- BEGIN .form__cols -->
+		<div class="form__cols">
+			<div class="form__col1">
+				<div class="form__code error">
+					<label for="code">HTML-контент виджета до получения купона</label>
+					<div class="message-error message-error_mod">
+						<strong>Ошибка!</strong>Тег &lt;a class="paylook-btn-goPost" href=""&gt; не найден.<button></button>
+					</div>
+					<textarea id="code">
+<div style="border: solid 1px gray;">
+<h3>Новогодняя скидка</h3>
+<p>Разместите пост в соцсети получите скидку!</p>
+<!-- Код кнопки -->
+<a class="paylook-btn-goPost" href="">Получить скидку</a>
+<!-- / Код кнопки -->
+</div>
+					</textarea>
+				</div>				
+			</div>
+			<div class="form__col2">
+				<p class="text">Вид виджета до получения купона</p>
+				<div style="border: solid 1px gray;">
+					<h3>Новогодняя скидка</h3>
+					<p>Разместите пост в соцсети получите скидку!</p>
+					<!-- Код кнопки -->
+					<a class="paylook-btn-goPost" href="">Получить скидку</a>
+					<!-- / Код кнопки -->
+				</div>
+			</div>
+		</div>
+		<!-- END .form__cols -->
+		<!-- BEGIN .form__cols -->
+		<div class="form__cols">
+			<div class="form__col1">
+				<div class="form__code">
+					<label for="code">HTML-контент виджета до получения купона</label>
+					<textarea id="code">
+<div style="border: solid 1px gray;">
+<h3>Новогодняя скидка</h3>
+<p>Разместите пост в соцсети получите скидку!</p>
+<!-- Код кнопки -->
+<a class="paylook-btn-goPost" href="">Получить скидку</a>
+<!-- / Код кнопки -->
+</div>
+					</textarea>
+				</div>				
+			</div>
+			<div class="form__col2">
+				<p class="text">Вид виджета до получения купона</p>
+				<div style="border: solid 1px gray;">
+					<h3>Новогодняя скидка</h3>
+					<p>Разместите пост в соцсети получите скидку!</p>
+					<!-- Код кнопки -->
+					<a class="paylook-btn-goPost" href="">Получить скидку</a>
+					<!-- / Код кнопки -->
+				</div>
+			</div>
+		</div>
+		<!-- END .form__cols -->
+		<div class="form__bottom">
+			<div class="form__back">
+				<a href="#">Назад</a>
+			</div>
+			<div class="form__next">
+				<button class="btn-big" type="submit"><strong>Назад<b>→</b></strong></button>
+			</div>
+		</div>
+	</form>
+	<!-- END .form -->
+	<!-- BEGIN .push -->
+	<div class="push"></div>
+	<!-- END .push -->
+</section>
+<!-- END .wrap -->
+<!-- BEGIN .footer -->
+<footer class="footer">
+	<div class="container">
+		<div class="footer__info">
+			<p>Продажи – <a href="mailto:sale@paylook.ru">sale@paylook.ru</a></p>
+			<p>Техподдержка – <a href="mailto:support@paylook.ru">support@paylook.ru</a></p>
+			<p><a href="#">Публичная оферта</a></p>
+		</div>
+		<div class="copyright">2012, © Paylook</div>
+	</div>
+</footer>
+<!-- END .footer -->
+</body>
+</html>

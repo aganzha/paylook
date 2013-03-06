@@ -1,0 +1,286 @@
+<!doctype html>
+<!--[if lte IE 8]><html lang="ru-RU" class="lteie8"><![endif]-->
+<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+<![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+<!-- BEGIN .wrap -->
+<section class="wrap">
+	<!-- BEGIN .header -->
+	<header class="header">
+		<div class="logo"><span>Кабинет клиента</span><i></i></div>
+		<ul class="user-link">
+			<li><a class="user-link__out" href="#">Выход</a></li>
+			<li><a class="user-link__mail" href="mailto:trendbender@gmail.com"><strong>trendbender</strong>@gmail.com</a></li>			
+		</ul>
+	</header>
+	<!-- END .header -->	
+	<!-- BEGIN .top -->
+	<div class="top">
+		<div class="top__title"><span>Tanchoo.ru</span></div>
+		<nav class="top__nav">
+			<ul>
+				<li><a href="#">Статистика</a></li>
+				<li><a class="active" href="#">Управление акциями</a></li>
+				<li><a href="#">Настройки сайта</a></li>
+				<li><a href="#">Баланс</a></li>
+				<li><a href="#">Помощь</a></li>
+			</ul>
+		</nav>
+	</div>
+	<!-- END .top -->
+	<!-- BEGIN .breadcrumps -->
+	<div class="breadcrumps">
+		<a href="#">Управление акциями</a>
+		<span><strong>Создание акции</strong> «Новогодняя скидка»</span>
+	</div>
+	<!-- END .breadcrumps -->
+	<!-- BEGIN .form-nav -->
+	<nav class="form-nav">
+		<ul>
+			<li><a class="active" href="#"><span>Выбор типа акции и поощрений</span></a></li>
+			<li><a href="#"><span>Виджет</span></a></li>
+			<li><a href="#"><span>Посты</span></a></li>
+			<li><a href="#"><span>Попапы</span></a></li>
+			<li><a href="#"><span>Емейлы</span></a></li>
+			<li><a class="disabled" href="#"><span>Купоны</span></a></li>
+			<li><a href="#"><span>Скрипт для вставки на сайт</span></a></li>
+		</ul>
+	</nav>
+	<!-- END .form-nav -->
+	<!-- BEGIN .form -->
+	<form action="" class="form">
+		<fieldset>
+			<label for="input1" class="form__label">Название акции</label>
+			<div class="form__block">
+				<input class="input-text" id="input1" type="text" value="Новогодняя скидка">
+			</div>
+		</fieldset>
+		<fieldset>
+			<label class="form__label">Язык</label>
+			<div class="form__block">
+				<select class="select">
+					<option value="">Русский</option>
+					<option value="">Українська</option>
+				</select>
+			</div>			
+		</fieldset>
+		<fieldset>
+			<label class="form__label">Тип акции</label>
+			<div class="form__block">
+				<ul class="form__actions">
+					<li class="active">
+						<strong>В одно касание</strong>
+						<span>Поощрение для меня и для друга</span>
+					</li>
+					<li>
+						<strong>Многоходовка</strong>
+						<span>Цепочка поощрений</span>
+					</li>
+					<li>
+						<strong>Коллективное поощрение</strong>
+					</li>
+				</ul>
+				<p class="text">Клиент делает пост и получает 5% скидки, все его друзья тоже получают</p>
+			</div>
+		</fieldset>
+		<fieldset>
+			<label class="form__label">Срок действия<br>акции</label>
+			<div class="form__block">
+				<label class="label">
+					<input class="input-radio" type="radio" name="radio-date">
+					<span>Бессрочно</span>
+				</label>
+				<label class="label">
+					<input class="input-radio" type="radio" name="radio-date" checked>
+					<span>На период</span>
+					<div class="form__date">
+						<div class="form__period"><strong>15</strong> ноября – <strong>15</strong> декабря</div>
+					</div>
+				</label>
+			</div>
+		</fieldset>
+		<fieldset>
+			<label class="form__label">Ограничение кол-ва срабатываний<br>акции</label>
+			<div class="form__block">
+				<label class="label">
+					<input class="input-radio" type="radio" name="radio-value">
+					<span>Без ограничений</span>
+				</label>
+				<label class="label">
+					<input class="input-radio" type="radio" name="radio-value" checked>
+					<span>Не более<input class="input-text input-text_inner" type="text" value="7 000">срабатываний</span>					
+				</label>
+			</div>
+		</fieldset>
+		<fieldset>
+			<label class="form__label">Социальные<br>сети</label>
+			<div class="form__block">
+				<label class="label">
+					<input class="input-checkbox" type="checkbox" checked>					
+					<span class="form__vk"><i></i>ВКонтакте</span>
+				</label>
+				<label class="label">
+					<input class="input-checkbox" type="checkbox" checked>					
+					<span class="form__fb"><i></i>Facebook</span>
+				</label>
+				<label class="label">
+					<input class="input-checkbox" type="checkbox" checked>					
+					<span class="form__ok"><i></i>Одноклассники</span>
+				</label>
+				<label class="label">
+					<input class="input-checkbox" type="checkbox" checked>					
+					<span class="form__tw"><i></i>Twitter</span>
+				</label>
+			</div>
+		</fieldset>
+		<fieldset>
+			<label class="form__label">Тип поощрений</label>
+			<div class="form__block">
+				<div class="form__tabs">
+					<ul>
+						<li class="active">Купон на скидку</li>
+						<li>Купон на что угодно</li>
+						<li>Выдача поощрения без купона</li>
+					</ul>
+					<p class="text">Скидка в процентах или на фиксированную сумму.</p>
+				</div>				
+			</div>
+		</fieldset>
+		<fieldset>
+			<label class="form__label">Срок действия<br>купонов</label>
+			<div class="form__block">
+				<label class="label">
+					<input class="input-radio" type="radio" name="radio-date1">
+					<span>Бессрочно</span>
+				</label>
+				<label class="label">
+					<input class="input-radio" type="radio" name="radio-date1" checked>
+					<span>На период</span>
+					<div class="form__date">
+						<div class="form__period"><strong>15</strong> ноября – <strong>15</strong> декабря</div>
+					</div>
+				</label>
+			</div>
+		</fieldset>
+		<fieldset>
+			<label class="form__label">Тип купонов</label>
+			<div class="form__block">
+				<div class="form__tabs">
+					<ul>
+						<li class="active">Одноразовые</li>
+						<li>Многоразовые</li>
+					</ul>
+				</div>
+			</div>
+		</fieldset>
+		<fieldset>
+			<label for="input1" class="form__label">Настройка скидок по купонам</label>
+			<div class="form__block">
+				<label class="label">
+					<input class="input-checkbox" type="checkbox">
+					<span>Настроить разные типы поощрений для каждого в цепочке</span>
+				</label>
+				<strong class="strong">Скидка для клиента</strong>
+				<label class="label">
+					<input class="input-radio" type="radio" name="radio-setting">
+					<span>В процентах 
+						<select class="select select_inner">
+							<option value="">15</option>
+							<option value="">30</option>
+						</select>
+						%
+					</span>
+				</label>
+				<label class="label">
+					<input class="input-radio" type="radio" name="radio-setting" checked="">
+					<span>Не более
+						<input class="input-text input-text_inner" type="text" value="7 000">
+						<select class="select select_inner">
+							<option value="">руб.</option>
+							<option value="">грн.</option>
+						</select>
+					</span>					
+				</label>
+				<strong class="strong">Скидка для друга</strong>
+				<label class="label">
+					<input class="input-radio" type="radio" name="radio-setting1">
+					<span>В процентах 
+						<select class="select select_inner">
+							<option value="">15</option>
+							<option value="">30</option>
+						</select>
+						%
+					</span>
+				</label>
+				<label class="label">
+					<input class="input-radio" type="radio" name="radio-setting1" checked="">
+					<span>Не более
+						<input class="input-text input-text_inner" type="text" value="7 000">
+						<select class="select select_inner">
+							<option value="">руб.</option>
+							<option value="">грн.</option>
+						</select>
+					</span>					
+				</label>
+				<strong class="strong">Скидка для друга, который сделал пост</strong>
+				<label class="label">
+					<input class="input-radio" type="radio" name="radio-setting2">
+					<span>В процентах 
+						<select class="select select_inner">
+							<option value="">15</option>
+							<option value="">30</option>
+						</select>
+						%
+					</span>
+				</label>
+				<label class="label">
+					<input class="input-radio" type="radio" name="radio-setting2" checked="">
+					<span>Не более
+						<input class="input-text input-text_inner" type="text" value="7 000">
+						<select class="select select_inner">
+							<option value="">руб.</option>
+							<option value="">грн.</option>
+						</select>
+					</span>					
+				</label>
+			</div>
+		</fieldset>
+		<div class="form__bottom">
+			<div class="form__back">
+				<a class="no-active" href="#">Назад</a>
+			</div>
+			<div class="form__next">
+				<button class="btn-big" type="submit"><strong>Назад<b>→</b></strong></button>
+			</div>
+		</div>
+	</form>
+	<!-- END .form -->
+	<!-- BEGIN .push -->
+	<div class="push"></div>
+	<!-- END .push -->
+</section>
+<!-- END .wrap -->
+<!-- BEGIN .footer -->
+<footer class="footer">
+	<div class="container">
+		<div class="footer__info">
+			<p>Продажи – <a href="mailto:sale@paylook.ru">sale@paylook.ru</a></p>
+			<p>Техподдержка – <a href="mailto:support@paylook.ru">support@paylook.ru</a></p>
+			<p><a href="#">Публичная оферта</a></p>
+		</div>
+		<div class="copyright">2012, © Paylook</div>
+	</div>
+</footer>
+<!-- END .footer -->
+</body>
+</html>

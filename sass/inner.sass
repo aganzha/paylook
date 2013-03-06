@@ -200,7 +200,7 @@
 		&:before, &:after
 			content: ""
 			position: absolute
-			top: -1px
+			top: 0
 			width: 20px
 			height: 20px
 			+box-shadow(#edcda4 1px -1px 0)
@@ -239,30 +239,78 @@
 //form
 .form
 	padding-top: 28px
+	margin-bottom: 64px
 	border: 1px solid $orange
 	+border-radius(4px)
 	fieldset
 		margin-bottom: 28px
 		overflow: hidden
-		label, input, select
-			float: left
-		label
-			width: 130px
-			padding: 0 20px
-			margin-top: 3px
-			color: $brown
-			text-align: right
-		input, select			
-			padding: 0 5px
-			border: 1px solid $gray
-			+border-radius(2px) 
-		input
-			width: 290px
-			height: 20px
-		select
-			width: 220px
-			height: 22px
-			padding: 1px
+//form elements
+.input-text, .select, .textarea	
+	border: 1px solid $gray
+	+border-radius(2px)
+	vertical-align: top
+.select
+	width: 220px
+	height: 22px
+	padding: 1px
+.select_inner
+	width: auto
+	min-width: 60px
+	margin: 0 5px
+.input-text + .select_inner
+	margin: 0 5px 0 -5px
+.input-text
+	width: 290px
+	height: 20px
+	padding: 0 5px
+.input-text_inner
+	width: 58px
+	margin: 0 5px
+.input-text_wide
+	width: 368px
+.input-text_mod
+	width: 32px
+.input-radio, .input-checkbox
+	position: relative
+	top: 1px
+	margin-right: 5px
+	&:checked + span
+		color: $brown
+.textarea 
+	width: 368px
+	height: 44px
+	padding: 2px 5px
+	resize: vertical
+.textarea_mod
+	height: 152px
+.label
+	display: block
+	height: 22px
+	margin-bottom: 5px
+	line-height: 22px
+.strong
+	display: block
+	margin: 9px 0
+.text
+	margin-top: 8px
+.text_mod
+	margin-bottom: 8px
+.text_link
+	a
+		text-decoration: underline
+//form blocks
+.form__label
+	float: left
+	width: 130px
+	padding: 0 20px
+	line-height: 1.2
+	color: $brown
+	text-align: right
+.form__block
+	overflow: hidden	
+.form__block_mod
+	margin-left: 170px
 .form__actions
 	overflow: hidden
 	li
@@ -271,10 +319,263 @@
 		padding: 7px
 		margin-right: 20px
 		min-height: 36px
+		background: #E8DFD3
+		+background-image(linear-gradient(top, #fff, #E8DFD3))
 		border: 1px solid $orange
 		+border-radius(6px)
 		cursor: pointer
+		&:hover
+			strong
+				color: $brown
+		&.active
+			border-color: #d6986f
+			+box-shadow(rgba(198,115,74,0.75) 0 0 10px inset)
+			strong
+				color: $brown 
 	strong
 		display: block
-		
-		E8DFD3
+		margin-bottom: 5px
+	span
+		font-size: 12px
+.form__date
+	display: inline-block
+.form__period	
+	position: relative
+	height: 19px
+	padding: 0 41px 0 8px
+	margin-left: 5px
+	line-height: 19px
+	background: #E8DFD3
+	+background-image(linear-gradient(top, #fff, #E8DFD3))
+	border: 1px solid $orange
+	+border-radius(10px)
+	cursor: pointer
+	&:before, &:after
+		content: ""
+		position: absolute
+	&:before
+		top: 4px
+		right: 22px 
+		+sized-sprite($icons, date)
+	&:after
+		top: 7px
+		right: 8px
+		+sized-sprite($icons, arr)
+	&:hover, &.active
+		color: $brown 
+		&:before
+			+sized-sprite($icons, date-act)
+	&.active
+		border-color: #d6986f
+		+box-shadow(rgba(198,115,74,0.75) 0 0 10px inset)
+.form__tabs		
+	ul
+		overflow: hidden
+	li
+		position: relative
+		float: left
+		height: 19px
+		padding: 0 7px	
+		margin-right: -1px 	
+		background: #E8DFD3
+		+background-image(linear-gradient(top, #fff, #E8DFD3))
+		border: 1px solid $orange		
+		line-height: 19px
+		cursor: pointer
+		&:first-child
+			+border-radius(11px 0 0 11px)
+		&:last-child
+			+border-radius(0 11px 11px 0)
+		&:hover
+			color: $brown 
+		&.active
+			border-color: #d6986f
+			+box-shadow(rgba(198,115,74,0.75) 0 0 10px inset)
+			color: $brown 
+			z-index: 5
+.form__cols
+	overflow: hidden
+.form__col1
+	float: left
+	width: 550px
+	margin-right: 20px
+.form__col2
+	float: left
+	width: 380px
+	.text
+		margin: 3px 0 5px 0 
+.form__bottom
+	padding: 9px 0 11px 0
+	border-top: 1px solid $orange
+	background: $yellow
+	+border-radius(0 0 4px 4px) 
+	overflow: hidden
+.form__back
+	float: left
+	width: 130px
+	height: 32px
+	line-height: 32px
+	padding: 0 20px
+	text-align: right
+	a
+		text-decoration: underline
+		&.no-active
+			text-decoration: none
+			color: gray
+			cursor: default
+.form__next
+	overflow: hidden
+	button
+		b
+			margin-left: 5px 
+.form__color
+	overflow: hidden
+	li
+		float: left
+		padding: 4px
+		margin-right: 4px
+		border: 1px solid #fff
+		+border-radius(3px)
+		cursor: pointer
+		&:first-child
+			i
+				background: #FFD46E
+				+background-image(linear-gradient(top, #FFD46E, #F5AE07))
+				border-color: #b37e00				
+		&.active
+			border-color: $gray
+	i
+		display: block
+		width: 24px
+		height: 23px
+		background: #FFD46E
+		+background-image(linear-gradient(top, #94C7FF, #8AA19D))
+		+border-radius(4px)
+		border: 1px dashed #487196
+.form__link
+	margin-top: 15px
+	a
+		border-bottom: 1px dashed
+.form__code
+	margin: 0 0 28px 9px
+	label
+		display: block
+		margin: 3px 0 5px 0
+	textarea
+		display: block
+		width: 529px
+		height: 342px
+		padding: 2px 5px
+		resize: vertical
+		border: 1px solid $gray
+		+border-radius(2px)
+	&.error
+		label
+			color: $red 
+		textarea
+			border-color: $red
+.form__post
+	padding-top: 19px 
+	background: #fdfeea
+.form__load
+	position: relative
+	height: 60px
+	margin-top: 13px
+	background: #FFF 
+	border: 1px dashed $gray
+	+border-radius(4px)
+	line-height: 60px
+	text-align: center	
+	input
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		opacity: 0
+		filter: alpha(opacity=0)
+.form__pic
+	img
+		display: block
+		+box-shadow(rgba(0,0,0,0.5) 0 0 10px)
+//icons
+.form__vk, .form__fb, .form__ok, .form__tw
+	i
+		position: relative
+		top: 2px
+		display: inline-block
+		margin-right: 6px
+.form__vk_mod, .form__fb_mod, .form__ok_mod, .form__tw_mod
+	position: relative
+	top: 2px
+	font-size: 18px
+	color: #787C80
+	font-weight: 700 
+	i
+		top: 1px
+.form__vk
+	i
+		+sized-sprite($icons, ico-vk)
+.form__fb
+	i
+		+sized-sprite($icons, ico-fb) 
+.form__ok
+	i
+		+sized-sprite($icons, ico-ok)
+.form__tw
+	i
+		+sized-sprite($icons, ico-tw)
+//widget
+.widget-container
+	width: 275px
+	padding: 13px 10px 9px 13px
+	border: 1px solid $gray
+	+border-radius(4px)
+	strong
+		font-size: 18px
+	p
+		margin: 5px 0 9px 0
+.widget
+	position: relative
+	display: inline-block
+	padding: 3px 8px
+	margin-bottom: 9px
+	background: #FFD46E
+	+background-image(linear-gradient(top, #FFD46E, #F5AE07))
+	border-color: #487196
+	+border-radius(4px)
+	border-style: dashed
+	border: 1px dashed #b37e00	
+	font-size: 0 
+	a, ul
+		display: inline-block
+		vertical-align: middle
+	a
+		font-size: 14px
+		text-shadow: rgba(255,255,255,0.5) 0 1px 0
+		color: #231F20  
+	ul
+		margin-left: 10px
+	li
+		display: inline-block
+		margin-left: 3px
+		a 
+			display: block
+	&:before
+		content: ""
+		position: absolute
+		bottom: -9px
+		left: 11px
+		+sized-sprite($icons, scissors)
+.widget__vk
+	+sized-sprite($icons, ico-vk)
+.widget__fb
+	+sized-sprite($icons, ico-fb) 
+.widget__ok
+	+sized-sprite($icons, ico-ok)
+.widget__tw
+	+sized-sprite($icons, ico-tw)
+.widget_got
+	background: #FFE8B3
+	+background-image(linear-gradient(top, #FFE8B3, #F5D893))
+
