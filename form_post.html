@@ -59,7 +59,7 @@
 	<!-- END .form-nav -->
 	<!-- BEGIN .form -->
 	<form action="" class="form">
-		<fieldset>
+		<fieldset class="fieldset">
 			<label class="form__label">Настройка поста</label>
 			<div class="form__block">
 				<label class="label">
@@ -75,7 +75,7 @@
 				<p class="text text_link"><a href="#">Технические требования к мета-тегам</a></p>
 			</div>
 		</fieldset>
-		<fieldset>
+		<fieldset class="fieldset">
 			<label class="form__label">Купонов в посте</label>
 			<div class="form__block">
 				<label class="label">
@@ -83,8 +83,7 @@
 				</label>
 			</div>
 		</fieldset>
-		<fieldset>
-			<label class="form__label"></label>
+		<fieldset class="fieldset fieldset_mod">
 			<div class="form__block form__block_mod">
 				<label class="label">
 					<input class="input-checkbox" type="checkbox" checked="">					
@@ -92,33 +91,34 @@
 				</label>				
 			</div>
 		</fieldset>
-		<div class="form__post">
+		<!-- BEGIN .form__bg -->
+		<div class="form__bg">
 			<!-- BEGIN .form__cols -->		
 			<div class="form__cols">
 				<div class="form__col1">
-					<fieldset>
+					<fieldset class="fieldset">
 						<label for="textarea" class="form__label">Контент верхней части поста</label>
 						<div class="form__block">
 							<textarea class="textarea textarea_mod" id="textarea">
-	Я дарю всем друзьям скидку в #sale-amount в магазине
-	http://www.tanchoo.ru
+Я дарю всем друзьям скидку в #sale-amount в магазине
+http://www.tanchoo.ru
 
-	Коды купонов на скидку:
-	#coupon-codes
+Коды купонов на скидку:
+#coupon-codes
 
-	Акция действует до 12 мая.
+Акция действует до 12 мая.
 							</textarea>
 							<p class="text">Ограничения поста в ВК: Общая длинна поста не ограничена, часть поста публикуемая в ленте новостей ограничена 280 символами. HTML-теги запрещены. Ссылки длиннее 30 символов публикуются укороченными.</p>
 							<p class="text">#sale-amount – размер скидки (например: 5%)<br>#coupon-codes – коды купонов<br>#post-url – адрес страницы с которой был совершен пост</p>
 						</div>
 					</fieldset>
-					<fieldset>
+					<fieldset class="fieldset">
 						<label class="form__label">Изображения<br>в посте</label>
 						<div class="form__block">
 							<div class="message-recommed message-recommed_mod">
 								<strong>Рекомендуется</strong>добавить хотя бы одну фотографию.<button></button>
 							</div>
-							<button class="btn-middle"><strong>+ Загрузить изображения</strong></button>
+							<div class="btn-middle btn-middle_file"><strong>+ Загрузить изображения <input type="file"></strong></div>
 							<div class="form__load">
 								<span>Перенесите сюда изображения, чтобы загрузить</span>
 								<input type="file">
@@ -129,7 +129,7 @@
 				</div>
 				<div class="form__col2">
 					<p class="text text_mod">Пример поста</p>
-					<div class="form__pic">
+					<div class="form__example">
 						<img src="img/post.jpg" alt="">
 					</div>
 					<div class="form__link">
@@ -140,10 +140,533 @@
 			<!-- END .form__cols -->
 			<!-- BEGIN .form__cols -->		
 			<div class="form__cols">
-				
+				<div class="form__col1">
+					<fieldset class="fieldset fieldset_mod">
+						<label for="textarea" class="form__label"><button class="form__move"></button></label>
+						<div class="form__block">
+							<textarea class="textarea textarea_mod" id="textarea">Брюки с принтом бирюзовые из натурального хлопка свободноо кроя.
+
+Состав: натуральний хлопок
+							</textarea>
+						</div>
+					</fieldset>
+				</div>
+				<div class="form__col2">
+					<div class="form__pic">
+						<img src="img/pic.jpg" alt="">
+						<button class="btn-gray">Удалить</button>
+					</div>
+				</div>
+			</div>
+			<!-- END .form__cols -->
+						<!-- BEGIN .form__cols -->		
+			<div class="form__cols">
+				<div class="form__col1">
+					<fieldset class="fieldset">
+						<label for="textarea" class="form__label"><button class="form__move"></button></label>
+						<div class="form__block">
+							<textarea class="textarea textarea_mod" id="textarea">Брюки с принтом бирюзовые из натурального хлопка свободноо кроя.
+
+Состав: натуральний хлопок
+							</textarea>
+						</div>
+					</fieldset>
+				</div>
+				<div class="form__col2">
+					<div class="form__pic">
+						<img src="img/pic.jpg" alt="">
+						<button class="btn-gray">Удалить</button>
+					</div>
+				</div>
+			</div>
+			<!-- END .form__cols -->
+			<!-- BEGIN .form__cols -->
+			<div class="form__cols">
+				<div class="form__col1">
+					<fieldset class="fieldset">
+						<label class="form__label">Предпросмотр поста</label>
+						<div class="form__block">
+							<button class="btn-gray">Сделать пост Вконтаке для предпросмотра</button>
+							<p class="text">Вы можете проверить внешний вид поста, отпосив его в вашей соцсети</p>					
+						</div>
+					</fieldset>
+				</div>
+			</div>
+			<!-- END .form__cols -->		
+			<div class="form__btn">
+				<button class="btn-gray">Сохранить пост для ВКонтакте</button>
+			</div>			
+		</div>
+		<!-- END .form__bg -->
+		<fieldset class="fieldset fieldset_mod">
+			<div class="form__block form__block_mod">
+				<label class="label">
+					<input class="input-checkbox" type="checkbox" checked="">					
+					<span class="form__fb form__fb_mod"><i></i>Facebook</span>
+				</label>				
+			</div>
+		</fieldset>
+		<!-- BEGIN .form__bg -->		
+		<div class="form__bg">
+			<!-- BEGIN .form__cols -->		
+			<div class="form__cols">
+				<div class="form__col1">
+					<fieldset class="fieldset">
+						<label for="textarea" class="form__label">Контент верхней части поста</label>
+						<div class="form__block">
+							<textarea class="textarea textarea_mod" id="textarea">
+Я дарю всем друзьям скидку в #sale-amount в магазине
+http://www.tanchoo.ru
+
+Коды купонов на скидку:
+#coupon-codes
+
+Акция действует до 12 мая.
+							</textarea>
+							<p class="text">Ограничения поста в Facebook: Общая длинна поста не ограничена, часть поста публикуемая в ленте новостей ограничена, как правило пятью переводами строк. HTML-еги запрщены, поэтому, рекомендуем воспользоваться сервисом по их укорачивани. Например http://bit.ly</p>
+							<p class="text">#sale-amount – размер скидки (например: 5%)<br>#coupon-codes – коды купонов<br>#post-url – адрес страницы с которой был совершен пост</p>
+						</div>
+					</fieldset>
+					<fieldset class="fieldset">
+						<label class="form__label">Изображения<br>в посте</label>
+						<div class="form__block">
+							<div class="message-recommed message-recommed_mod">
+								<strong>Рекомендуется</strong>добавить хотя бы одну фотографию.<button></button>
+							</div>
+							<div class="btn-middle btn-middle_file"><strong>+ Загрузить изображения <input type="file"></strong></div>
+							<div class="form__load">
+								<span>Перенесите сюда изображения, чтобы загрузить</span>
+								<input type="file">
+							</div>	
+							<p class="text">Длина текста к изображению ограничена пятью строками с общим количеством символов таким-то.</p>		
+						</div>
+					</fieldset>
+				</div>
+				<div class="form__col2">
+					<p class="text text_mod">Пример поста</p>
+					<div class="form__example">
+						<img src="img/post1.jpg" alt="">
+					</div>
+					<div class="form__link">
+						<a href="#">Посмотреть пример использования</a>
+					</div>
+				</div>
+			</div>
+			<!-- END .form__cols -->
+			<!-- BEGIN .form__cols -->		
+			<div class="form__cols">
+				<div class="form__col1">
+					<fieldset class="fieldset">
+						<label for="textarea" class="form__label"><button class="form__move"></button></label>
+						<div class="form__block">
+							<textarea class="textarea textarea_mod" id="textarea">Брюки с принтом бирюзовые из натурального хлопка свободноо кроя.
+
+Состав: натуральний хлопок
+							</textarea>
+						</div>
+					</fieldset>
+				</div>
+				<div class="form__col2">
+					<div class="form__pic">
+						<img src="img/pic.jpg" alt="">
+						<button class="btn-gray">Удалить</button>
+					</div>
+				</div>
+			</div>
+			<!-- END .form__cols -->
+			<!-- BEGIN .form__cols -->		
+			<div class="form__cols">
+				<div class="form__col1">
+					<fieldset class="fieldset">
+						<label for="textarea" class="form__label"><button class="form__move"></button></label>
+						<div class="form__block">
+							<textarea class="textarea textarea_mod" id="textarea">Брюки с принтом бирюзовые из натурального хлопка свободноо кроя.
+
+Состав: натуральний хлопок
+							</textarea>
+						</div>
+					</fieldset>
+				</div>
+				<div class="form__col2">
+					<div class="form__pic">
+						<img src="img/pic.jpg" alt="">
+						<button class="btn-gray">Удалить</button>
+					</div>
+				</div>
+			</div>
+			<!-- END .form__cols -->
+			<!-- BEGIN .form__cols -->
+			<div class="form__cols">
+				<div class="form__col1">
+					<fieldset class="fieldset">
+						<label class="form__label">Предпросмотр поста</label>
+						<div class="form__block">
+							<button class="btn-gray">Сделать пост в Facebook для предпросмотра</button>
+							<p class="text">Вы можете проверить внешний вид поста, отпосив его в вашей соцсети</p>					
+						</div>
+					</fieldset>
+				</div>
+			</div>
+			<!-- END .form__cols -->		
+			<div class="form__btn">
+				<button class="btn-gray">Сохранить пост для Facebook</button>
+			</div>	
+		</div>
+		<!-- END .form__bg -->
+		<fieldset class="fieldset fieldset_mod">
+			<label class="form__label"></label>
+			<div class="form__block form__block_mod">
+				<label class="label">
+					<input class="input-checkbox" type="checkbox" disabled>					
+					<span class="form__ok form__ok_mod"><i></i>Однокласники</span>
+				</label>				
+			</div>
+		</fieldset>
+		<fieldset class="fieldset fieldset_mod">
+			<div class="form__block form__block_mod">
+				<label class="label">
+					<input class="input-checkbox" type="checkbox" checked>					
+					<span class="form__tw form__tw_mod"><i></i>Twitter</span>
+				</label>				
+			</div>
+		</fieldset>
+				<!-- BEGIN .form__bg -->		
+		<div class="form__bg">
+			<!-- BEGIN .form__cols -->		
+			<div class="form__cols">
+				<div class="form__col1">
+					<fieldset class="fieldset">
+						<label for="textarea" class="form__label">Контент верхней части поста</label>
+						<div class="form__block">
+							<textarea class="textarea textarea_mod" id="textarea">
+Я дарю всем друзьям скидку в #sale-amount в магазине
+http://www.tanchoo.ru
+
+Коды купонов на скидку:
+#coupon-codes
+
+Акция действует до 12 мая.
+							</textarea>
+							<p class="text">Ограничения поста в Twitter. Общая длинна поста ограничена 140 символами. HTML-теги запрещены. Ссылки не укорачиваются, а символы в ссылках считаются, поэтому, рекомендуем воспользоваться сервисом по их укорачивани. Например http://bit.ly</p>
+							<p class="text">#sale-amount – размер скидки (например: 5%)<br>#coupon-codes – коды купонов<br>#post-url – адрес страницы с которой был совершен пост</p>
+						</div>
+					</fieldset>
+					<fieldset class="fieldset">
+						<label class="form__label">Изображения<br>в посте</label>
+						<div class="form__block">
+							<div class="message-recommed message-recommed_mod">
+								<strong>Рекомендуется</strong>добавить хотя бы одну фотографию.<button></button>
+							</div>
+							<div class="btn-middle btn-middle_file"><strong>+ Загрузить изображения <input type="file"></strong></div>
+							<div class="form__load">
+								<span>Перенесите сюда изображения, чтобы загрузить</span>
+								<input type="file">
+							</div>	
+							<p class="text">Изображение для Twitter может быть только одно, причем оно будет вставлено в пост ссылкой</p>	
+							<div class="form__pic form__pic_mod">
+								<img src="img/pic.jpg" alt="">
+								<button class="btn-gray">Удалить</button>
+							</div>	
+						</div>
+					</fieldset>
+				</div>
+				<div class="form__col2">
+					<p class="text text_mod">Пример поста</p>
+					<div class="form__example">
+						<img src="img/post.jpg" alt="">
+					</div>
+					<div class="form__link">
+						<a href="#">Посмотреть пример использования</a>
+					</div>
+				</div>
+			</div>
+			<!-- END .form__cols -->
+			<!-- BEGIN .form__cols -->
+			<div class="form__cols">
+				<div class="form__col1">
+					<fieldset class="fieldset">
+						<label class="form__label">Предпросмотр поста</label>
+						<div class="form__block">
+							<button class="btn-gray">Сделать пост в Twitter для предпросмотра</button>
+							<p class="text">Вы можете проверить внешний вид поста, отпосив его в вашей соцсети</p>					
+						</div>
+					</fieldset>
+				</div>
+			</div>
+			<!-- END .form__cols -->		
+			<div class="form__btn">
+				<button class="btn-gray">Сохранить пост для Twitter</button>
+			</div>	
+		</div>
+		<!-- END .form__bg -->
+		<div class="form__bottom">
+			<div class="form__back">
+				<a href="#">Назад</a>
+			</div>
+			<div class="form__next">
+				<button class="btn-big" type="submit"><strong>Назад<b>→</b></strong></button>
+			</div>
+		</div>
+	</form>
+	<!-- END .form -->
+	<!-- BEGIN .form -->
+	<form action="" class="form">
+		<fieldset class="fieldset">
+			<label class="form__label">Настройка поста</label>
+			<div class="form__block">
+				<label class="label">
+					<input class="input-radio" type="radio" name="post1">
+					<span>Ручной пост</span>					
+				</label>
+				<p class="text text_mod">Единая или индивидуальная акция с общим контентом<br>не зависящим от контента страницы.</p>
+				<label class="label">
+					<input class="input-radio" type="radio" name="post1" checked>
+					<span>Автопост</span>					
+				</label>
+				<p class="text">Единая акция с контентом, автоматически забираемым<br>со страницы через мета-теги.</p>
+				<p class="text text_link"><a href="#">Технические требования к мета-тегам</a></p>
+			</div>
+		</fieldset>
+		<fieldset class="fieldset">
+			<label class="form__label">Купонов в посте</label>
+			<div class="form__block">
+				<label class="label">
+					<input class="input-text input-text_mod" type="text" value="3">	
+				</label>
+			</div>
+		</fieldset>
+		<fieldset class="fieldset fieldset_mod">
+			<div class="form__block form__block_mod">
+				<label class="label">
+					<input class="input-checkbox" type="checkbox" checked="">					
+					<span class="form__vk form__vk_mod"><i></i>ВКонтакте</span>
+				</label>				
+			</div>
+		</fieldset>
+		<!-- BEGIN .form__bg -->
+		<div class="form__bg">
+			<!-- BEGIN .form__cols -->		
+			<div class="form__cols">
+				<div class="form__col1">
+					<fieldset class="fieldset">
+						<label for="textarea" class="form__label">Контент верхней части поста</label>
+						<div class="form__block">
+							<textarea class="textarea textarea_mod" id="textarea">
+Я дарю всем друзьям скидку в #sale-amount в магазине
+http://www.tanchoo.ru
+
+Коды купонов на скидку:
+#coupon-codes
+
+Акция действует до 12 мая.
+							</textarea>
+							<p class="text">Ограничения поста в ВК: Общая длинна поста не ограничена, часть поста публикуемая в ленте новостей ограничена 280 символами. HTML-теги запрещены. Ссылки длиннее 30 символов публикуются укороченными.</p>
+							<p class="text">#sale-amount – размер скидки (например: 5%)<br>#coupon-codes – коды купонов<br>#post-url – адрес страницы с которой был совершен пост</p>
+						</div>
+					</fieldset>
+					<fieldset class="fieldset">
+						<label class="form__label">Изображения<br>в посте</label>
+						<div class="form__block">
+							<input class="input-text input-text_mod" type="text" value="10">
+							<p class="text">Изображения, а также название и описания к ним заберутся автоматически, если на вашей странице размещены мета-теги в сооответствии с <a href="#">техническими требованиями</a></p>		
+						</div>
+					</fieldset>
+				</div>
+				<div class="form__col2">
+					<p class="text text_mod">Пример поста</p>
+					<div class="form__example">
+						<img src="img/post2.jpg" alt="">
+					</div>
+					<div class="form__link">
+						<a href="#">Посмотреть пример использования</a>
+					</div>
+				</div>
+			</div>
+			<!-- END .form__cols -->	
+			<!-- BEGIN .form__cols -->
+			<div class="form__cols">
+				<div class="form__col1">
+					<fieldset class="fieldset">
+						<label class="form__label">Предпросмотр поста</label>
+						<div class="form__block">
+							<div class="message-error message-error_mod">
+								<strong>Ошибка!</strong>Введен некоректен интернет-адрес.<button></button>
+							</div>
+							<input class="input-text input-text_wide-1 error" id="input1" type="text" value="Получить скидку #sale-amount">
+							<button class="btn-gray">Сделать пост Вконтаке для предпросмотра</button>
+							<p class="text">Вы можете проверить внешний вид поста, отпосив его в вашей соцсети</p>					
+						</div>
+					</fieldset>
+				</div>
+			</div>
+			<!-- END .form__cols -->		
+			<div class="form__btn">
+				<button class="btn-gray">Сохранить пост для ВКонтакте</button>
+			</div>			
+		</div>
+		<!-- END .form__bg -->
+		<fieldset class="fieldset fieldset_mod">
+			<div class="form__block form__block_mod">
+				<label class="label">
+					<input class="input-checkbox" type="checkbox" checked="">					
+					<span class="form__fb form__fb_mod"><i></i>Facebook</span>
+				</label>				
+			</div>
+		</fieldset>
+		<!-- BEGIN .form__bg -->		
+		<div class="form__bg">
+			<!-- BEGIN .form__cols -->		
+			<div class="form__cols">
+				<div class="form__col1">
+					<fieldset class="fieldset">
+						<label for="textarea" class="form__label">Контент верхней части поста</label>
+						<div class="form__block">
+							<textarea class="textarea textarea_mod" id="textarea">
+Я дарю всем друзьям скидку в #sale-amount в магазине
+http://www.tanchoo.ru
+
+Коды купонов на скидку:
+#coupon-codes
+
+Акция действует до 12 мая.
+							</textarea>
+							<p class="text">Ограничения поста в Facebook: Общая длинна поста не ограничена, часть поста публикуемая в ленте новостей ограничена, как правило пятью переводами строк. HTML-еги запрщены, поэтому, рекомендуем воспользоваться сервисом по их укорачивани. Например http://bit.ly</p>
+							<p class="text">#sale-amount – размер скидки (например: 5%)<br>#coupon-codes – коды купонов<br>#post-url – адрес страницы с которой был совершен пост</p>
+						</div>
+					</fieldset>
+					<fieldset class="fieldset">
+						<label class="form__label">Изображения<br>в посте</label>
+						<div class="form__block">
+							<input class="input-text input-text_mod" type="text" value="10">
+							<p class="text">Изображения, а также название и описания к ним заберутся автоматически, если на вашей странице размещены мета-теги в сооответствии с <a href="#">техническими требованиями</a></p>
+						</div>
+					</fieldset>
+				</div>
+				<div class="form__col2">
+					<p class="text text_mod">Пример поста</p>
+					<div class="form__example">
+						<img src="img/post1.jpg" alt="">
+					</div>
+					<div class="form__link">
+						<a href="#">Посмотреть пример использования</a>
+					</div>
+				</div>
+			</div>
+			<!-- END .form__cols -->
+			<!-- BEGIN .form__cols -->		
+			<div class="form__cols">
+				<div class="form__col1">
+					<fieldset class="fieldset">
+						<label class="form__label">Предпросмотр поста</label>
+						<div class="form__block">
+							<input class="input-text input-text_wide-1" id="input1" type="text" value="Получить скидку #sale-amount">
+							<button class="btn-gray">Сделать пост Вконтаке для предпросмотра</button>
+							<p class="text">Вы можете проверить внешний вид поста, отпосив его в вашей соцсети</p>					
+						</div>
+					</fieldset>
+				</div>
+			</div>
+			<!-- END .form__cols -->			
+			<div class="form__btn">
+				<button class="btn-gray">Сохранить пост для Facebook</button>
+			</div>	
+		</div>
+		<!-- END .form__bg -->
+		<fieldset class="fieldset fieldset_mod">
+			<label class="form__label"></label>
+			<div class="form__block form__block_mod">
+				<label class="label">
+					<input class="input-checkbox" type="checkbox" checked>					
+					<span class="form__ok form__ok_mod"><i></i>Однокласники</span>
+				</label>				
+			</div>
+		</fieldset>
+		<div class="form__bg">
+			<!-- BEGIN .form__cols -->		
+			<div class="form__cols">
+				<div class="form__col1">
+					<div class="form__block form__block_mod">
+						<p>Будет размещеа только ссылка, по которой Одноклассники сами построят пост собственного формата "ссылка", с кратим содержанием и картинкой исходя из контента на странице</p>
+					</div>
+				</div>
+				<div class="form__col2">
+					<p class="text text_mod">Пример поста</p>
+					<div class="form__example">
+						<img src="img/post3.jpg" alt="">
+					</div>
+					<div class="form__link">
+						<a href="#">Посмотреть пример использования</a>
+					</div>
+				</div>
 			</div>
 			<!-- END .form__cols -->
 		</div>
+		<fieldset class="fieldset fieldset_mod">
+			<div class="form__block form__block_mod">
+				<label class="label">
+					<input class="input-checkbox" type="checkbox" checked>					
+					<span class="form__tw form__tw_mod"><i></i>Twitter</span>
+				</label>				
+			</div>
+		</fieldset>
+				<!-- BEGIN .form__bg -->		
+		<div class="form__bg">
+			<!-- BEGIN .form__cols -->		
+			<div class="form__cols">
+				<div class="form__col1">
+					<fieldset class="fieldset">
+						<label for="textarea" class="form__label">Контент верхней части поста</label>
+						<div class="form__block">
+							<textarea class="textarea textarea_mod" id="textarea">
+Я дарю всем друзьям скидку в #sale-amount в магазине
+http://www.tanchoo.ru
+
+Коды купонов на скидку:
+#coupon-codes
+
+Акция действует до 12 мая.
+							</textarea>
+							<p class="text">Ограничения поста в Twitter. Общая длинна поста ограничена 140 символами. HTML-теги запрещены. Ссылки не укорачиваются, а символы в ссылках считаются, поэтому, рекомендуем воспользоваться сервисом по их укорачивани. Например http://bit.ly</p>
+							<p class="text">#sale-amount – размер скидки (например: 5%)<br>#coupon-codes – коды купонов<br>#post-url – адрес страницы с которой был совершен пост</p>
+						</div>
+					</fieldset>
+					<fieldset class="fieldset">
+						<label class="form__label">Изображения<br>в посте</label>
+						<div class="form__block">
+							<p class="text">Изображение для Twitter может быть только одно, причем оно будет вставлено в пост ссылкой. Сервис возьмет первое изображение по порядку.</p>	
+						</div>
+					</fieldset>
+				</div>
+				<div class="form__col2">
+					<p class="text text_mod">Пример поста</p>
+					<div class="form__example">
+						<img src="img/post.jpg" alt="">
+					</div>
+					<div class="form__link">
+						<a href="#">Посмотреть пример использования</a>
+					</div>
+				</div>
+			</div>
+			<!-- END .form__cols -->
+			<!-- BEGIN .form__cols -->
+			<div class="form__cols">
+				<div class="form__col1">
+					<fieldset class="fieldset">
+						<label class="form__label">Предпросмотр поста</label>
+						<div class="form__block">
+							<input class="input-text input-text_wide-1" id="input1" type="text" value="Получить скидку #sale-amount">
+							<button class="btn-gray">Сделать пост в Twitter для предпросмотра</button>
+							<p class="text">Вы можете проверить внешний вид поста, отпосив его в вашей соцсети</p>					
+						</div>
+					</fieldset>
+				</div>
+			</div>
+			<!-- END .form__cols -->		
+			<div class="form__btn">
+				<button class="btn-gray">Сохранить пост для Twitter</button>
+			</div>	
+		</div>
+		<!-- END .form__bg -->
 		<div class="form__bottom">
 			<div class="form__back">
 				<a href="#">Назад</a>

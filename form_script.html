@@ -1,0 +1,163 @@
+<!doctype html>
+<!--[if lte IE 8]><html lang="ru-RU" class="lteie8"><![endif]-->
+<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+<![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+<!-- BEGIN .wrap -->
+<section class="wrap">
+	<!-- BEGIN .header -->
+	<header class="header">
+		<div class="logo"><span>Кабинет клиента</span><i></i></div>
+		<ul class="user-link">
+			<li><a class="user-link__out" href="#">Выход</a></li>
+			<li><a class="user-link__mail" href="mailto:trendbender@gmail.com"><strong>trendbender</strong>@gmail.com</a></li>			
+		</ul>
+	</header>
+	<!-- END .header -->	
+	<!-- BEGIN .top -->
+	<div class="top">
+		<div class="top__title"><span>Tanchoo.ru</span></div>
+		<nav class="top__nav">
+			<ul>
+				<li><a href="#">Статистика</a></li>
+				<li><a class="active" href="#">Управление акциями</a></li>
+				<li><a href="#">Настройки сайта</a></li>
+				<li><a href="#">Баланс</a></li>
+				<li><a href="#">Помощь</a></li>
+			</ul>
+		</nav>
+	</div>
+	<!-- END .top -->
+	<!-- BEGIN .breadcrumps -->
+	<div class="breadcrumps">
+		<a href="#">Управление акциями</a>
+		<span><strong>Создание акции</strong> «Новогодняя скидка»</span>
+	</div>
+	<!-- END .breadcrumps -->
+	<!-- BEGIN .form-nav -->
+	<nav class="form-nav">
+		<ul>
+			<li><a href="#"><span>Выбор типа акции и поощрений</span></a></li>
+			<li><a href="#"><span>Виджет</span></a></li>
+			<li><a href="#"><span>Посты</span></a></li>
+			<li><a class="disabled" href="#"><span>Попапы</span></a></li>
+			<li><a href="#"><span>Емейлы</span></a></li>
+			<li><a href="#"><span>Купоны</span></a></li>
+			<li><a class="active" href="#"><span>Скрипт для вставки на сайт</span></a></li>
+		</ul>
+	</nav>
+	<!-- END .form-nav -->
+	<!-- BEGIN .form -->
+	<form action="" class="form form_script">
+		<div class="fieldset">
+			<div class="form__label"><strong>Внимание!</strong></div>
+			<div class="form__block">
+				<p>Данный код скрипта необходимо установить на страницы вашего сайта где проводится акция.</p>
+			</div>
+		</div>		
+		<fieldset class="fieldset">
+			<div class="form__label">Код скрипта</div>
+			<div class="form__block">
+				<textarea class="textarea textarea_mod-5"><!-- Виджет Paylook -->
+<div class="paylook-button"></div>
+<!--/ Виджет -->
+
+<!-- Скрипт Paylook -->
+<script type="text/javascript">(function (ID, PaylookAccessToken, paylookDomain) {
+     var scripts = document.getElementsByTagName('script');
+     var me = scripts[scripts.length - 1];
+     var scr = document.createElement('script');
+     scr.id="paylookLoader";
+     scr.type = "text/javascript";
+     scr.src = '//'+paylookDomain + "/Api/js/button/"+ID+".js?returnUrl="+
+	 document.location.href;
+     var parts = document.location.href.split('?');
+     if(parts.length>1){
+	 var pairs = parts[1].split('&');
+	 for(var i=0,l=pairs.length;i<l;i++){
+	     var pair = pairs[i];
+	     var splitted = pair.split('=');
+	     if(splitted[0]==PaylookAccessToken){
+		 scr.src+="&"+pair;
+	     }
+	 }
+     }
+     me.parentNode.insertBefore(scr, me);
+ })('2','paylookaccesstoken','test.paylook.ru');</script>
+<!-- / Скрипт Paylook --></textarea>
+				<p class="text">Код <strong>Виджет Paylook</strong> устанавливается в место кода где должна быть показана кнопка.<br>Код <strong>Скрипт Paylook</strong> устанавливается либо рядом с кодом виджета, либо в конец страницы перед тегом &lt;/body&gt;.<br><a href="#">Посмотреть пример установки скрипта</a></p>
+			</div>
+		</fieldset>
+		<div class="fieldset">
+			<div class="form__label">Проверка<br>скрипта</div>
+			<div class="form__block">
+				<p>После установки скрипта желательно проверить его работоспособность. Для этого необходимо зайти на страницу сайта где установлен скрипт и обновить ее (Ctrl+F5 для Windows, Command+R для Mac). После этого нажмите на кнопку проверки установки скрипта.</p>
+				<div class="form__verify">
+					<button class="btn-gray">Проверить установку скрипта</button>
+				</div>
+			</div>
+		</div>
+		<div class="fieldset">
+			<div class="form__label">Проверка<br>скрипта</div>
+			<div class="form__block">
+				<p>После установки скрипта желательно проверить его работоспособность. Для этого необходимо зайти на страницу сайта где установлен скрипт и обновить ее (Ctrl+F5 для Windows, Command+R для Mac). После этого нажмите на кнопку проверки установки скрипта.</p>
+				<div class="form__verify">
+					<button class="btn-gray disabled">Проверить установку скрипта</button>
+					<div class="form__wait"><i></i>Идет проверка</div>
+				</div>
+			</div>
+		</div>
+		<div class="fieldset">
+			<div class="form__label">Проверка<br>скрипта</div>
+			<div class="form__block">
+				<div class="message-success message-success_mod">
+					<strong>Успех!</strong>Код на сайте установлен.<button></button>
+				</div>
+				<p>После установки скрипта желательно проверить его работоспособность. Для этого необходимо зайти на страницу сайта где установлен скрипт и обновить ее (Ctrl+F5 для Windows, Command+R для Mac). После этого нажмите на кнопку проверки установки скрипта.</p>
+				<div class="form__verify">
+					<button class="btn-gray">Проверить установку скрипта</button>
+				</div>
+			</div>
+		</div>
+		<div class="form__bottom">
+			<div class="form__alert">
+				<p>Если вы не можете в данный момент добавить купоны, ничего срашного.<br>Можно <a href="#">пропустить этот шаг</a> и добавить их позже.</p>
+			</div>
+			<div class="form__back">
+				<a href="#">Назад</a>
+			</div>
+			<div class="form__next">
+				<button class="btn-big" type="submit"><strong>Назад<b>→</b></strong></button>
+			</div>
+		</div>
+	</form>
+	<!-- END .form -->
+	<!-- BEGIN .push -->
+	<div class="push"></div>
+	<!-- END .push -->
+</section>
+<!-- END .wrap -->
+<!-- BEGIN .footer -->
+<footer class="footer">
+	<div class="container">
+		<div class="footer__info">
+			<p>Продажи – <a href="mailto:sale@paylook.ru">sale@paylook.ru</a></p>
+			<p>Техподдержка – <a href="mailto:support@paylook.ru">support@paylook.ru</a></p>
+			<p><a href="#">Публичная оферта</a></p>
+		</div>
+		<div class="copyright">2012, © Paylook</div>
+	</div>
+</footer>
+<!-- END .footer -->
+</body>
+</html>

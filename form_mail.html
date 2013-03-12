@@ -1,0 +1,126 @@
+<!doctype html>
+<!--[if lte IE 8]><html lang="ru-RU" class="lteie8"><![endif]-->
+<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+<![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+<!-- BEGIN .wrap -->
+<section class="wrap">
+	<!-- BEGIN .header -->
+	<header class="header">
+		<div class="logo"><span>Кабинет клиента</span><i></i></div>
+		<ul class="user-link">
+			<li><a class="user-link__out" href="#">Выход</a></li>
+			<li><a class="user-link__mail" href="mailto:trendbender@gmail.com"><strong>trendbender</strong>@gmail.com</a></li>			
+		</ul>
+	</header>
+	<!-- END .header -->	
+	<!-- BEGIN .top -->
+	<div class="top">
+		<div class="top__title"><span>Tanchoo.ru</span></div>
+		<nav class="top__nav">
+			<ul>
+				<li><a href="#">Статистика</a></li>
+				<li><a class="active" href="#">Управление акциями</a></li>
+				<li><a href="#">Настройки сайта</a></li>
+				<li><a href="#">Баланс</a></li>
+				<li><a href="#">Помощь</a></li>
+			</ul>
+		</nav>
+	</div>
+	<!-- END .top -->
+	<!-- BEGIN .breadcrumps -->
+	<div class="breadcrumps">
+		<a href="#">Управление акциями</a>
+		<span><strong>Создание акции</strong> «Новогодняя скидка»</span>
+	</div>
+	<!-- END .breadcrumps -->
+	<!-- BEGIN .form-nav -->
+	<nav class="form-nav">
+		<ul>
+			<li><a href="#"><span>Выбор типа акции и поощрений</span></a></li>
+			<li><a href="#"><span>Виджет</span></a></li>
+			<li><a href="#"><span>Посты</span></a></li>
+			<li><a class="disabled" href="#"><span>Попапы</span></a></li>
+			<li><a class="active" href="#"><span>Емейлы</span></a></li>
+			<li><a href="#"><span>Купоны</span></a></li>
+			<li><a href="#"><span>Скрипт для вставки на сайт</span></a></li>
+		</ul>
+	</nav>
+	<!-- END .form-nav -->
+	<!-- BEGIN .form -->
+	<form action="" class="form form_mail">
+		<div class="fieldset">
+			<div class="form__label">E-mail</div>
+			<div class="form__block">
+				<p>В одно касание, купон на скидку</p>
+			</div>
+		</div>		
+		<fieldset class="fieldset">
+			<label class="form__label">Тема письма</label>	
+			<div class="form__block">
+				<textarea class="textarea textarea_mod-3">Вы получили купон на скидку #sale-amount в Tanchoo.ru</textarea>
+				<p class="text">#sale-amount – размер скидки (например: 5%)<br>#site-name – название сайта</p>
+			</div>			
+		</fieldset>
+		<fieldset class="fieldset">
+			<label class="form__label">Контент письма</label>	
+			<div class="form__block">
+				<div class="form__tabs form__tabs_mod">
+					<ul>
+						<li class="active">Текстовый формат</li>
+						<li>HTML-формат</li>
+					</ul>
+				</div>
+				<textarea class="textarea textarea_mod-2">Здравствуйте!
+
+Вы получили купон на скидку #sale-amount в магазине www.tanchoo.ru
+---
+Код купона: #coupon-codes
+---
+Купон действует до 07 декабря 2015 включительно.
+Сохраните этот код и введите в форму ввода кода купона при оформлении заказа.
+
+С уважением,
+магазин www.tanchoo.ru</textarea>	
+			<p class="text">#sale-amount – размер скидки (например: 5%)<br>#site-name – название сайта<br>#coupon-codes – коды купонов<br>#post-url – адрес страницы с которой был совершен пост</p>			
+			</div>
+		</fieldset>
+		<div class="form__bottom">
+			<div class="form__back">
+				<a href="#">Назад</a>
+			</div>
+			<div class="form__next">
+				<button class="btn-big" type="submit"><strong>Назад<b>→</b></strong></button>
+			</div>
+		</div>
+	</form>
+	<!-- END .form -->
+	<!-- BEGIN .push -->
+	<div class="push"></div>
+	<!-- END .push -->
+</section>
+<!-- END .wrap -->
+<!-- BEGIN .footer -->
+<footer class="footer">
+	<div class="container">
+		<div class="footer__info">
+			<p>Продажи – <a href="mailto:sale@paylook.ru">sale@paylook.ru</a></p>
+			<p>Техподдержка – <a href="mailto:support@paylook.ru">support@paylook.ru</a></p>
+			<p><a href="#">Публичная оферта</a></p>
+		</div>
+		<div class="copyright">2012, © Paylook</div>
+	</div>
+</footer>
+<!-- END .footer -->
+</body>
+</html>

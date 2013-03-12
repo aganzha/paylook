@@ -176,13 +176,13 @@ table
 	padding: 2px
 	+border-radius(17px)
 	@extend .btn
-	strong		
+	strong				
 		height: 28px
 		padding: 0 10px		
 		+border-radius(15px)
 		line-height: 28px
 		font-size: 15px
-		font-weight: 700 		
+		font-weight: 700 	
 .btn-middle
 	padding: 2px
 	+border-radius(3px)
@@ -194,6 +194,19 @@ table
 		line-height: 21px
 		font-size: 14px
 		font-weight: 700 
+.btn-middle_file
+	display: inline-block	
+	strong 
+		position: relative
+	input
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		opacity: 0
+		cursor: pointer
+		filter: alpha(opacity=0)
 .btn-small
 	padding: 1px
 	+border-radius(3px)
@@ -211,21 +224,27 @@ table
 	@extend .btn
 	i	
 		display: block
-		@include sized-sprite($icons, edit)	
+		+sized-sprite($icons, edit)	
 		&:hover, &:active
-			@include sized-sprite($icons, edit)
-.btn-remove, .btn-delete
+			+sized-sprite($icons, edit)
+.btn-remove, .btn-delete, .btn-update
 	padding: 1px
 	+border-radius(3px)
+	strong
+		display: block
+		+border-radius(2px)
+	&.disabled
+		background: #D497AC
+		+background-image(linear-gradient(top, #D7D7D7 0%, #9C9C9C 46%, #656565 100%))
+		+box-shadow(rgba(80,80,80,0.5) 0 1px 1px)	
+.btn-remove, .btn-delete	
 	background: #E381CE
 	+background-image(linear-gradient(top, #E381CE 0%, #E33D28 46%, #E31A22 100%))
 	+box-shadow(rgba(255,54,62,0.5) 0 1px 1px)	
 	i
 		display: block
-		@include sized-sprite($icons, remove)
+		+sized-sprite($icons, remove)
 	strong
-		display: block
-		+border-radius(2px)
 		background: #D35306
 		+background-image(linear-gradient(top, #E3815D 0%, #E38891 9%, #E35C49 49%, #E33F29 50%, #E31A22 85%, #E36346 100%))
 		color: #FFF
@@ -241,17 +260,20 @@ table
 		strong
 			+box-shadow(#962b2d 0 0 20px inset)
 	&.disabled
-		background: #D497AC
-		+background-image(linear-gradient(top, #D7D7D7 0%, #9C9C9C 46%, #656565 100%))
-		+box-shadow(rgba(80,80,80,0.5) 0 1px 1px)	
 		strong
 			background: #c9c8c8
 			+background-image(linear-gradient(top, #c9c8c8 0%, #D4D4D4 9%, #B2B2B2 49%, #9E9E9E 50%, #808080 67%, #B6B6B6 100%))
 			+box-shadow(none)
 			text-shadow: rgba(95,95,95,0.75) 0 -1px 0	
 			cursor: default	
+.btn-remove
+	strong
+		height: 19px
+		padding: 0 5px
+		line-height: 19px
 .btn-delete
 	strong
+		padding: 1px
 		background: #FFF 
 	&:hover, &:active, &.disabled
 		strong
@@ -259,7 +281,39 @@ table
 			+box-shadow(none)
 	&.disabled
 		i		
-			@include sized-sprite($icons, remove-dis)
+			+sized-sprite($icons, remove-dis)
+.btn-update
+	background: #17A12F
+	+background-image(linear-gradient(top, #17A12F, #074A00))
+	+box-shadow(rgba(80,80,80,0.5) 0 1px 1px)
+	strong
+		padding: 1px
+		background: #FFF 
+	i
+		display: block
+		+sized-sprite($icons, update)
+	&:active
+		+box-shadow(none)
+		strong
+			background: #FFF 
+			+box-shadow(none)
+	&.disabled
+		cursor: default
+		i		
+			+sized-sprite($icons, update-dis)
+		&:active
+			+box-shadow(rgba(80,80,80,0.5) 0 1px 1px)
+.btn-gray
+	height: 19px
+	padding: 0 5px
+	+border-radius(3px)
+	border: 1px solid #adaeb1
+	background: #fff
+	+background-image(linear-gradient(top, #fff 0%, #eaecee 100%))
+	&.disabled
+		background: #eaecee
+		+background-image(linear-gradient(top, #eaecee 0%, #fff 100%))
+		color: #B3B3B3
 //link
 .link	
 	&.active
@@ -286,6 +340,8 @@ table
 		position: absolute
 		top: 8px
 		right: 9px	
+	a
+		text-decoration: underline
 .message-success_mod, .message-attention_mod, .message-recommed_mod, .message-error_mod
 	height: auto
 	margin: 0 0 10px 0
@@ -321,114 +377,4 @@ table
 		color: $red
 	button
 		+sized-sprite($icons, message-error)
-//table
-.table
-	margin-bottom: 20px
-	table
-		width: 100%
-	thead
-		background: $yellow
-		text-align: left
-	th, td
-		padding: 10px
-		vertical-align: top
-	th
-		font-weight: 400  
-		border-bottom: 1px solid $orange 
-		color: $brown 		
-		&.active
-			background: #ffe6c2 
-			border-color: #ffe6c2 
-			text-shadow: #fff 0 1px 0
-			&:after
-				content: "↓" 
-	a, span 
-		height: 21px
-		line-height: 21px
-	a
-		display: inline-block		
-		text-decoration: underline
-	.table__info
-		height: auto
-		line-height: 1 
-	.error
-		a, span
-			color: $red 
-.table__site	
-	min-width: 190px
-	a
-		position: relative
-		padding-left: 30px
-		max-width: 160px		
-		white-space: nowrap
-		text-overflow: ellipsis 
-		overflow: hidden		
-		&:before
-			content: ""
-			position: absolute
-			top: 3px
-			left: 0
-			+sized-sprite($icons, graph)	
-.table__info
-	display: block
-	width: 100px 
-	margin-top: 3px
-	font-size: 12px
-	color: $brown
-.table__nav
-	height: 21px
-	padding: 6px 10px 7px 10px
-	background: $yellow
-	border-top: 1px solid $orange   
-	line-height: 21px
-	overflow: hidden
-	a
-		&.active			
-			background: #9B5E43
-			+background-image(linear-gradient(top, #9B5E43 0%, #9B2E12 100%))
-			+box-shadow(rgba(71,56,56,0.75) 0 0 5px inset)
-			+border-radius(11px)			
-			color: #fff
-.table__view
-	float: left
-	strong, a
-		float: left
-	strong
-		margin-right: 8px 		
-		color: $brown 
-		font-weight: 400 
-	a
-		margin-right: 4px
-		color: $blue
-		text-decoration: none
-		&.active
-			padding: 0 8px
-			span
-				border: none
-	span
-		height: auto
-		border-bottom: 1px dashed $blue 
-		line-height: 1 
-.table__pagination
-	float: right
-	a
-		float: left
-		margin-right: 2px
-		padding: 0 6px 
-		&:first-child, &:last-child
-			font-weight: 700
-			text-decoration: none 
-		&:first-child
-			margin-right: 14px
-		&:last-child
-			margin-left: 14px
-		&.disabled
-			color: #B1B3B6
-			cursor: default 
-			span
-				text-decoration: none
-		&.active
-			text-decoration: none
-	span
-		text-decoration: underline
 

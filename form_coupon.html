@@ -1,0 +1,238 @@
+<!doctype html>
+<!--[if lte IE 8]><html lang="ru-RU" class="lteie8"><![endif]-->
+<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+<![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+<!-- BEGIN .wrap -->
+<section class="wrap">
+	<!-- BEGIN .header -->
+	<header class="header">
+		<div class="logo"><span>Кабинет клиента</span><i></i></div>
+		<ul class="user-link">
+			<li><a class="user-link__out" href="#">Выход</a></li>
+			<li><a class="user-link__mail" href="mailto:trendbender@gmail.com"><strong>trendbender</strong>@gmail.com</a></li>			
+		</ul>
+	</header>
+	<!-- END .header -->	
+	<!-- BEGIN .top -->
+	<div class="top">
+		<div class="top__title"><span>Tanchoo.ru</span></div>
+		<nav class="top__nav">
+			<ul>
+				<li><a href="#">Статистика</a></li>
+				<li><a class="active" href="#">Управление акциями</a></li>
+				<li><a href="#">Настройки сайта</a></li>
+				<li><a href="#">Баланс</a></li>
+				<li><a href="#">Помощь</a></li>
+			</ul>
+		</nav>
+	</div>
+	<!-- END .top -->
+	<!-- BEGIN .breadcrumps -->
+	<div class="breadcrumps">
+		<a href="#">Управление акциями</a>
+		<span><strong>Создание акции</strong> «Новогодняя скидка»</span>
+	</div>
+	<!-- END .breadcrumps -->
+	<!-- BEGIN .form-nav -->
+	<nav class="form-nav">
+		<ul>
+			<li><a href="#"><span>Выбор типа акции и поощрений</span></a></li>
+			<li><a href="#"><span>Виджет</span></a></li>
+			<li><a href="#"><span>Посты</span></a></li>
+			<li><a class="disabled" href="#"><span>Попапы</span></a></li>
+			<li><a href="#"><span>Емейлы</span></a></li>
+			<li><a class="active" href="#"><span>Купоны</span></a></li>
+			<li><a href="#"><span>Скрипт для вставки на сайт</span></a></li>
+		</ul>
+	</nav>
+	<!-- END .form-nav -->
+	<!-- BEGIN .form -->
+	<form action="" class="form form_coupon">
+		<div class="fieldset">
+			<div class="form__label"><strong>Внимание!</strong></div>
+			<div class="form__block">
+				<p>Пожалуйста убедитесь что загружаемые купоны соотвествуют <a href="#">настройкам акции</a> по размеру, типу скидки и сроку действия.</p>
+			</div>
+		</div>		
+		<div class="fieldset">
+			<div class="form__label">Срок действия<br>купонов!</div>
+			<div class="form__block">
+				<p>На период <strong>15</strong> ноября – <strong>15</strong> декабря</p>
+			</div>
+		</div>
+		<div class="fieldset">
+			<div class="form__label">Тип купонов</div>
+			<div class="form__block">
+				<p>Многоразовый</p>
+			</div>
+		</div>		
+		<div class="fieldset">
+			<div class="form__label">Скидка</div>
+			<div class="form__block">
+				<p>Фиксированно <strong>1 000</strong> рублей</p>
+			</div>
+		</div>		
+		<div class="fieldset">
+			<div class="form__label">Рекомендуемое число купонов в акции</div>
+			<div class="form__block">
+				<p>1 000 постов <strong>+</strong><br>3 купона в посте x 1 000 постов <strong>+</strong><br>минимум 30% вирусного эффекта от общего количества =</p>
+				<p class="text-border">= <strong>5 200</strong> купонов</p>
+			</div>
+		</div>
+		<div class="fieldset">
+			<div class="form__label form__label_mod">Загруженные<br>купоны</div>
+			<div class="form__block form__block_table">
+				<table class="form__table">
+					<thead>
+						<tr>
+							<th>Время загрузки</th>
+							<th>Было загружено</th>
+							<th>Осталось</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>8 ноября, 10:25</td>
+							<td>1 000</td>
+							<td>256</td>
+							<td><button class="btn-remove"><strong>Удалить</strong></button></td>
+						</tr>
+						<tr>
+							<td>8 ноября, 10:25</td>
+							<td>1 000</td>
+							<td>256</td>
+							<td><button class="btn-remove"><strong>Удалить</strong></button></td>
+						</tr>						
+					</tbody>
+					<tfoot>
+						<tr>
+							<td></td>
+							<td>Всего</td>
+							<td>756</td>
+							<td></td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</div>
+		<!-- BEGIN load coupons -->
+		<div class="form__title">Загрузка купонов</div>
+		<div class="form__bg">
+			<fieldset class="fieldset">
+				<label class="form__label">Формат загрузки купонов</label> 
+				<div class="form__block">
+					<label class="label">
+						<input class="input-radio" type="radio" name="radio-date1">
+						<span>Разделитель – запятая</span>
+					</label>
+					<label class="label">
+						<input class="input-radio" type="radio" name="radio-date1" checked>
+						<span>Разделитель – перенос строки</span>
+					</label>
+				</div>
+			</fieldset>
+			<fieldset class="fieldset">
+				<label class="form__label">Загрузка купонов</label> 
+				<div class="form__block">
+					<div class="form__tabs">
+						<ul>
+							<li class="active">Списком</li>
+							<li>Из файла</li>
+						</ul>
+					</div>
+					<textarea class="textarea textarea_mod-4"></textarea>
+				</div>
+			</fieldset>
+			<div class="form__btn">
+				<button class="btn-gray">Загрузить купоны</button>
+			</div>			
+		</div>
+		<!-- END load coupons -->		
+		<!-- BEGIN load coupons -->
+		<div class="form__title">Загрузка купонов</div>
+		<div class="form__bg">
+			<fieldset class="fieldset">
+				<label class="form__label">Формат загрузки купонов</label> 
+				<div class="form__block">
+					<label class="label">
+						<input class="input-radio" type="radio" name="radio-date1">
+						<span>Разделитель – запятая</span>
+					</label>
+					<label class="label">
+						<input class="input-radio" type="radio" name="radio-date1" checked>
+						<span>Разделитель – перенос строки</span>
+					</label>
+				</div>
+			</fieldset>
+			<fieldset class="fieldset">
+				<label class="form__label">Загрузка купонов</label> 
+				<div class="form__block">
+					<div class="message-error message-error_mod">
+						<strong>Ошибка!</strong>Не удалось загрузить купоны из списка. Проверьте правильность формата и попробуйте снова. <a href="#">Справка</a> по форматам загрузки.<button></button>
+					</div>
+					<div class="message-success message-success_mod">
+						<strong>Успех!</strong>Загружено 500 купонов.<button></button>
+					</div>
+					<div class="form__tabs">
+						<ul>
+							<li>Списком</li>
+							<li class="active">Из файла</li>
+						</ul>
+					</div>
+					<div class="btn-middle btn-middle_file"><strong>+ Загрузить изображения <input type="file"></strong></div>
+					<div class="form__load">
+						<span>Перенесите сюда изображения, чтобы загрузить</span>
+						<input type="file">
+					</div>
+					<p class="text">txt - файл, в кодировке UTF-8, с разделителем в выбранном выше формате</p>
+				</div>	
+			</fieldset>
+			<div class="form__btn">
+				<button class="btn-gray">Загрузить купоны</button>
+			</div>			
+		</div>
+		<!-- END load coupons -->		
+		<div class="form__bottom">
+			<div class="form__alert">
+				<p>Если вы не можете в данный момент добавить купоны, ничего срашного.<br>Можно <a href="#">пропустить этот шаг</a> и добавить их позже.</p>
+			</div>
+			<div class="form__back">
+				<a href="#">Назад</a>
+			</div>
+			<div class="form__next">
+				<button class="btn-big" type="submit"><strong>Назад<b>→</b></strong></button>
+			</div>
+		</div>
+	</form>
+	<!-- END .form -->
+	<!-- BEGIN .push -->
+	<div class="push"></div>
+	<!-- END .push -->
+</section>
+<!-- END .wrap -->
+<!-- BEGIN .footer -->
+<footer class="footer">
+	<div class="container">
+		<div class="footer__info">
+			<p>Продажи – <a href="mailto:sale@paylook.ru">sale@paylook.ru</a></p>
+			<p>Техподдержка – <a href="mailto:support@paylook.ru">support@paylook.ru</a></p>
+			<p><a href="#">Публичная оферта</a></p>
+		</div>
+		<div class="copyright">2012, © Paylook</div>
+	</div>
+</footer>
+<!-- END .footer -->
+</body>
+</html>

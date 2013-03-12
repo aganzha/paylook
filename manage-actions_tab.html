@@ -8,7 +8,7 @@
 	<meta charset="utf-8">
 	<title>Template</title>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
-	<!--<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>-->
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/common.js"></script>
 </head>
@@ -26,7 +26,7 @@
 	<!-- END .header -->	
 	<!-- BEGIN .top -->
 	<div class="top">
-		<div class="top__title"><span>Tanchoo.ru</span></div>
+		<div class="top__title"><span>Все сайты</span></div>
 		<nav class="top__nav">
 			<ul>
 				<li><a href="#">Статистика</a></li>
@@ -41,23 +41,75 @@
 	<!-- BEGIN .breadcrumps -->
 	<div class="breadcrumps">
 		<a href="#">Управление акциями</a>
-		<span><strong>Создание акции</strong> «Новогодняя скидка»</span>
+		<span><strong>Совместная ноябрьская супер-акция Kaiser и Домострой</strong></span>
 	</div>
 	<!-- END .breadcrumps -->
-	<!-- BEGIN .form-nav -->
-	<nav class="form-nav">
-		<ul>
-			<li><a class="active" href="#"><span>Выбор типа акции и поощрений</span></a></li>
-			<li><a href="#"><span>Виджет</span></a></li>
-			<li><a href="#"><span>Посты</span></a></li>
-			<li><a href="#"><span>Попапы</span></a></li>
-			<li><a href="#"><span>Емейлы</span></a></li>
-			<li><a class="disabled" href="#"><span>Купоны</span></a></li>
-			<li><a href="#"><span>Скрипт для вставки на сайт</span></a></li>
-		</ul>
-	</nav>
-	<!-- END .form-nav -->
+	<!-- BEGIN .table -->
+	<div class="table">
+		<table>
+			<thead>
+				<tr>
+					<th class="active">Создана</th>
+					<th class="table__col-1">Название</th>
+					<th>Срок</th>
+					<th class="table__col-2">Статус</th>
+					<th>Срабатываний</th>
+					<th>Купоны</th>
+					<th>Скрипт</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<div class="table__cell">20 сен</div></td>
+					<td>
+						<div class="table__action">
+							<a href="#">Совместная ноябрьская супер-акция Kaiser и Домострой</a>
+							<span>В одно касание</span>
+						</div>						
+					</td>
+					<td>
+						<div class="table__cell"><strong>29</strong> сен – <strong>30</strong> ноя</div>
+					</td>
+					<td>
+						<div class="table__status disabled">
+							<button class="table__play"><i></i></button>
+							<button class="table__pause"><i></i></button>
+						</div>
+						<div class="table__info">Не запущена</div>
+					</td>
+					<td>
+						<div class="table__cell">0 из 5 000</div>
+					</td>
+					<td>
+						<button class="btn-small"><strong>Добавить</strong></button>
+						<div class="table__info error">Не добавлены</div>
+					</td>
+					<td>
+						<button class="btn-small"><strong>Получить</strong></button>
+						<div class="table__info error">Не установлен</div>
+					</td>
+					<td><button class="btn-delete"><strong><i></i></strong></button></td>
+				</tr>				
+			</tbody>
+		</table>
+	</div>
+	<!-- END .table -->
+	<div class="alert"><span>Внимание!</span>Для запуска акции необходимо добавить <a href="#">купоны</a>, получить <a href="#">скрипт</a> и установить его на страницу сайта с акцией.</div>
+	<div class="alert">Для редактирования параметров акции ее необходимо приостановить. Для работающей акции доступно<br>только добавление купонов и получение скрипта.</div>	
 	<!-- BEGIN .form -->
+	<div class="form-tabs">
+			<ul>
+				<li class="active">Тип акции и поощрений</li>
+				<li>Виджет</li>
+				<li>Посты</li>
+				<li class="disabled">Попапы</li>
+				<li>Емейлы</li>
+				<li class="danger">Купоны</li>
+				<li class="danger">Скрипт</li>
+			</ul>
+		</div>
 	<form action="" class="form">
 		<fieldset class="fieldset">
 			<label class="form__label">Название акции</label>
@@ -101,7 +153,7 @@
 					<span>Бессрочно</span>
 				</label>
 				<label class="label">
-					<input class="input-radio" type="radio" name="radio-date" checked>
+					<input class="input-radio" type="radio" name="radio-date" checked="">
 					<span>На период</span>
 					<div class="form__date">
 						<div class="form__period"><strong>15</strong> ноября – <strong>15</strong> декабря</div>
@@ -117,7 +169,7 @@
 					<span>Без ограничений</span>
 				</label>
 				<label class="label">
-					<input class="input-radio" type="radio" name="radio-value" checked>
+					<input class="input-radio" type="radio" name="radio-value" checked="">
 					<span>Не более<input class="input-text input-text_inner" type="text" value="7 000">срабатываний</span>					
 				</label>
 			</div>
@@ -126,19 +178,19 @@
 			<label class="form__label">Социальные<br>сети</label>
 			<div class="form__block">
 				<label class="label">
-					<input class="input-checkbox" type="checkbox" checked>					
+					<input class="input-checkbox" type="checkbox" checked="">					
 					<span class="form__vk"><i></i>ВКонтакте</span>
 				</label>
 				<label class="label">
-					<input class="input-checkbox" type="checkbox" checked>					
+					<input class="input-checkbox" type="checkbox" checked="">					
 					<span class="form__fb"><i></i>Facebook</span>
 				</label>
 				<label class="label">
-					<input class="input-checkbox" type="checkbox" checked>					
+					<input class="input-checkbox" type="checkbox" checked="">					
 					<span class="form__ok"><i></i>Одноклассники</span>
 				</label>
 				<label class="label">
-					<input class="input-checkbox" type="checkbox" checked>					
+					<input class="input-checkbox" type="checkbox" checked="">					
 					<span class="form__tw"><i></i>Twitter</span>
 				</label>
 			</div>
@@ -164,7 +216,7 @@
 					<span>Бессрочно</span>
 				</label>
 				<label class="label">
-					<input class="input-radio" type="radio" name="radio-date1" checked>
+					<input class="input-radio" type="radio" name="radio-date1" checked="">
 					<span>На период</span>
 					<div class="form__date">
 						<div class="form__period"><strong>15</strong> ноября – <strong>15</strong> декабря</div>
@@ -187,11 +239,6 @@
 			<label for="input1" class="form__label">Настройка скидок по купонам</label>
 			<div class="form__block">
 				<label class="label">
-					<input class="input-checkbox" type="checkbox">
-					<span>Настроить разные типы поощрений для каждого в цепочке</span>
-				</label>
-				<strong class="strong">Скидка для клиента</strong>
-				<label class="label">
 					<input class="input-radio" type="radio" name="radio-setting">
 					<span>В процентах 
 						<select class="select select_inner">
@@ -210,52 +257,13 @@
 							<option value="">грн.</option>
 						</select>
 					</span>					
-				</label>
-				<strong class="strong">Скидка для друга</strong>
-				<label class="label">
-					<input class="input-radio" type="radio" name="radio-setting1">
-					<span>В процентах 
-						<select class="select select_inner">
-							<option value="">15</option>
-							<option value="">30</option>
-						</select>
-						%
-					</span>
-				</label>
-				<label class="label">
-					<input class="input-radio" type="radio" name="radio-setting1" checked="">
-					<span>Не более
-						<input class="input-text input-text_inner" type="text" value="7 000">
-						<select class="select select_inner">
-							<option value="">руб.</option>
-							<option value="">грн.</option>
-						</select>
-					</span>					
-				</label>
-				<strong class="strong">Скидка для друга, который сделал пост</strong>
-				<label class="label">
-					<input class="input-radio" type="radio" name="radio-setting2">
-					<span>В процентах 
-						<select class="select select_inner">
-							<option value="">15</option>
-							<option value="">30</option>
-						</select>
-						%
-					</span>
-				</label>
-				<label class="label">
-					<input class="input-radio" type="radio" name="radio-setting2" checked="">
-					<span>Не более
-						<input class="input-text input-text_inner" type="text" value="7 000">
-						<select class="select select_inner">
-							<option value="">руб.</option>
-							<option value="">грн.</option>
-						</select>
-					</span>					
-				</label>
+				</label>				
 			</div>
 		</fieldset>
 		<div class="form__bottom">
+			<div class="form__alert form__alert_mod">
+				<p>При измении типа поощрений, типа купонов, срока действия купонов и настройки скидок,<br><strong>текущие купоны будут удалены</strong>. После сохранения параметров будет необходимо загрузить<br>новые купоны, соотвествующие новым условиям.</p>
+			</div>
 			<div class="form__back">
 				<a class="no-active" href="#">Назад</a>
 			</div>

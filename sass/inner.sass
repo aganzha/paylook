@@ -59,7 +59,7 @@
 .add-site__btn
 	position: relative
 	padding: 17px 12px 15px 12px
-	margin-bottom: 75px
+	margin-bottom: 22px
 	border: 1px solid $orange
 	background: #FFF 
 	font-size: 0
@@ -80,69 +80,30 @@
 		margin-right: 10px
 		line-height: 25px 
 		font-size: 14px 
+.add-site__nav
+	display: inline-block	
+	font-weight: 700 
+	li
+		display: inline-block
+		height: 25px		
+		margin-right: 20px
+		line-height: 25px 
+	a
+		font-size: 14px
+		text-decoration: underline
+		&.active
+			color: #000
+			text-decoration: none
+			cursor: default
+	img
+		position: relative
+		top: 3px
+		margin-right: 4px
 .add-site__info
-	margin-bottom: 50px
+	margin: 75px 0 50px 0
 	text-align: center
 	span
 		font-weight: 400 
-//some-form
-.some-form
-	margin-bottom: 50px
-	padding-top: 24px
-	border: 1px solid $orange
-	+border-radius(5px)
-	fieldset
-		overflow: hidden
-	label, input, textarea
-		float: left
-	label
-		width: 125px
-		margin: 2px 20px 0 25px
-		color: $brown
-		text-align: right
-	input, textarea
-		width: 367px	
-		margin-bottom: 28px	
-		border: 1px solid $gray
-		+border-radius(3px)
-	input
-		height: 20px
-		padding: 0 5px		
-	textarea
-		height: 56px
-		padding: 5px
-	p
-		position: relative 
-		top: -20px
-		display: block
-		width: 380px
-		margin: 0 0 7px 170px 
-		clear: both
-.some-form__pass
-	position: relative
-	padding-left: 26px	
-	span
-		border-bottom: 1px dashed $blue 
-	&:before
-		content: ""
-		position: absolute
-		top: 3px
-		left: 0
-		+sized-sprite($icons, eye)
-.some-form__bottom
-	padding: 10px 10px 10px 170px
-	background: $yellow 
-	border-top: 1px solid $orange 
-	+border-radius(0 0 5px 5px)
-	overflow: hidden
-	a, button
-		float: left
-	button
-		margin-right: 13px
-	a
-		height: 32px
-		line-height: 32px
-		text-decoration: underline
 //settings
 .setting-chenged
 	margin: 100px 0
@@ -157,6 +118,14 @@
 		font-size: 16px
 		color: $blue
 		text-decoration: underline 
+//alert
+.alert
+	margin-bottom: 23px 
+	span
+		margin-right: 15px
+		color: $red
+	a
+		text-decoration: underline
 //form-nav
 .form-nav	
 	margin-bottom: 26px
@@ -242,10 +211,26 @@
 	margin-bottom: 64px
 	border: 1px solid $orange
 	+border-radius(4px)
-	fieldset
-		margin-bottom: 28px
-		overflow: hidden
+	p
+		a
+			text-decoration: underline	
+.form_mail
+	.form__block
+		width: 541px
+.form_coupon
+	.form__block
+		width: 380px
+	.form__block_table
+		width: 410px
+.form_script
+	.form__block
+		width: 700px
 //form elements
+.fieldset 
+	padding-bottom: 28px
+	overflow: hidden
+.fieldset_mod
+	padding-bottom: 18px
 .input-text, .select, .textarea	
 	border: 1px solid $gray
 	+border-radius(2px)
@@ -264,11 +249,15 @@
 	width: 290px
 	height: 20px
 	padding: 0 5px
+	&.error
+		border-color: $red
 .input-text_inner
 	width: 58px
 	margin: 0 5px
-.input-text_wide
+.input-text_wide, .input-text_wide-1
 	width: 368px
+.input-text_wide-1
+	margin-bottom: 13px
 .input-text_mod
 	width: 32px
 .input-radio, .input-checkbox
@@ -282,13 +271,31 @@
 	height: 44px
 	padding: 2px 5px
 	resize: vertical
+	&.error
+		border-color: $red
 .textarea_mod
 	height: 152px
+.textarea_mod-1, .textarea_mod-2, .textarea_mod-3
+	width: 529px
+.textarea_mod-1
+	height: 342px
+.textarea_mod-2, .textarea_mod-4
+	height: 280px
+.textarea_mod-3
+	height: 30px
+.textarea_mod-4
+	width: 368px
+.textarea_mod-5
+	width: 688px
+	height: 420px
+	font-size: 12px
 .label
 	display: block
 	height: 22px
 	margin-bottom: 5px
 	line-height: 22px
+	&.error
+		color: $red
 .strong
 	display: block
 	margin: 9px 0
@@ -296,9 +303,11 @@
 	margin-top: 8px
 .text_mod
 	margin-bottom: 8px
+.text-border
+	padding-top: 5px
+	margin-top: 5px 
+	border-top: 1px solid #acacac 
 .text_link
-	a
-		text-decoration: underline
 //form blocks
 .form__label
 	float: left
@@ -307,10 +316,14 @@
 	line-height: 1.2
 	color: $brown
 	text-align: right
+.form__label_mod
+	padding-top: 10px 
 .form__block
 	overflow: hidden	
 .form__block_mod
 	margin-left: 170px
+.form__block_table
+	margin: 0 -20px 0 -10px
 .form__actions
 	overflow: hidden
 	li
@@ -368,7 +381,7 @@
 	&.active
 		border-color: #d6986f
 		+box-shadow(rgba(198,115,74,0.75) 0 0 10px inset)
-.form__tabs		
+.form__choice		
 	ul
 		overflow: hidden
 	li
@@ -410,26 +423,30 @@
 	background: $yellow
 	+border-radius(0 0 4px 4px) 
 	overflow: hidden
-.form__back
-	float: left
-	width: 130px
+.form__bottom_mod
+	padding: 9px 0 11px 170px
+.form__back, .form__cancel
+	float: left	
 	height: 32px
-	line-height: 32px
+	line-height: 32px		
+	a
+		text-decoration: underline		
+.form__back
+	width: 130px
 	padding: 0 20px
 	text-align: right
-	a
-		text-decoration: underline
+	a 
 		&.no-active
 			text-decoration: none
 			color: gray
 			cursor: default
 .form__next
-	overflow: hidden
+	float: left
+	margin-right: 13px
 	button
 		b
 			margin-left: 5px 
-.form__color
-	overflow: hidden
+			.form__color
 	li
 		float: left
 		padding: 4px
@@ -453,30 +470,19 @@
 		+border-radius(4px)
 		border: 1px dashed #487196
 .form__link
-	margin-top: 15px
+	margin: 15px 0 28px 0
 	a
 		border-bottom: 1px dashed
 .form__code
-	margin: 0 0 28px 9px
-	label
-		display: block
-		margin: 3px 0 5px 0
-	textarea
-		display: block
-		width: 529px
-		height: 342px
-		padding: 2px 5px
-		resize: vertical
-		border: 1px solid $gray
-		+border-radius(2px)
-	&.error
-		label
-			color: $red 
-		textarea
-			border-color: $red
-.form__post
+	margin: 0 0 28px 9px	
+.form__bg
 	padding-top: 19px 
+	margin-bottom: 28px
 	background: #fdfeea
+	.form__tabs
+		li
+			&.active
+				background: $yellow 
 .form__load
 	position: relative
 	height: 60px
@@ -494,10 +500,125 @@
 		height: 100%
 		opacity: 0
 		filter: alpha(opacity=0)
-.form__pic
+.form__example
+	margin-top: 10px
 	img
 		display: block
 		+box-shadow(rgba(0,0,0,0.5) 0 0 10px)
+.form__move 
+	+sized-sprite($icons, move)
+.form__pic
+	overflow: hidden
+	img
+		float: left
+		margin-right: 20px
+.form__pic_mod 
+	margin-top: 12px
+.form__btn
+	padding: 10px 0 10px 170px
+	background: #fcfac5
+.form__tabs, .form-tabs
+	height: 19px
+	margin-bottom: 20px
+	border-bottom: 1px solid $orange	
+	ul 
+		overflow: hidden
+	li
+		float: left
+		padding: 2px 7px
+		margin-right: 5px
+		background: #E8DFD3
+		+background-image(linear-gradient(top, #fff, #E8DFD3))
+		+border-radius(4px 4px 0 0)
+		border: 1px solid $orange	
+		border-width: 1px 1px 0 1px
+		color: $brown
+		cursor: pointer
+		&:hover
+			color: #963B47
+		&.active
+			padding: 2px 7px 3px 7px
+			background: #FFF 
+			color: #000
+		&.disabled
+			background: #f8f8f8
+			+background-image(linear-gradient(top, #fff, #f8f8f8))
+			color: #808080
+			border-color: #e6e6e6
+		&.danger			
+			background: #fffefe
+			+background-image(linear-gradient(top, #fffefe, #ffc4cc))
+.form-tabs
+	height: 23px
+	margin: 0 7px
+	border: none
+	li
+		padding: 4px 6px
+		&.active
+			padding: 4px 6px 5px 6px
+.form__table
+	width: 100%
+	th, td
+		padding: 10px
+	th
+		padding: 10px
+		background: $yellow
+		border-bottom: 1px solid $orange
+		font-weight: 400
+		color: $brown
+	tbody
+		tr
+			&:first-child
+				td
+					padding: 16px 10px 10px 10px
+			&:last-child
+				td
+					padding: 10px 10px 16px 10px
+	tfoot
+		td
+			padding: 16px 10px 20px 10px
+			border-top: 1px solid $orange 
+.form__title
+	margin-left: 170px
+	padding-bottom: 10px 
+	font-size: 18px 
+	font-weight: 700 
+.form__alert
+	margin: 0 0 10px 170px
+.form__alert_mod
+	position: relative
+	&:before
+		content: ""
+		position: absolute
+		top: -2px
+		left: -24px
+		+sized-sprite($icons, mod)
+.form__verify
+	margin-top: 10px 
+.form__wait
+	position: relative
+	display: inline-block
+	height: 21px
+	padding-left: 37px
+	line-height: 21px
+	i
+		position: absolute 
+		top: -1px
+		left: 5px
+		width: 24px
+		height: 24px
+		background: url(../img/icons/spinner-white-bg.gif) no-repeat 0 0 
+.form__pass
+	position: relative
+	padding-left: 26px	
+	span
+		border-bottom: 1px dashed $blue 
+	&:before
+		content: ""
+		position: absolute
+		top: 3px
+		left: 0
+		+sized-sprite($icons, eye)
 //icons
 .form__vk, .form__fb, .form__ok, .form__tw
 	i
@@ -525,6 +646,209 @@
 .form__tw
 	i
 		+sized-sprite($icons, ico-tw)
+//add-action
+.add-action
+	margin-bottom: 12px
+	overflow: hidden		
+.add-action__title
+	float: left
+	height: 25px
+	margin-right: 12px 
+	line-height: 25px
+	font-size: 18px
+	font-weight: 700
+	color: $brown 
+//table
+.table
+	margin-bottom: 20px
+	table
+		width: 100%
+	thead
+		background: $yellow
+		text-align: left
+	th, td
+		padding: 10px
+		vertical-align: top
+	th
+		font-weight: 400  
+		border-bottom: 1px solid $orange 
+		color: $brown 		
+		&.active
+			background: #ffe6c2 
+			border-color: #ffe6c2 
+			text-shadow: #fff 0 1px 0
+			&:after
+				content: " ↓" 
+	tr
+		&:first-child
+			td
+				padding: 16px 10px 10px 10px
+		&:last-child
+			td
+				padding: 10px 10px 16px 10px
+.table__col-1
+	width: 250px
+.table__col-2
+	width: 80px
+.table__col-3
+	width: 100px
+.table__cell
+	padding: 3px 0 4px 0
+	a
+		text-decoration: underline
+		&.error
+			color: $red
+.table__action
+	padding: 3px 0 0 20px
+	a
+		position: relative
+		text-decoration: underline
+		&:before
+			content: ""
+			position: absolute
+			top: 1px
+			left: -20px
+			+sized-sprite($icons, pen)
+	span
+		display: block
+		margin-top: 5px
+		color: $brown 
+.table__info
+	margin-top: 5px
+	font-size: 12px
+	color: $brown 
+	&.error
+		color: $red
+.table__status
+	overflow: hidden
+	button
+		position: relative
+		float: left
+		width: 26px
+		height: 21px
+		border: 1px solid $orange
+		background: #E8DFD3
+		+background-image(linear-gradient(top, #fff 0%, #E8DFD3 100%))
+		&:hover
+			background: #fff
+			+background-image(linear-gradient(top, #fff 0%, #EAE1D6 67%, #fff 100%))	
+		&.active
+			border-color: #d6986f
+			+box-shadow(rgba(198, 115, 74, 0.75) 0 0 10px inset)
+			z-index: 10 
+	i
+		position: absolute
+		top: 5px
+	&.disabled		
+		button
+			background: #f8f8f8
+			+background-image(linear-gradient(top, #fff 0%, #f8f8f8 100%))
+			border-color: #e6e6e6 
+			cursor: default
+			&.active
+				border-color: #b6b6b6
+				+box-shadow(rgba(155, 155, 155, 0.75) 0 0 10px inset)
+				z-index: 10 
+				.table__play
+					i
+						+sized-sprite($icons, play-dis-act)
+				.table__pause
+					i
+						+sized-sprite($icons, pause-dis-act)
+		.table__play
+			i
+				+sized-sprite($icons, play-dis)
+		.table__pause
+			i
+				+sized-sprite($icons, pause-dis)
+.table__play	
+	+border-radius(10px 0 0 10px)
+	i
+		left: 12px
+		+sized-sprite($icons, play)
+	&.active
+		i
+			+sized-sprite($icons, play-act)
+.table__pause	
+	margin-left: -1px
+	+border-radius(0 10px 10px 0)
+	i
+		left: 8px
+		+sized-sprite($icons, pause)
+	&.active
+		i
+			+sized-sprite($icons, pause-act)
+.table__site	
+	width: 190px
+	padding: 3px 0
+	white-space: nowrap
+	text-overflow: ellipsis 
+	overflow: hidden	
+	a
+		position: relative
+		padding-left: 30px			
+		&:before
+			content: ""
+			position: absolute
+			top: 2px
+			left: 0
+			+sized-sprite($icons, graph)	
+.table__nav
+	height: 21px
+	padding: 6px 10px 7px 10px
+	background: $yellow
+	border-top: 1px solid $orange   
+	line-height: 21px
+	overflow: hidden
+	a
+		&.active			
+			background: #9B5E43
+			+background-image(linear-gradient(top, #9B5E43 0%, #9B2E12 100%))
+			+box-shadow(rgba(71,56,56,0.75) 0 0 5px inset)
+			+border-radius(11px)			
+			color: #fff
+.table__view
+	float: left
+	strong, a
+		float: left
+	strong
+		margin-right: 8px 		
+		color: $brown 
+		font-weight: 400 
+	a
+		margin-right: 4px
+		color: $blue
+		text-decoration: none
+		&.active
+			padding: 0 8px
+			span
+				border: none
+	span
+		height: auto
+		border-bottom: 1px dashed $blue 
+		line-height: 1 
+.table__pagination
+	float: right
+	a
+		float: left
+		margin-right: 2px
+		padding: 0 6px 
+		&:first-child, &:last-child
+			font-weight: 700
+			text-decoration: none 
+		&:first-child
+			margin-right: 14px
+		&:last-child
+			margin-left: 14px
+		&.disabled
+			color: #B1B3B6
+			cursor: default 
+			span
+				text-decoration: none
+		&.active
+			text-decoration: none
+	span
+		text-decoration: underline
 //widget
 .widget-container
 	width: 275px

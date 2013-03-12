@@ -48,27 +48,37 @@
 			<div class="title"><span>Спасибо за регистрацию</span></div>
 			<p>Теперь вы можете добавлять сайты и создавать для них акции.</p>
 		</div>
-		<!-- BEGIN .some-form -->		
-		<form class="some-form" action="">
-			<fieldset>
-				<label for="add-site-address">Адрес сайта</label>
-				<input id="add-site-address" type="text">
-			</fieldset>	
-			<fieldset>
-				<label for="add-site-name">Название сайта</label>
-				<textarea id="add-site-name"></textarea>
-			</fieldset>	
-			<fieldset>
-				<label for="add-site-mail">Электронная почта для уведомлений</label>
-				<input id="add-site-mail" type="text">
-				<p>Можно ввести несколько, через запятую</p>
-			</fieldset>	
-			<div class="some-form__bottom">
-				<button class="btn-big" type="submit"><strong>Добавить сайт</strong></button>
-				<a href="#">Отмена</a>
+		<!-- BEGIN .form -->		
+		<form action="" class="form">
+			<fieldset class="fieldset">
+				<label for="add-site-address" class="form__label">Адрес сайта</label>
+				<div class="form__block">
+					<input id="add-site-address" class="input-text input-text_wide" type="text">
+				</div>
+			</fieldset>
+			<fieldset class="fieldset">
+				<label for="add-site-name" class="form__label">Название сайта</label>
+				<div class="form__block">
+					<textarea id="add-site-name" class="textarea"></textarea>
+				</div>
+			</fieldset>
+			<fieldset class="fieldset">
+				<label for="add-site-mail" class="form__label">Электронная почта для уведомлений</label>
+				<div class="form__block">
+					<input id="add-site-mail" class="input-text input-text_wide" type="text">
+					<p class="text">Можно ввести несколько, через запятую</p>
+				</div>
+			</fieldset>
+			<div class="form__bottom form__bottom_mod">
+				<div class="form__next">
+					<button class="btn-big" type="submit"><strong>Назад<b>→</b></strong></button>
+				</div>
+				<div class="form__cancel">
+					<a href="#">Отмена</a>
+				</div>				
 			</div>
-		</form>
-		<!-- END .some-form -->
+		</form>		
+		<!-- END .form -->
 	</div>
 	<!-- END .add-site -->
 	<!-- BEGIN .push -->

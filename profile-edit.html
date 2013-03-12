@@ -38,29 +38,38 @@
 		</nav>
 	</div>
 	<!-- END .top -->
-	<!-- BEGIN .some-form -->
-	<form class="some-form" action="">
-		<fieldset>
-			<label for="email-enter">Емейл для входа</label>
-			<input id="email-enter" type="text">
-			<p>После смены емейла на новый, по старому емейлу войти в аккаунт будет невозможно.</p>
+	<!-- BEGIN .form -->
+	<form class="form" action="">
+		<fieldset class="fieldset">
+			<label class="form__label" for="email-enter">Емейл для входа</label>
+			<div class="form__block">
+				<input id="email-enter" class="input-text input-text_wide" type="text">
+				<p class="text">После смены емейла на новый, по старому емейлу войти<br>в аккаунт будет невозможно.</p>
+			</div>			
 		</fieldset>	
-		<fieldset>
-			<label for="old-pass">Старый пароль</label>
-			<input id="old-pass" type="text">
+		<fieldset class="fieldset">
+			<label class="form__label" for="old-pass">Старый пароль</label>
+			<div class="form__block">
+				<input id="old-pass" class="input-text input-text_wide" type="text">
+			</div>			
 		</fieldset>	
-		<fieldset>
-			<label for="new-pass">Новый пароль</label>
-			<input id="new-pass" type="text">	
-			<p><a class="some-form__pass" href="#"><span>Показать пароль</span></a></p>
+		<fieldset class="fieldset">
+			<label class="form__label" for="new-pass">Новый пароль</label>
+			<div class="form__block">
+				<input id="new-pass" class="input-text input-text_wide" type="text">
+				<p class="text"><a class="form__pass" href="#"><span>Показать пароль</span></a></p>
+			</div>			
 		</fieldset>	
-		<div class="some-form__bottom">
-			<button class="btn-big" type="submit"><strong>Сохранить</strong></button>
-			<a href="#">Отмена</a>
+		<div class="form__bottom form__bottom_mod">
+			<div class="form__next">
+				<button class="btn-big" type="submit"><strong>Назад<b>→</b></strong></button>
+			</div>
+			<div class="form__cancel">
+				<a href="#">Отмена</a>
+			</div>				
 		</div>
 	</form>
-	</div>
-	<!-- END .some-form -->
+	<!-- END .form -->
 	<!-- BEGIN .setting-chenged -->
 	<div class="setting-chenged">
 		<span>Настройки аккаунта изменены</span>
