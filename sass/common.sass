@@ -61,7 +61,7 @@ table
 		font-weight: 700
 		color: $brown
 	i 
-		@include sized-sprite($icons, logo)
+		+sized-sprite($icons, logo)
 .user-link
 	float: right
 	margin-top: 10px
@@ -81,12 +81,12 @@ table
 	padding-left: 17px	
 	&:before
 		top: 2px
-		@include sized-sprite($icons, out)
+		+sized-sprite($icons, out)
 .user-link__mail
 	padding-left: 19px
 	&:before
 		top: 3px
-		@include sized-sprite($icons, user)
+		+sized-sprite($icons, user)
 	&.edit
 		text-decoration: none
 		color: #000 
