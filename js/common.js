@@ -10,7 +10,7 @@ var current = new Date();
 
 $('.form__datepicker').DatePicker({
   flat: true,
-  format: 'd B',
+  format: 'd B Y',
   date: [],
   current: current,
   calendars: 3,

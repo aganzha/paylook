@@ -14,7 +14,9 @@
         '<table cellspacing="0" cellpadding="0">',
         '<thead>',
         '<tr>',
-        '<th colspan="7" class="datepickerMonth"><span></span></th>',
+        '<th class="datepickerGoPrev"><a href="#"><span><%=prev%></span></a></th>',
+        '<th colspan="5" class="datepickerMonth"><span></span></th>',
+        '<th class="datepickerGoNext"><a href="#"><span><%=next%></span></a></th>',
         '</tr>',
         '<tr class="datepickerDoW">',
         '<th><span><%=day1%></span></th>',
@@ -33,7 +35,9 @@
         '<table cellspacing="0" cellpadding="0">',
         '<thead>',
         '<tr>',
-        '<th colspan="7" class="datepickerMonth"><span></span></th>',
+        '<th class="datepickerGoPrev"><a href="#"><span><%=prev%></span></a></th>',
+        '<th colspan="5" class="datepickerMonth"><span></span></th>',
+        '<th class="datepickerGoNext"><a href="#"><span><%=next%></span></a></th>',
         '</tr>',
         '<tr class="datepickerDoW">',
         '<th><span><%=day1%></span></th>',
@@ -247,7 +251,14 @@
         //alert(html);
         
         tblCal.append(html);
-        tblCal.find('.datepickerMonth span').html(options.locale.months1[month]);
+        var ololo_year = date.getMonth();
+        if (ololo_year == 0) {
+          tblCal.find('.datepickerMonth span').html(options.locale.months1[month] + ', ' + (date.getFullYear()-1));
+        }
+        else {
+          tblCal.find('.datepickerMonth span').html(options.locale.months1[month] + ', ' + date.getFullYear());
+        }
+        
         //$('.footer').html(html);
         
       }
@@ -517,7 +528,7 @@
               break;
             case 'datepickerViewYears':
               tblEl.get(0).className = 'datepickerViewDays';
-              el.find('span').text(formatDate(tmp, 'b, Y'));
+              el.find('span').text(formatDate(tmp, 'b, y'));
               break;
             }
           } else if (parentEl.parent().parent().is('thead')) {

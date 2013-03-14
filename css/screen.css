@@ -656,7 +656,6 @@ table { border-spacing: 0; border-collapse: collapse; }
 .content ol ol li { list-style: decimal inside; }
 .content ol ul li { list-style: disc inside; }
 
-.datepicker .datepickerGoPrev a, .datepicker .datepickerGoNext a { display: none; }
 .datepicker .datepickerSpace { padding: 0 10px; }
 .datepicker .datepickerSpace div { height: 175px; border-left: 1px solid #f8d7ad; }
 .datepicker .datepickerDays span, .datepicker .datepickerDoW span { display: block; width: 25px; height: 25px; line-height: 25px; text-align: center; }
@@ -669,13 +668,12 @@ table { border-spacing: 0; border-collapse: collapse; }
 .datepicker .datepickerSelected span { background: #f8d7ad; }
 .datepicker .datepickerNotInMonth { width: 25px; height: 25px; background: white; }
 .datepicker .datepickerNotInMonth span { display: none; }
-.datepicker .datepickerGoPrev, .datepicker .datepickerGoNext { display: none; }
 
-.datepickerGoPrev, .datepickerGoNext { position: absolute; top: 20px; z-index: 10; }
+.datepickerGoPrev span, .datepickerGoNext span { position: absolute; top: 5px; z-index: 10; cursor: pointer; }
 
-.datepickerGoPrev { left: 15px; background: url('../img/icons-s5bb7865106.png') 0 -769px no-repeat; width: 12px; height: 13px; }
+.datepickerGoPrev span { left: 0; background: url('../img/icons-s5bb7865106.png') 0 -769px no-repeat; width: 12px; height: 13px; }
 
-.datepickerGoNext { right: 15px; background: url('../img/icons-s5bb7865106.png') 0 -724px no-repeat; width: 12px; height: 13px; }
+.datepickerGoNext span { right: 0; background: url('../img/icons-s5bb7865106.png') 0 -724px no-repeat; width: 12px; height: 13px; }
 
 .widget-container { width: 275px; padding: 13px 10px 9px 13px; border: 1px solid #999999; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; }
 .widget-container strong { font-size: 18px; }

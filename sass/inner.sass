@@ -1255,9 +1255,6 @@
 				list-style: disc inside
 //datepicker
 .datepicker
-	.datepickerGoPrev, .datepickerGoNext
-		a
-			display: none
 	.datepickerSpace		
 		padding: 0 10px
 		div
@@ -1300,18 +1297,20 @@
 		background: #FFF 
 		span
 			display: none
-	.datepickerGoPrev, .datepickerGoNext
-		display: none
 .datepickerGoPrev, .datepickerGoNext
-	position: absolute
-	top: 20px
-	z-index: 10 
+	span
+		position: absolute
+		top: 5px
+		z-index: 10
+		cursor: pointer
 .datepickerGoPrev
-	left: 15px
-	+sized-sprite($icons, calendar-prev)
+	span
+		left: 0
+		+sized-sprite($icons, calendar-prev)
 .datepickerGoNext
-	right: 15px
-	+sized-sprite($icons, calendar-next)
+	span
+		right: 0
+		+sized-sprite($icons, calendar-next)
 //widget
 .widget-container
 	width: 275px
