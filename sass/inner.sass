@@ -231,7 +231,8 @@
 //form elements
 .fieldset 
 	padding-bottom: 28px
-	overflow: hidden
+	//@extend %clr
+	font-size: 0
 .fieldset_mod
 	padding-bottom: 18px
 .input-text, .select, .textarea	
@@ -313,16 +314,20 @@
 .text_link
 //form blocks
 .form__label
-	float: left
+	display: inline-block
 	width: 130px
 	padding: 0 20px
+	vertical-align: top 
 	line-height: 1.2
 	color: $brown
 	text-align: right
+	font-size: 14px
 .form__label_mod
 	padding-top: 10px 
 .form__block
-	overflow: hidden	
+	display: inline-block
+	vertical-align: top
+	font-size: 14px
 .form__block_mod
 	margin-left: 170px
 .form__block_table
@@ -356,7 +361,9 @@
 	span
 		font-size: 12px
 .form__date
+	position: relative
 	display: inline-block
+	z-index: 10 
 .form__period	
 	position: relative
 	height: 19px
@@ -389,6 +396,23 @@
 	&.active
 		border-color: #d6986f
 		+box-shadow(rgba(198,115,74,0.75) 0 0 10px inset)
+.form__calendar
+	position: absolute
+	top: 33px
+	left: 7px
+	padding: 18px
+	background: #FFF
+	+box-shadow(#5A3338 0 1px 5px)
+	&:before
+		content: ""
+		position: absolute
+		top: -5px
+		left: 100px
+		width: 10px
+		height: 10px
+		+box-shadow(#d7cdcf 1px -1px 0 0)
+		background: #fff
+		+rotate(-45)
 .form__choice		
 	ul
 		overflow: hidden
@@ -423,6 +447,8 @@
 	float: left
 	width: 550px
 	margin-right: 20px
+	.form__block
+		width: 380px
 .form__col2
 	float: left
 	width: 380px
@@ -568,7 +594,6 @@
 		&.active
 			padding: 4px 6px 5px 6px
 .form__table
-	width: 100%
 	th, td
 		padding: 10px
 	th
@@ -640,6 +665,7 @@
 	+border-radius(50%)
 	border: 1px solid $orange		
 	line-height: 19px
+	color: #000
 	cursor: pointer
 	&:hover
 		background: #fff
@@ -717,11 +743,21 @@
 		&:last-child
 			td
 				padding: 10px 10px 16px 10px
-.table_mod
+.table_mod, .table_mod-1
+	.table__nav
+		position: relative
+		top: -1px
 	tr
 		&:first-child, &:last-child
 			td
-				padding: 10px	0		
+				padding: 10px
+			.table__users
+				padding: 10px 0 
+		&:hover
+			background: #fff8f0 
+			.table__prod-link
+				&:after
+					+background-image(linear-gradient(left, rgba(255,255,255,0), #fff8f0))
 	.table__cell
 		width: 80px	
 	.table__sub
@@ -752,11 +788,22 @@
 		border: 1px solid $orange
 		&:hover
 			background: #fff
+			.table__prod-link
+				&:after
+					+background-image(linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,1)))
 		tr
 			&:first-child
 				&:hover
-					background-color: #FFF 	
-.table__users
+					background: #FFF 	
+			&:hover
+				background: #fff8f0 
+				.table__prod-link
+					&:after
+						+background-image(linear-gradient(left, rgba(255,255,255,0), #fff8f0))				
+.table_mod-1
+	.table__prod, .table__col-4
+		width: 330px
+.table__users 
 	.table__info	
 		margin: 0 0 5px 0
 		font-size: 14px
@@ -787,6 +834,15 @@
 		text-decoration: underline
 		&.error
 			color: $red
+	&.disabled
+		color: #d4c9cb
+		span
+			color: #000
+.table__small
+	border-bottom: 1px solid $orange 
+	td
+		color: #808080
+		font-size: 10px
 .table__action
 	padding: 3px 0 0 20px
 	a
@@ -814,6 +870,8 @@
 	color: $brown 
 	&.error
 		color: $red
+	&.disabled
+		color: #d4c9cb
 .table__status
 	overflow: hidden
 	button
@@ -897,12 +955,18 @@
 	margin-right: 13px
 .table__user
 	font-size: 0	
+	a, p
+		font-size: 14px
 	a
 		display: inline-block
 		vertical-align: middle
-		font-size: 14px
 		line-height: 16px
 		text-decoration: underline
+	p
+		margin-top: 3px		
+	.table__user-more 
+		border-bottom: 1px dashed
+		text-decoration: none
 .table__prod-link
 	position: relative
 	white-space: nowrap	
@@ -1109,6 +1173,145 @@
 		width: 30px
 		margin-right: 5px
 		text-align: right
+//content
+.content
+	padding-bottom: 50px
+	h1, h2, h3, h4
+		color: $brown
+	h1, h2
+		font-weight: 700 
+	h1		
+		font-size: 36px
+		& + p
+			margin-top: 9px
+		& + h2
+			margin-top: 11px 
+		& + h3
+			margin-top: 7px 
+		& + h4
+			margin-top: 6px 
+	h2
+		font-size: 24px
+		& + p 
+			margin-top: 8px
+			margin-bottom: 23px 
+		& + h3
+			margin-top: 10px
+		& + h4
+			margin-top: 7px
+	h3
+		font-size: 18px
+		& + p 
+			margin-top: 8px
+			margin-bottom: 20px 
+		& + h2
+			margin-top: 26px
+		& + h4
+			margin-top: 9px
+		& + ul, & + ol
+			margin-top: 10px
+			margin-bottom: 25px 
+		& + .table, & + .form__table
+			margin-top: 12px 
+	h4
+		font-weight: 400 
+		font-size: 16px 
+		& + p 
+			margin-top: 5px
+		& + h1
+			margin-top: 22px
+		& + h3
+			margin-top: 24px 		
+	p
+		margin-bottom: 11px
+		& + h1, & + h3
+			margin-top: 22px 
+		& + h2
+			margin-top: 27px
+	li
+		margin-bottom: 8px
+	ul, ol
+		& + p
+			margin-top: 12px
+		ul, ol
+			margin: 8px 0 0 35px
+	ul		
+		li
+			list-style: disc inside
+		ul			
+			li
+				list-style: disc inside
+		ol			
+			li
+				list-style: decimal inside
+	ol		
+		li
+			list-style: decimal inside
+		ol
+			li
+				list-style: decimal inside
+		ul
+			li
+				list-style: disc inside
+//datepicker
+.datepicker
+	.datepickerGoPrev, .datepickerGoNext
+		a
+			display: none
+	.datepickerSpace		
+		padding: 0 10px
+		div
+			height: 175px
+			border-left: 1px solid $orange
+	.datepickerDays, .datepickerDoW
+		span
+			display: block
+			width: 25px
+			height: 25px
+			line-height: 25px
+			text-align: center
+	.datepickerMonth
+		span
+			font-size: 16px
+			font-weight: 400
+			color: $brown
+	.datepickerDoW
+		span			
+			font-size: 12px
+			font-weight: 400 
+	.datepickerDays
+		tr
+			&:last-child
+				display: none
+		td
+			padding: 0 1px 1px 0
+		a
+			color: #000
+			text-decoration: none
+	.datepickerSaturday, .datepickerSunday, .sunday, .saturday
+		span
+			color: $red
+	.datepickerSelected
+		span
+			background: $orange 
+	.datepickerNotInMonth
+		width: 25px
+		height: 25px
+		background: #FFF 
+		span
+			display: none
+	.datepickerGoPrev, .datepickerGoNext
+		display: none
+.datepickerGoPrev, .datepickerGoNext
+	position: absolute
+	top: 20px
+	z-index: 10 
+.datepickerGoPrev
+	left: 15px
+	+sized-sprite($icons, calendar-prev)
+.datepickerGoNext
+	right: 15px
+	+sized-sprite($icons, calendar-next)
 //widget
 .widget-container
 	width: 275px

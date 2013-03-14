@@ -8,8 +8,9 @@
 	<meta charset="utf-8">
 	<title>Template</title>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
-	<!--<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>-->
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<script src="js/jquery.min.js"></script>
+	<script src="js/datepicker.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -104,7 +105,12 @@
 					<input class="input-radio" type="radio" name="radio-date" checked>
 					<span>На период</span>
 					<div class="form__date">
-						<div class="form__period"><strong>15</strong> ноября – <strong>15</strong> декабря</div>
+						<div class="form__period active"><strong>15 ноября</strong> – <strong>15 декабря</strong></div>
+						<div class="form__calendar">
+							<button class="datepickerGoPrev"></button>
+							<button class="datepickerGoNext"></button>
+							<div class="form__datepicker"></div>
+						</div>
 					</div>
 				</label>
 			</div>

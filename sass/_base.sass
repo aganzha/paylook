@@ -11,7 +11,15 @@ $green: #009300
 $experimental-support-for-svg: true
 // global sprites
 $icons: sprite-map("icons/*.png", $spacing: 10px)
-////mixins
+//extends
+%clr
+  &:after
+    content: "."
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
+//mixins
 @mixin rotate($deg: 0) 
   -moz-transform: rotate($deg+ deg)
   -o-transform: rotate($deg+ deg)
