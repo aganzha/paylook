@@ -482,7 +482,6 @@
       });
     },
     click = function(ev) {
-      //alert('aasd');
       if ($(ev.target).is('span')) {
         ev.target = ev.target.parentNode;
       }
@@ -531,11 +530,9 @@
               el.find('span').text(formatDate(tmp, 'b, y'));
               break;
             }
-          } else if (parentEl.parent().parent().is('thead')) {
+          } else if (parentEl.parent().parent().is('thead')) {            
             
-            
-            options.current.addMonths(parentEl.hasClass('datepickerGoPrev') ? -1 : 1);
-            
+            options.current.addMonths(parentEl.hasClass('datepickerGoPrev') ? -1 : 1);            
             
             fillIt = true;
           }
@@ -557,7 +554,7 @@
             if (parentEl.hasClass('datepickerNotInMonth')) {
               tmp.addMonths(val > 15 ? -1 : 1);
             }
-            
+
             tmp.setDate(val);
             switch (options.mode) {
             case 'multiple':

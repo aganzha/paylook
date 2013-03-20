@@ -1,15 +1,14 @@
 <!doctype html>
 <!--[if lte IE 8]><html lang="ru-RU" class="lteie8"><![endif]-->
-<!--[if lt IE 9]>
-	<script src="js/html5shiv.js"></script>
-<![endif]-->
 <!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
 	<title>Template</title>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.min.js"></script>
+	<script src="js/datepicker.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -38,12 +37,15 @@
 		</nav>
 	</div>
 	<!-- END .top -->
-	<!-- BEGIN .breadcrumps -->
-	<div class="breadcrumps">
-		<a href="#">Управление акциями</a>
-		<span><strong>Совместная ноябрьская супер-акция Kaiser и Домострой</strong></span>
-	</div>
-	<!-- END .breadcrumps -->
+	<!-- BEGIN .breadcrumbs -->
+	<ul class="breadcrumbs">
+		<li><a href="#">Управление акциями</a></li>
+		<li><a href="#">Управление акциями</a></li>
+		<li><a href="#">Управление акциями</a></li>
+		<li><a href="#">Управление акциями</a></li>
+		<li><span><strong>Создание акции</strong> «Новогодняя скидка»</span></li>		
+	</ul>
+	<!-- END .breadcrumbs -->
 	<!-- BEGIN .stat -->
 	<div class="stat">
 		<div class="stat__data">
@@ -101,7 +103,9 @@
 	<!-- BEGIN .form-switch -->
 	<div class="form-switch">
 		<div class="form__date">
-			<div class="form__period"><strong>15</strong> ноября – <strong>15</strong> декабря</div>
+			<div class="form__period"><strong>15 ноября</strong> – <strong>15 декабря</strong></div>
+			<div class="form__datepicker"></div>
+			<div class="form__datepicker-close"></div>
 		</div>
 		<div class="form__choice">
 			<ul>

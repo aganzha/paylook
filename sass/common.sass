@@ -19,11 +19,13 @@ a img, fieldset
 a
 	color: #37559a
 	text-decoration: none
+	&:hover
+		color: $hover
 p
 	line-height: 1.2
 li 
 	list-style: none
-input, textarea, button, select 
+input, textarea, button, select
 	border: none
 	outline: none
 	font-family: 'PT Sans', Arial, Tahoma, sans-serif
@@ -48,7 +50,7 @@ table
 	clear: both
 //header
 .header 
-	padding: 25px 0 30px 0
+	padding: 25px 10px 30px 10px
 	overflow: hidden
 .logo
 	float: left
@@ -64,7 +66,7 @@ table
 		+sized-sprite($icons, logo)
 .user-link
 	float: right
-	margin-top: 10px
+	margin-top: 7px
 	text-align: right
 	li
 		margin-top: 10px
@@ -99,6 +101,7 @@ table
 		overflow: hidden
 .footer__info
 	float: left
+	margin-left: 10px
 	p
 		font-size: 16px
 		&:last-child
@@ -107,6 +110,7 @@ table
 		text-decoration: underline
 .copyright
 	float: right
+	margin-right: 10px
 	font-size: 16px
 //general
 .title	
@@ -124,22 +128,26 @@ table
 			top: 2px
 			left: 0
 			+sized-sprite($icons, enter)
-//breadcrumps
-.breadcrumps
-	margin: 0 0 20px 10px
+//breadcrumbs
+.breadcrumbs
+	margin: 0 0 18px 10px
 	overflow: hidden
-	a, span
+	li
 		float: left
+		margin-bottom: 10px
+	a, span
 		font-size: 18px
 		color: $brown
 	a
 		position: relative
 		margin-right: 24px
 		text-decoration: underline
+		&:hover
+			color: $hover
 		&:after
 			content: ""
 			position: absolute
-			top: 4px
+			top: 7px
 			right: -16px
 			+sized-sprite($icons, arr1)
 //buttons
@@ -219,6 +227,7 @@ table
 		font-size: 14px
 		font-weight: 400 
 .btn-edit
+	float: right
 	padding: 1px
 	+border-radius(3px)
 	@extend .btn
@@ -255,9 +264,9 @@ table
 			background: #D4973B
 			+background-image(linear-gradient(top, #E3815D 0%, #E38891 9%, #E35C49 49%, #E33F29 50%, #E35257 67%, #E36346 100%))
 	&:active
-		background: #962b2d
-		+box-shadow(none)
 		strong
+			background: #D35306
+			+background-image(linear-gradient(top, #E3815D 0%, #E38891 9%, #E35C49 49%, #E33F29 50%, #E31A22 85%, #E36346 100%))
 			+box-shadow(#962b2d 0 0 20px inset)
 	&.disabled
 		strong
@@ -267,11 +276,13 @@ table
 			text-shadow: rgba(95,95,95,0.75) 0 -1px 0	
 			cursor: default	
 .btn-remove
+	float: right
 	strong
 		height: 19px
 		padding: 0 5px
 		line-height: 19px
 .btn-delete
+	float: right
 	strong
 		padding: 1px
 		background: #FFF 

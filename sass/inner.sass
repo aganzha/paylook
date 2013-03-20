@@ -15,13 +15,13 @@
 	font-size: 24px
 	font-weight: 700 
 	color: $brown 
-	cursor: pointer
+	cursor: pointer	
 	&:before
 		content: ""
 		position: absolute
 		top: 0px
 		left: 12px
-		@include sized-sprite($icons, add-site)
+		+sized-sprite($icons, add-site)
 	span
 		position: relative
 		padding-right: 13px
@@ -31,7 +31,7 @@
 			position: absolute
 			top: 15px
 			right: 0
-			@include sized-sprite($icons, arr)
+			+sized-sprite($icons, arr)
 .top__nav
 	float: right
 	margin-top: 5px
@@ -44,12 +44,15 @@
 		line-height: 25px
 		font-size: 17px
 		color: $brown 
+		&:hover
+			color: $hover 
 		&.active
 			background: #9B5E43
 			+background-image(linear-gradient(top, #9B5E43 0%, #9B2E12 100%))
 			+box-shadow(rgba(71,56,56,0.75) 0 0 5px inset)
 			+border-radius(12px)
 			color: #FFF 
+			cursor: default
 		&.disabled
 			color: #AC999B
 			cursor: default 
@@ -66,13 +69,9 @@
 	&:before
 		content: ""
 		position: absolute
-		top: -5px
-		left: 20px
-		width: 10px
-		height: 10px
-		+box-shadow($orange 1px -1px 0 0) 
-		background: #FFF 
-		+rotate(-45) 
+		top: -7px
+		left: 19px
+		+sized-sprite($icons, arr2)
 	span, button
 		display: inline-block
 	span
@@ -116,7 +115,6 @@
 		margin: 15px 0
 	a
 		font-size: 16px
-		color: $blue
 		text-decoration: underline 
 //alert
 .alert
@@ -216,7 +214,9 @@
 	+border-radius(4px)
 	p
 		a
-			text-decoration: underline	
+			text-decoration: underline
+		.form__pass
+			text-decoration: none	
 .form_mail
 	.form__block
 		width: 541px
@@ -239,10 +239,10 @@
 	border: 1px solid $gray
 	+border-radius(2px)
 	vertical-align: top
+	font-size: 14px
 .select
 	width: 220px
 	height: 22px
-	padding: 1px
 .select_inner
 	width: auto
 	min-width: 60px
@@ -304,19 +304,18 @@
 	display: block
 	margin: 9px 0
 .text
-	margin-top: 8px
+	margin-top: 5px
 .text_mod
 	margin-bottom: 8px
 .text-border
 	padding-top: 5px
 	margin-top: 5px 
 	border-top: 1px solid #acacac 
-.text_link
 //form blocks
 .form__label
 	display: inline-block
 	width: 130px
-	padding: 0 20px
+	padding: 3px 20px 0 20px
 	vertical-align: top 
 	line-height: 1.2
 	color: $brown
@@ -328,6 +327,8 @@
 	display: inline-block
 	vertical-align: top
 	font-size: 14px
+	p
+		padding-top: 3px 
 .form__block_mod
 	margin-left: 170px
 .form__block_table
@@ -337,7 +338,7 @@
 	li
 		float: left
 		width: 206px
-		padding: 7px
+		padding: 3px 7px 5px 7px
 		margin-right: 20px
 		min-height: 36px
 		background: #E8DFD3
@@ -351,8 +352,11 @@
 			strong
 				color: $brown
 		&.active
+			background: #E8DFD3
+			+background-image(linear-gradient(top, #fff, #E8DFD3))
 			border-color: #d6986f
 			+box-shadow(rgba(198,115,74,0.75) 0 0 10px inset)
+			cursor: default
 			strong
 				color: $brown 
 	strong
@@ -386,33 +390,44 @@
 		top: 7px
 		right: 8px
 		+sized-sprite($icons, arr)
-	&:hover, &.active
-		&:hover
-			background: #fff
-			+background-image(linear-gradient(top, #fff 0%, #EAE1D6 67%, #fff 100%))	
-			color: $brown 
+	&:hover
+		background: #fff
+		+background-image(linear-gradient(top, #fff 0%, #EAE1D6 67%, #fff 100%))	
+		color: $brown 
 		&:before
 			+sized-sprite($icons, date-act)
-	&.active
+	&.active		
 		border-color: #d6986f
 		+box-shadow(rgba(198,115,74,0.75) 0 0 10px inset)
-.form__calendar
+		background: #E8DFD3
+		+background-image(linear-gradient(top, #fff, #E8DFD3))
+.form__datepicker
+	display: none
 	position: absolute
 	top: 33px
-	left: 7px
+	left: 5px
 	padding: 18px
 	background: #FFF
 	+box-shadow(#5A3338 0 1px 5px)
+	z-index: 10
 	&:before
 		content: ""
 		position: absolute
 		top: -5px
-		left: 100px
+		left: 90px
 		width: 10px
 		height: 10px
 		+box-shadow(#d7cdcf 1px -1px 0 0)
 		background: #fff
 		+rotate(-45)
+.form__datepicker-close
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 5 
 .form__choice		
 	ul
 		overflow: hidden
@@ -437,17 +452,23 @@
 			+background-image(linear-gradient(top, #fff 0%, #EAE1D6 67%, #fff 100%))	
 			color: $brown 
 		&.active
+			background: #fff
+			+background-image(linear-gradient(top, #fff 0%, #EAE1D6 67%, #fff 100%))	
 			border-color: #d6986f
 			+box-shadow(rgba(198,115,74,0.75) 0 0 10px inset)
 			color: $brown 
 			z-index: 5
+			cursor: default
 .form__cols
 	overflow: hidden
 .form__col1
 	float: left
 	width: 550px
 	margin-right: 20px
+	.form__label
+		float: left
 	.form__block
+		float: right
 		width: 380px
 .form__col2
 	float: left
@@ -483,7 +504,6 @@
 	button
 		b
 			margin-left: 5px 
-			.form__color
 	li
 		float: left
 		padding: 4px
@@ -554,6 +574,30 @@
 .form__btn
 	padding: 10px 0 10px 170px
 	background: #fcfac5
+.form__color
+	overflow: hidden
+	li
+		float: left
+		margin-right: 4px 
+		padding: 4px
+		border: 1px solid #fff
+		+border-radius(4px)
+		&.active
+			border-color: #999
+		&:first-child
+			i
+				background: #ffd46e
+				+background-image(linear-gradient(top, #ffd46e, #f5af09))
+				border-color: #b37e00
+			
+	i
+		display: block
+		width: 26px
+		height: 26px
+		background: #94c7ff
+		+background-image(linear-gradient(top, #94c7ff, #8aa29f))
+		border: 1px dashed #487196
+		+border-radius(2px)
 .form__tabs, .form-tabs
 	height: 19px
 	margin-bottom: 20px
@@ -655,6 +699,9 @@
 		top: 3px
 		left: 0
 		+sized-sprite($icons, eye)
+	&:hover
+		span
+			border-color: $hover
 .form__note
 	float: right
 	height: 19px
@@ -705,7 +752,7 @@
 		+sized-sprite($icons, ico-tw)
 //add-action
 .add-action
-	margin-bottom: 12px
+	margin: 0 0 12px 10px
 	overflow: hidden		
 .add-action__title
 	float: left
@@ -717,9 +764,9 @@
 	color: $brown 
 //table
 .table
-	margin-bottom: 20px
+	margin-bottom: 64px
 	table
-		width: 100%
+		width: 100%		
 	thead
 		background: $yellow
 		text-align: left
@@ -743,6 +790,10 @@
 		&:last-child
 			td
 				padding: 10px 10px 16px 10px
+		&.table__total
+			border-top: 1px solid $orange
+			td
+				padding: 20px 10px		
 .table_mod, .table_mod-1
 	.table__nav
 		position: relative
@@ -758,6 +809,10 @@
 			.table__prod-link
 				&:after
 					+background-image(linear-gradient(left, rgba(255,255,255,0), #fff8f0))
+		&.table__total
+			border-top: 1px solid $orange
+			td
+				padding: 15px 10px
 	.table__cell
 		width: 80px	
 	.table__sub
@@ -786,6 +841,7 @@
 	.table__users
 		padding: 10px 0
 		border: 1px solid $orange
+		box-sizing: border-box
 		&:hover
 			background: #fff
 			.table__prod-link
@@ -967,6 +1023,7 @@
 	.table__user-more 
 		border-bottom: 1px dashed
 		text-decoration: none
+		font-size: 13px
 .table__prod-link
 	position: relative
 	white-space: nowrap	
@@ -996,6 +1053,9 @@
 			+box-shadow(rgba(71,56,56,0.75) 0 0 5px inset)
 			+border-radius(11px)			
 			color: #fff
+.table__nav_mod
+	width: 939px
+	border: 1px solid $orange
 .table__view
 	float: left
 	strong, a
@@ -1008,14 +1068,27 @@
 		margin-right: 4px
 		color: $blue
 		text-decoration: none
+		&:hover
+			span
+				color: $hover
+				border-color: $hover
 		&.active
 			padding: 0 8px
 			span
 				border: none
+				color: #fff
+				cursor: default
 	span
 		height: auto
 		border-bottom: 1px dashed $blue 
 		line-height: 1 
+.table__total
+	border-top: 1px solid $orange
+	td
+		padding: 20px 10px
+		&:first-child
+			text-align: right
+			font-weight: bold 
 .table__pagination
 	float: right
 	a
@@ -1036,6 +1109,7 @@
 				text-decoration: none
 		&.active
 			text-decoration: none
+			cursor: default
 	span
 		text-decoration: underline
 .table__ico-pause, .table__ico-play
@@ -1074,14 +1148,18 @@
 			+box-shadow(rgba(71,56,56,0.75) 0 0 5px inset)
 			+border-radius(12px)
 			color: #FFF 
+			cursor: default
 			span
 				border: none
+		&:hover
+			span
+				border-color: $hover
 	span
 		border-bottom: 1px dashed $blue
 //form-switch
 .form-switch
 	margin-bottom: 21px
-	overflow: hidden
+	height: 21px
 	.form__date
 		float: left
 		margin: 0 12px 0 5px
@@ -1111,7 +1189,7 @@
 	strong, i, span
 		float: left	
 	strong
-		width: 120px
+		width: 116px
 		text-align: right
 	i
 		margin: 0 7px
@@ -1231,34 +1309,35 @@
 	li
 		margin-bottom: 8px
 	ul, ol
+		margin-left: 20px
 		& + p
 			margin-top: 12px
 		ul, ol
 			margin: 8px 0 0 35px
 	ul		
 		li
-			list-style: disc inside
+			list-style: disc
 		ul			
 			li
-				list-style: disc inside
+				list-style: disc
 		ol			
 			li
-				list-style: decimal inside
+				list-style: decimal
 	ol		
 		li
-			list-style: decimal inside
+			list-style: decimal
 		ol
 			li
-				list-style: decimal inside
+				list-style: decimal
 		ul
 			li
-				list-style: disc inside
+				list-style: disc
 //datepicker
 .datepicker
 	.datepickerSpace		
 		padding: 0 10px
 		div
-			height: 175px
+			height: 200px
 			border-left: 1px solid $orange
 	.datepickerDays, .datepickerDoW
 		span
@@ -1278,10 +1357,32 @@
 			font-weight: 400 
 	.datepickerDays
 		tr
-			&:last-child
-				display: none
+			.datepickerNotInMonth
+				width: 25px
+				height: 25px
+				background: #FFF 
+				span
+					display: none
+			// .datepickerNotInMonth
+			// 	display: none
+			// &:first-child			
+			// 	.datepickerNotInMonth
+			// 		display: table-cell
+			// 		width: 25px
+			// 		height: 25px
+			// 		background: #FFF 
+			// 		span
+			// 			display: none
 		td
 			padding: 0 1px 1px 0
+			&.active
+				span
+					background: $brown
+					color: #fff 
+			&:hover				
+				span
+					background: $hover
+					color: #FFF 
 		a
 			color: #000
 			text-decoration: none
@@ -1290,13 +1391,7 @@
 			color: $red
 	.datepickerSelected
 		span
-			background: $orange 
-	.datepickerNotInMonth
-		width: 25px
-		height: 25px
-		background: #FFF 
-		span
-			display: none
+			background: $orange 	
 .datepickerGoPrev, .datepickerGoNext
 	span
 		position: absolute

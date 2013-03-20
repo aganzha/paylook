@@ -1,2 +1,23 @@
 .lteie8
-	
+	.form-nav
+		ul, a
+			&:after, &:before
+				display: none
+		ul
+			padding: 0
+		li
+			padding: 0
+		a
+			margin: 0 -1px 0 0
+			border-width: 1px
+	.form__datepicker
+		border: 1px solid #d6986f
+		&:before
+			content: ""
+			position: absolute
+			top: -7px
+			left: 100px
+			+sized-sprite($icons, arr3)
+	.table__status
+		i
+			top: -5px

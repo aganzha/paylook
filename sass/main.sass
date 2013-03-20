@@ -1,9 +1,10 @@
 @import "base"
 //main styles
 //enter
-.main
+.main	
 	margin-bottom: 20px
 	.logo
+		position: relative
 		float: none
 		width: 410px
 		margin: 0 auto
@@ -15,7 +16,9 @@
 			font-weight: 700
 			color: $brown
 		i 
-			float: right
+			position: absolute
+			top: 0
+			right: 0
 			@include sized-sprite($icons, logo)	
 .enter
 	width: 410px
