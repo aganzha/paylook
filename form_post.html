@@ -8,6 +8,7 @@
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui-1.10.2.custom.min.js"></script>	
 	<script src="js/datepicker.js"></script>
 	<script src="js/common.js"></script>
 </head>
@@ -25,7 +26,7 @@
 	<!-- END .header -->	
 	<!-- BEGIN .top -->
 	<div class="top">
-		<div class="top__title"><span>Tanchoo.ru</span></div>
+		<div class="top__title js-sites"><span>Tanchoo.ru</span></div>
 		<nav class="top__nav">
 			<ul>
 				<li><a href="#">Статистика</a></li>
@@ -35,6 +36,14 @@
 				<li><a href="#">Помощь</a></li>
 			</ul>
 		</nav>
+	</div>
+	<div class="top-sites">
+		<ul class="top-sites__nav">
+			<li><a href="#">Все сайты</a></li>
+			<li><a class="active" href="#"><img src="img/icons/ico-1.png" alt=""></i>Tanchoo.ru</a></li>
+			<li><a href="#"><img src="img/icons/ico-2.png" alt=""></i>Domostroy39.ru</a></li>
+		</ul>
+		<button class="btn-middle"><strong>+ Добавить сайт</strong></button>
 	</div>
 	<!-- END .top -->
 	<!-- BEGIN .breadcrumbs -->
@@ -117,7 +126,7 @@ http://www.tanchoo.ru
 					<fieldset class="fieldset">
 						<label class="form__label">Изображения<br>в посте</label>
 						<div class="form__block">
-							<div class="message-recommed message-recommed_mod">
+							<div class="message-recommed message-recommed_mod js-message">
 								<strong>Рекомендуется</strong>добавить хотя бы одну фотографию.<button></button>
 							</div>
 							<div class="btn-middle btn-middle_file"><strong>+ Загрузить изображения <input type="file"></strong></div>
@@ -140,55 +149,63 @@ http://www.tanchoo.ru
 				</div>
 			</div>
 			<!-- END .form__cols -->
-			<!-- BEGIN .form__cols -->		
-			<div class="form__cols">
-				<div class="form__col1">
-					<fieldset class="fieldset fieldset_mod">
-						<label for="textarea" class="form__label"><button class="form__move"></button></label>
-						<div class="form__block">
-							<textarea class="textarea textarea_mod" id="textarea">Брюки с принтом бирюзовые из натурального хлопка свободноо кроя.
+			<!-- BEGIN .form-sortable -->
+			<div class="form-sortable js-form-sort">
+				<!-- BEGIN .form__cols -->		
+				<div class="form__cols">
+					<div class="form__col1">
+						<fieldset class="fieldset fieldset_mod">
+							<label for="textarea" class="form__label">
+								<div class="form__move"><i></i></div>
+							</label>
+							<div class="form__block">
+								<textarea class="textarea textarea_mod" id="textarea">Брюки с принтом бирюзовые из натурального хлопка свободноо кроя.
 
-Состав: натуральний хлопок
-							</textarea>
+	Состав: натуральний хлопок
+								</textarea>
+							</div>
+						</fieldset>
+					</div>
+					<div class="form__col2">
+						<div class="form__pic">
+							<img src="img/pic.jpg" alt="">
+							<input type="button" value="Удалить">
 						</div>
-					</fieldset>
-				</div>
-				<div class="form__col2">
-					<div class="form__pic">
-						<img src="img/pic.jpg" alt="">
-						<button class="btn-gray">Удалить</button>
 					</div>
 				</div>
-			</div>
-			<!-- END .form__cols -->
-						<!-- BEGIN .form__cols -->		
-			<div class="form__cols">
-				<div class="form__col1">
-					<fieldset class="fieldset">
-						<label for="textarea" class="form__label"><button class="form__move"></button></label>
-						<div class="form__block">
-							<textarea class="textarea textarea_mod" id="textarea">Брюки с принтом бирюзовые из натурального хлопка свободноо кроя.
+				<!-- END .form__cols -->
+				<!-- BEGIN .form__cols -->		
+				<div class="form__cols">
+					<div class="form__col1">
+						<fieldset class="fieldset">
+							<label for="textarea" class="form__label">
+								<div class="form__move"><i></i></div>								
+							</label>
+							<div class="form__block">
+								<textarea class="textarea textarea_mod" id="textarea">Брюки с принтом бирюзовые из натурального хлопка свободноо кроя.
 
-Состав: натуральний хлопок
-							</textarea>
+	Состав: натуральний хлопок
+								</textarea>
+							</div>
+						</fieldset>
+					</div>
+					<div class="form__col2">
+						<div class="form__pic">
+							<img src="img/pic.jpg" alt="">
+							<input type="button" value="Удалить">
 						</div>
-					</fieldset>
-				</div>
-				<div class="form__col2">
-					<div class="form__pic">
-						<img src="img/pic.jpg" alt="">
-						<button class="btn-gray">Удалить</button>
 					</div>
 				</div>
+				<!-- END .form__cols -->
 			</div>
-			<!-- END .form__cols -->
+			<!-- END .form-sortable -->
 			<!-- BEGIN .form__cols -->
 			<div class="form__cols">
 				<div class="form__col1">
 					<fieldset class="fieldset">
 						<label class="form__label">Предпросмотр поста</label>
 						<div class="form__block">
-							<button class="btn-gray">Сделать пост Вконтаке для предпросмотра</button>
+							<input type="button" value="Сделать пост Вконтаке для предпросмотра">
 							<p class="text">Вы можете проверить внешний вид поста, отпосив его в вашей соцсети</p>					
 						</div>
 					</fieldset>
@@ -196,7 +213,7 @@ http://www.tanchoo.ru
 			</div>
 			<!-- END .form__cols -->		
 			<div class="form__btn">
-				<button class="btn-gray">Сохранить пост для ВКонтакте</button>
+				<input type="button" value="Сохранить пост для ВКонтакте">
 			</div>			
 		</div>
 		<!-- END .form__bg -->
@@ -232,7 +249,7 @@ http://www.tanchoo.ru
 					<fieldset class="fieldset">
 						<label class="form__label">Изображения<br>в посте</label>
 						<div class="form__block">
-							<div class="message-recommed message-recommed_mod">
+							<div class="message-recommed message-recommed_mod js-message">
 								<strong>Рекомендуется</strong>добавить хотя бы одну фотографию.<button></button>
 							</div>
 							<div class="btn-middle btn-middle_file"><strong>+ Загрузить изображения <input type="file"></strong></div>
@@ -255,55 +272,63 @@ http://www.tanchoo.ru
 				</div>
 			</div>
 			<!-- END .form__cols -->
-			<!-- BEGIN .form__cols -->		
-			<div class="form__cols">
-				<div class="form__col1">
-					<fieldset class="fieldset">
-						<label for="textarea" class="form__label"><button class="form__move"></button></label>
-						<div class="form__block">
-							<textarea class="textarea textarea_mod" id="textarea">Брюки с принтом бирюзовые из натурального хлопка свободноо кроя.
+			<!-- BEGIN .form-sortable -->
+			<div class="form-sortable js-form-sort">
+				<!-- BEGIN .form__cols -->		
+				<div class="form__cols">
+					<div class="form__col1">
+						<fieldset class="fieldset fieldset_mod">
+							<label for="textarea" class="form__label">
+								<div class="form__move"><i></i></div>
+							</label>
+							<div class="form__block">
+								<textarea class="textarea textarea_mod" id="textarea">Брюки с принтом бирюзовые из натурального хлопка свободноо кроя.
 
-Состав: натуральний хлопок
-							</textarea>
+	Состав: натуральний хлопок
+								</textarea>
+							</div>
+						</fieldset>
+					</div>
+					<div class="form__col2">
+						<div class="form__pic">
+							<img src="img/pic.jpg" alt="">
+							<input type="button" value="Удалить">
 						</div>
-					</fieldset>
-				</div>
-				<div class="form__col2">
-					<div class="form__pic">
-						<img src="img/pic.jpg" alt="">
-						<button class="btn-gray">Удалить</button>
 					</div>
 				</div>
-			</div>
-			<!-- END .form__cols -->
-			<!-- BEGIN .form__cols -->		
-			<div class="form__cols">
-				<div class="form__col1">
-					<fieldset class="fieldset">
-						<label for="textarea" class="form__label"><button class="form__move"></button></label>
-						<div class="form__block">
-							<textarea class="textarea textarea_mod" id="textarea">Брюки с принтом бирюзовые из натурального хлопка свободноо кроя.
+				<!-- END .form__cols -->
+				<!-- BEGIN .form__cols -->		
+				<div class="form__cols">
+					<div class="form__col1">
+						<fieldset class="fieldset">
+							<label for="textarea" class="form__label">
+								<div class="form__move"><i></i></div>								
+							</label>
+							<div class="form__block">
+								<textarea class="textarea textarea_mod" id="textarea">Брюки с принтом бирюзовые из натурального хлопка свободноо кроя.
 
-Состав: натуральний хлопок
-							</textarea>
+	Состав: натуральний хлопок
+								</textarea>
+							</div>
+						</fieldset>
+					</div>
+					<div class="form__col2">
+						<div class="form__pic">
+							<img src="img/pic.jpg" alt="">
+							<input type="button" value="Удалить">
 						</div>
-					</fieldset>
-				</div>
-				<div class="form__col2">
-					<div class="form__pic">
-						<img src="img/pic.jpg" alt="">
-						<button class="btn-gray">Удалить</button>
 					</div>
 				</div>
+				<!-- END .form__cols -->
 			</div>
-			<!-- END .form__cols -->
+			<!-- END .form-sortable -->
 			<!-- BEGIN .form__cols -->
 			<div class="form__cols">
 				<div class="form__col1">
 					<fieldset class="fieldset">
 						<label class="form__label">Предпросмотр поста</label>
 						<div class="form__block">
-							<button class="btn-gray">Сделать пост в Facebook для предпросмотра</button>
+							<input type="button" value="Сделать пост в Facebook для предпросмотра">
 							<p class="text">Вы можете проверить внешний вид поста, отпосив его в вашей соцсети</p>					
 						</div>
 					</fieldset>
@@ -311,7 +336,7 @@ http://www.tanchoo.ru
 			</div>
 			<!-- END .form__cols -->		
 			<div class="form__btn">
-				<button class="btn-gray">Сохранить пост для Facebook</button>
+				<input type="button" value="Сохранить пост для Facebook">
 			</div>	
 		</div>
 		<!-- END .form__bg -->
@@ -356,7 +381,7 @@ http://www.tanchoo.ru
 					<fieldset class="fieldset">
 						<label class="form__label">Изображения<br>в посте</label>
 						<div class="form__block">
-							<div class="message-recommed message-recommed_mod">
+							<div class="message-recommed message-recommed_mod js-message">
 								<strong>Рекомендуется</strong>добавить хотя бы одну фотографию.<button></button>
 							</div>
 							<div class="btn-middle btn-middle_file"><strong>+ Загрузить изображения <input type="file"></strong></div>
@@ -367,7 +392,7 @@ http://www.tanchoo.ru
 							<p class="text">Изображение для Twitter может быть только одно, причем оно будет вставлено в пост ссылкой</p>	
 							<div class="form__pic form__pic_mod">
 								<img src="img/pic.jpg" alt="">
-								<button class="btn-gray">Удалить</button>
+								<input type="button" value="Удалить">
 							</div>	
 						</div>
 					</fieldset>
@@ -389,7 +414,7 @@ http://www.tanchoo.ru
 					<fieldset class="fieldset">
 						<label class="form__label">Предпросмотр поста</label>
 						<div class="form__block">
-							<button class="btn-gray">Сделать пост в Twitter для предпросмотра</button>
+							<input type="button" value="Сделать пост в Twitter для предпросмотра">
 							<p class="text">Вы можете проверить внешний вид поста, отпосив его в вашей соцсети</p>					
 						</div>
 					</fieldset>
@@ -397,7 +422,7 @@ http://www.tanchoo.ru
 			</div>
 			<!-- END .form__cols -->		
 			<div class="form__btn">
-				<button class="btn-gray">Сохранить пост для Twitter</button>
+				<input type="button" value="Сохранить пост для Twitter">
 			</div>	
 		</div>
 		<!-- END .form__bg -->
@@ -491,11 +516,11 @@ http://www.tanchoo.ru
 					<fieldset class="fieldset">
 						<label class="form__label">Предпросмотр поста</label>
 						<div class="form__block">
-							<div class="message-error message-error_mod">
+							<div class="message-error message-error_mod js-message">
 								<strong>Ошибка!</strong>Введен некоректен интернет-адрес.<button></button>
 							</div>
 							<input class="input-text input-text_wide-1 error" id="input1" type="text" value="Получить скидку #sale-amount">
-							<button class="btn-gray">Сделать пост Вконтаке для предпросмотра</button>
+							<input type="button" value="Сделать пост Вконтаке для предпросмотра">
 							<p class="text">Вы можете проверить внешний вид поста, отпосив его в вашей соцсети</p>					
 						</div>
 					</fieldset>
@@ -503,7 +528,7 @@ http://www.tanchoo.ru
 			</div>
 			<!-- END .form__cols -->		
 			<div class="form__btn">
-				<button class="btn-gray">Сохранить пост для ВКонтакте</button>
+				<input type="button" value="Сохранить пост для ВКонтакте">
 			</div>			
 		</div>
 		<!-- END .form__bg -->
@@ -562,7 +587,7 @@ http://www.tanchoo.ru
 						<label class="form__label">Предпросмотр поста</label>
 						<div class="form__block">
 							<input class="input-text input-text_wide-1" id="input1" type="text" value="Получить скидку #sale-amount">
-							<button class="btn-gray">Сделать пост Вконтаке для предпросмотра</button>
+							<input type="button" value="Сделать пост Вконтаке для предпросмотра">
 							<p class="text">Вы можете проверить внешний вид поста, отпосив его в вашей соцсети</p>					
 						</div>
 					</fieldset>
@@ -570,7 +595,7 @@ http://www.tanchoo.ru
 			</div>
 			<!-- END .form__cols -->			
 			<div class="form__btn">
-				<button class="btn-gray">Сохранить пост для Facebook</button>
+				<input type="button" value="Сохранить пост для Facebook">
 			</div>	
 		</div>
 		<!-- END .form__bg -->
@@ -657,7 +682,7 @@ http://www.tanchoo.ru
 						<label class="form__label">Предпросмотр поста</label>
 						<div class="form__block">
 							<input class="input-text input-text_wide-1" id="input1" type="text" value="Получить скидку #sale-amount">
-							<button class="btn-gray">Сделать пост в Twitter для предпросмотра</button>
+							<input type="button" value="Сделать пост Вконтаке для предпросмотра">
 							<p class="text">Вы можете проверить внешний вид поста, отпосив его в вашей соцсети</p>					
 						</div>
 					</fieldset>
@@ -665,7 +690,7 @@ http://www.tanchoo.ru
 			</div>
 			<!-- END .form__cols -->		
 			<div class="form__btn">
-				<button class="btn-gray">Сохранить пост для Twitter</button>
+				<input type="button" value="Сохранить пост для Twitter">
 			</div>	
 		</div>
 		<!-- END .form__bg -->

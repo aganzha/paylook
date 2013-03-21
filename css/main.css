@@ -1,7 +1,7 @@
 .main { margin-bottom: 20px; }
 .main .logo { position: relative; float: none; width: 410px; margin: 0 auto; overflow: hidden; }
 .main .logo span { float: left; margin-top: 33px; font-size: 28px; font-weight: 700; color: #5a3338; }
-.main .logo i { position: absolute; top: 0; right: 0; background: url('../img/icons-s5bb7865106.png') 0 0 no-repeat; width: 189px; height: 68px; }
+.main .logo i { position: absolute; top: 0; right: 0; background: url('../img/icons-sfb6abd27db.png') 0 0 no-repeat; width: 189px; height: 68px; }
 
 .enter { width: 410px; margin: 0 auto; border: 1px solid #f8d7ad; -webkit-box-shadow: #f8d7ad 0 0 5px inset; -moz-box-shadow: #f8d7ad 0 0 5px inset; box-shadow: #f8d7ad 0 0 5px inset; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; }
 
@@ -16,12 +16,12 @@
 .enter__fields strong { margin-right: 5px; }
 
 .enter__info { margin: -8px 0 8px 0; }
-.enter__info a { color: #2f4f9d; text-decoration: underline; }
+.enter__info a { text-decoration: underline; }
 
 .enter__bottom { border-top: 1px solid #f8d7ad; overflow: hidden; }
 
 .enter__btn { padding: 14px 0 12px 15px; background: #fffdea; margin-top: -5px; -webkit-border-radius: 0 0 3px 3px; -moz-border-radius: 0 0 3px 3px; -ms-border-radius: 0 0 3px 3px; -o-border-radius: 0 0 3px 3px; border-radius: 0 0 3px 3px; -webkit-box-shadow: #f8d7ad 0 0 5px inset; -moz-box-shadow: #f8d7ad 0 0 5px inset; box-shadow: #f8d7ad 0 0 5px inset; overflow: hidden; }
 .enter__btn button, .enter__btn a, .enter__btn span { float: left; }
 .enter__btn button { margin-right: 13px; }
-.enter__btn a { margin-top: 8px; color: #2f4f9d; text-decoration: underline; }
+.enter__btn a { margin-top: 8px; text-decoration: underline; }
 .enter__btn span { margin: 8px 5px 0 5px; font-weight: normal; }

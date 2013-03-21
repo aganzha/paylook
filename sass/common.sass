@@ -25,10 +25,14 @@ p
 	line-height: 1.2
 li 
 	list-style: none
-input, textarea, button, select
+textarea, button, select
 	border: none
 	outline: none
 	font-family: 'PT Sans', Arial, Tahoma, sans-serif
+input[type="text"]
+	outline: none
+input[type="button"]
+	padding: 1px 5px
 button 
 	line-height: 1
 	cursor: pointer
@@ -259,11 +263,12 @@ table
 		color: #FFF
 		text-shadow: rgba(73,49,32,0.75) 0 -1px 0
 		font-weight: 400 
-	&:hover		
+	&:hover				
 		strong
 			background: #D4973B
 			+background-image(linear-gradient(top, #E3815D 0%, #E38891 9%, #E35C49 49%, #E33F29 50%, #E35257 67%, #E36346 100%))
 	&:active
+		+box-shadow(none)
 		strong
 			background: #D35306
 			+background-image(linear-gradient(top, #E3815D 0%, #E38891 9%, #E35C49 49%, #E33F29 50%, #E31A22 85%, #E36346 100%))
@@ -275,6 +280,8 @@ table
 			+box-shadow(none)
 			text-shadow: rgba(95,95,95,0.75) 0 -1px 0	
 			cursor: default	
+		&:active
+			box-shadow: rgba(80,80,80,0.5) 0 1px 1px
 .btn-remove
 	float: right
 	strong

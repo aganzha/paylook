@@ -2,7 +2,7 @@
 //styles for inner pages
 //top	
 .top
-	margin-bottom: 30px
+	padding-bottom: 30px
 	overflow: hidden
 	.title
 		float: left
@@ -16,6 +16,10 @@
 	font-weight: 700 
 	color: $brown 
 	cursor: pointer	
+	&.open
+		span
+			&:after
+				+sized-sprite($icons, arr-open)
 	&:before
 		content: ""
 		position: absolute
@@ -56,13 +60,11 @@
 		&.disabled
 			color: #AC999B
 			cursor: default 
-//add-site
-.add-site
-	margin-top: -15px
-.add-site__btn
+.top-sites
+	display: none
 	position: relative
-	padding: 17px 12px 15px 12px
 	margin-bottom: 22px
+	padding: 17px 12px 15px 12px
 	border: 1px solid $orange
 	background: #FFF 
 	font-size: 0
@@ -79,7 +81,8 @@
 		margin-right: 10px
 		line-height: 25px 
 		font-size: 14px 
-.add-site__nav
+//top-sites
+.top-sites__nav
 	display: inline-block	
 	font-weight: 700 
 	li
@@ -99,7 +102,7 @@
 		top: 3px
 		margin-right: 4px
 .add-site__info
-	margin: 75px 0 50px 0
+	padding: 75px 0 50px 0
 	text-align: center
 	span
 		font-weight: 400 
@@ -266,8 +269,9 @@
 	width: 32px
 .input-radio, .input-checkbox
 	position: relative
-	top: 1px
+	top: -2px
 	margin-right: 5px
+	vertical-align: middle
 	&:checked + span
 		color: $brown
 .textarea 
@@ -296,7 +300,7 @@
 .label
 	display: block
 	height: 22px
-	margin-bottom: 5px
+	padding-bottom: 5px
 	line-height: 22px
 	&.error
 		color: $red
@@ -563,7 +567,12 @@
 		display: block
 		+box-shadow(rgba(0,0,0,0.5) 0 0 10px)
 .form__move 
-	+sized-sprite($icons, move)
+	text-align: right
+	font-size: 0
+	i
+		display: inline-block
+		+sized-sprite($icons, move)
+		cursor: drag
 .form__pic
 	overflow: hidden
 	img
@@ -582,6 +591,7 @@
 		padding: 4px
 		border: 1px solid #fff
 		+border-radius(4px)
+		cursor: pointer
 		&.active
 			border-color: #999
 		&:first-child
@@ -942,6 +952,8 @@
 			background: #fff
 			+background-image(linear-gradient(top, #fff 0%, #EAE1D6 67%, #fff 100%))	
 		&.active
+			background: #E8DFD3
+			+background-image(linear-gradient(top, #fff 0%, #E8DFD3 100%))
 			border-color: #d6986f
 			+box-shadow(rgba(198, 115, 74, 0.75) 0 0 10px inset)
 			z-index: 10 

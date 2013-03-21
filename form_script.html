@@ -7,7 +7,7 @@
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
-	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.min.js"></script>	
 	<script src="js/datepicker.js"></script>
 	<script src="js/common.js"></script>
 </head>
@@ -25,7 +25,7 @@
 	<!-- END .header -->	
 	<!-- BEGIN .top -->
 	<div class="top">
-		<div class="top__title"><span>Tanchoo.ru</span></div>
+		<div class="top__title js-sites"><span>Tanchoo.ru</span></div>
 		<nav class="top__nav">
 			<ul>
 				<li><a href="#">Статистика</a></li>
@@ -35,6 +35,14 @@
 				<li><a href="#">Помощь</a></li>
 			</ul>
 		</nav>
+	</div>
+	<div class="top-sites">
+		<ul class="top-sites__nav">
+			<li><a href="#">Все сайты</a></li>
+			<li><a class="active" href="#"><img src="img/icons/ico-1.png" alt=""></i>Tanchoo.ru</a></li>
+			<li><a href="#"><img src="img/icons/ico-2.png" alt=""></i>Domostroy39.ru</a></li>
+		</ul>
+		<button class="btn-middle"><strong>+ Добавить сайт</strong></button>
 	</div>
 	<!-- END .top -->
 	<!-- BEGIN .breadcrumbs -->
@@ -105,7 +113,7 @@
 			<div class="form__block">
 				<p>После установки скрипта желательно проверить его работоспособность. Для этого необходимо зайти на страницу сайта где установлен скрипт и обновить ее (Ctrl+F5 для Windows, Command+R для Mac). После этого нажмите на кнопку проверки установки скрипта.</p>
 				<div class="form__verify">
-					<button class="btn-gray">Проверить установку скрипта</button>
+					<input type="button" value="Проверить установку скрипта">
 				</div>
 			</div>
 		</div>
@@ -114,7 +122,7 @@
 			<div class="form__block">
 				<p>После установки скрипта желательно проверить его работоспособность. Для этого необходимо зайти на страницу сайта где установлен скрипт и обновить ее (Ctrl+F5 для Windows, Command+R для Mac). После этого нажмите на кнопку проверки установки скрипта.</p>
 				<div class="form__verify">
-					<button class="btn-gray disabled">Проверить установку скрипта</button>
+					<input type="button" value="Проверить установку скрипта" disabled>
 					<div class="form__wait"><i></i>Идет проверка</div>
 				</div>
 			</div>
@@ -122,12 +130,12 @@
 		<div class="fieldset">
 			<div class="form__label">Проверка<br>скрипта</div>
 			<div class="form__block">
-				<div class="message-success message-success_mod">
+				<div class="message-success message-success_mod js-message">
 					<strong>Успех!</strong>Код на сайте установлен.<button></button>
 				</div>
 				<p>После установки скрипта желательно проверить его работоспособность. Для этого необходимо зайти на страницу сайта где установлен скрипт и обновить ее (Ctrl+F5 для Windows, Command+R для Mac). После этого нажмите на кнопку проверки установки скрипта.</p>
 				<div class="form__verify">
-					<button class="btn-gray">Проверить установку скрипта</button>
+					<input type="button" value="Проверить установку скрипта">
 				</div>
 			</div>
 		</div>

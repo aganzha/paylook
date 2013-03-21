@@ -40,5 +40,26 @@ if ($('.form__datepicker').length > 0) {
   });
 };
 
+//messages
+$('.js-message button').click(function() {
+  $(this).parent().slideUp(100);
+  return false;
+});
+$('.js-sites').click(function() {
+  if ($(this).hasClass('open')) {
+    $(this).removeClass('open');
+    $(this).parent().next().slideUp();
+  }
+  else {
+    $(this).addClass('open');
+    $(this).parent().next().slideDown();
+  };  
+});
+
+//sortable + draglable
+if ($('.js-form-sort').length > 0) {
+  $('.js-form-sort').sortable({axis: 'y', cursor: 'move'});
+  $('.js-form-sort').disableSelection();
+};
 
 });

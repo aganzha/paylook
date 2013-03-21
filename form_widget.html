@@ -25,7 +25,7 @@
 	<!-- END .header -->	
 	<!-- BEGIN .top -->
 	<div class="top">
-		<div class="top__title"><span>Tanchoo.ru</span></div>
+		<div class="top__title js-sites"><span>Tanchoo.ru</span></div>
 		<nav class="top__nav">
 			<ul>
 				<li><a href="#">Статистика</a></li>
@@ -35,6 +35,14 @@
 				<li><a href="#">Помощь</a></li>
 			</ul>
 		</nav>
+	</div>
+	<div class="top-sites">
+		<ul class="top-sites__nav">
+			<li><a href="#">Все сайты</a></li>
+			<li><a class="active" href="#"><img src="img/icons/ico-1.png" alt=""></i>Tanchoo.ru</a></li>
+			<li><a href="#"><img src="img/icons/ico-2.png" alt=""></i>Domostroy39.ru</a></li>
+		</ul>
+		<button class="btn-middle"><strong>+ Добавить сайт</strong></button>
 	</div>
 	<!-- END .top -->
 	<!-- BEGIN .breadcrumbs -->
@@ -320,7 +328,7 @@
 			<div class="form__col1">
 				<div class="form__code">
 					<label class="label error" for="code">HTML-контент виджета до получения купона</label>
-					<div class="message-error message-error_mod">
+					<div class="message-error message-error_mod js-message">
 						<strong>Ошибка!</strong>Тег &lt;a class="paylook-btn-goPost" href=""&gt; не найден.<button></button>
 					</div>
 					<textarea class="textarea textarea_mod-1 error" id="code">
