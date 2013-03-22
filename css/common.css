@@ -29,14 +29,14 @@ table { border-spacing: 0; border-collapse: collapse; }
 
 .push { height: 140px; clear: both; }
 
-.header { padding: 25px 10px 30px 10px; overflow: hidden; }
+.header { padding: 20px 10px 30px 10px; overflow: hidden; }
 
 .logo { float: left; height: 68px; }
 .logo span, .logo i { float: left; }
-.logo span { margin: 33px 8px 0 0; font-size: 28px; font-weight: 700; color: #5a3338; }
+.logo span { margin: 38px 8px 0 0; font-size: 28px; font-weight: 700; color: #5a3338; }
 .logo i { background: url('../img/icons-sfb6abd27db.png') 0 0 no-repeat; width: 189px; height: 68px; }
 
-.user-link { float: right; margin-top: 7px; text-align: right; }
+.user-link { float: right; margin-top: 12px; text-align: right; }
 .user-link li { margin-top: 10px; }
 .user-link a { position: relative; font-size: 16px; text-decoration: underline; }
 

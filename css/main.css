@@ -1,6 +1,6 @@
 .main { margin-bottom: 20px; }
 .main .logo { position: relative; float: none; width: 410px; margin: 0 auto; overflow: hidden; }
-.main .logo span { float: left; margin-top: 33px; font-size: 28px; font-weight: 700; color: #5a3338; }
+.main .logo span { float: left; margin-top: 38px; font-size: 28px; font-weight: 700; color: #5a3338; }
 .main .logo i { position: absolute; top: 0; right: 0; background: url('../img/icons-sfb6abd27db.png') 0 0 no-repeat; width: 189px; height: 68px; }
 
 .enter { width: 410px; margin: 0 auto; border: 1px solid #f8d7ad; -webkit-box-shadow: #f8d7ad 0 0 5px inset; -moz-box-shadow: #f8d7ad 0 0 5px inset; box-shadow: #f8d7ad 0 0 5px inset; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; }

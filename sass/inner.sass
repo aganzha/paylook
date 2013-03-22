@@ -405,6 +405,8 @@
 		+box-shadow(rgba(198,115,74,0.75) 0 0 10px inset)
 		background: #E8DFD3
 		+background-image(linear-gradient(top, #fff, #E8DFD3))
+		&:after
+			+sized-sprite($icons, arr-open)
 .form__datepicker
 	display: none
 	position: absolute
@@ -780,6 +782,9 @@
 	thead
 		background: $yellow
 		text-align: left
+		tr
+			&:hover
+				background: $yellow
 	th, td
 		padding: 10px
 		vertical-align: top
@@ -793,7 +798,7 @@
 			text-shadow: #fff 0 1px 0
 			&:after
 				content: " \2193" 
-	tr
+	tr		
 		&:first-child
 			td
 				padding: 16px 10px 10px 10px
@@ -1187,7 +1192,8 @@
 	margin-left: 10px
 .stat__graph
 	float: right
-	width: 630px
+	width: 620px
+	padding-right: 10px
 .stat__title	
 	margin-bottom: 10px
 	font-size: 18px
@@ -1265,7 +1271,7 @@
 		text-align: right
 //content
 .content
-	padding-bottom: 50px
+	padding: 0 10px 50px 10px
 	h1, h2, h3, h4
 		color: $brown
 	h1, h2

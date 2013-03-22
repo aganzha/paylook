@@ -24,7 +24,7 @@ if ($('.form__datepicker').length > 0) {
         mode: 'range',
         starts: 1,
         onChange: function(formated) {
-          $('.form__period').get(0).innerHTML = '<b>' + formated.join('</b> – <b>') + '</b>';
+          $(this).parent().prev().html('<b>' + formated.join('</b> – <b>') + '</b>');
         }
       });
     }
