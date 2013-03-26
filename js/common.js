@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 //datepicker
-if ($('.form__datepicker').length > 0) {  
+if ($('.datepicker-container').length > 0) {  
   $('.datepicker table tr:last').hide();  
   $('.form__period').click(function() {
     if (!$(this).hasClass('active')) {
@@ -15,7 +15,7 @@ if ($('.form__datepicker').length > 0) {
       } else {
         current.setMonth(current.getMonth()-1);
       }
-      $(this).next().DatePicker({
+      $(this).next().children('.datepicker-container').DatePicker({
         flat: true,
         format: 'd B Y',
         date: [],
@@ -24,7 +24,7 @@ if ($('.form__datepicker').length > 0) {
         mode: 'range',
         starts: 1,
         onChange: function(formated) {
-          $(this).parent().prev().html('<b>' + formated.join('</b> – <b>') + '</b>');
+          $(this).parent().next().children('.datepicker-detail__date').html('<strong>' + formated.join('</strong> – <strong>') + '</strong>');
         }
       });
     }
@@ -33,6 +33,20 @@ if ($('.form__datepicker').length > 0) {
       $(this).next().fadeOut();
     };
   });   
+  $('.datepicker-detail__btn button').click(function() {
+    var date_value = $(this).parent().prev().html();
+    $(this).parent().parent().parent().prev().html(date_value);
+    $(this).parent().parent().parent().fadeOut();
+    $(this).parent().parent().parent().prev().removeClass('active');
+    $(this).parent().parent().parent().next().fadeOut();
+    return false;
+  });
+  $('.datepicker-detail__btn a').click(function() {
+    $(this).parent().parent().parent().fadeOut();
+    $(this).parent().parent().parent().prev().removeClass('active');
+    $(this).parent().parent().parent().next().fadeOut();
+    return false;
+  });
   $('.form__datepicker-close').click(function() {
     $('.form__datepicker').fadeOut();
     $('.form__period').removeClass('active');

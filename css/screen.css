@@ -342,7 +342,7 @@ table { border-spacing: 0; border-collapse: collapse; }
 .form__datepicker { display: none; position: absolute; top: 33px; left: 5px; padding: 18px; background: white; -webkit-box-shadow: #5a3338 0 1px 5px; -moz-box-shadow: #5a3338 0 1px 5px; box-shadow: #5a3338 0 1px 5px; z-index: 10; }
 .form__datepicker:before { content: ""; position: absolute; top: -5px; left: 90px; width: 10px; height: 10px; -webkit-box-shadow: #d7cdcf 1px -1px 0 0; -moz-box-shadow: #d7cdcf 1px -1px 0 0; box-shadow: #d7cdcf 1px -1px 0 0; background: white; -moz-transform: rotate(-45deg); -o-transform: rotate(-45deg); -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg); }
 
-.form__datepicker-close { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 5; }
+.form__datepicker-close { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 5; cursor: pointer; }
 
 .form__choice ul { overflow: hidden; }
 .form__choice li { position: relative; float: left; height: 19px; padding: 0 7px; margin-right: -1px; background: #e8dfd3; background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U4ZGZkMyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='); background-size: 100%; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #e8dfd3)); background-image: -webkit-linear-gradient(top, #ffffff, #e8dfd3); background-image: -moz-linear-gradient(top, #ffffff, #e8dfd3); background-image: -o-linear-gradient(top, #ffffff, #e8dfd3); background-image: linear-gradient(top, #ffffff, #e8dfd3); border: 1px solid #f8d7ad; line-height: 19px; cursor: pointer; }
@@ -713,6 +713,15 @@ table { border-spacing: 0; border-collapse: collapse; }
 .datepickerGoPrev span { left: 0; background: url('../img/icons-sfb6abd27db.png') 0 -803px no-repeat; width: 12px; height: 13px; }
 
 .datepickerGoNext span { right: 0; background: url('../img/icons-sfb6abd27db.png') 0 -741px no-repeat; width: 12px; height: 13px; }
+
+.datepicker-detail { height: 25px; padding-bottom: 2px; line-height: 25px; overflow: hidden; }
+
+.datepicker-detail__date { float: left; color: #5a3338; }
+
+.datepicker-detail__btn { float: right; }
+.datepicker-detail__btn a, .datepicker-detail__btn button { float: left; }
+.datepicker-detail__btn a { margin-right: 10px; color: #2f4f9d; }
+.datepicker-detail__btn span { border-bottom: 1px dashed #2f4f9d; }
 
 .widget-container { width: 275px; padding: 13px 10px 9px 13px; border: 1px solid #999999; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; }
 .widget-container strong { font-size: 18px; }

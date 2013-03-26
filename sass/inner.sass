@@ -434,6 +434,7 @@
 	right: 0
 	bottom: 0
 	z-index: 5 
+	cursor: pointer
 .form__choice		
 	ul
 		overflow: hidden
@@ -1424,6 +1425,23 @@
 	span
 		right: 0
 		+sized-sprite($icons, calendar-next)
+.datepicker-detail
+	height: 25px
+	padding-bottom: 2px
+	line-height: 25px
+	overflow: hidden
+.datepicker-detail__date
+	float: left
+	color: $brown
+.datepicker-detail__btn
+	float: right
+	a, button
+		float: left	
+	a
+		margin-right: 10px
+		color: $blue
+	span
+		border-bottom: 1px dashed $blue 
 //widget
 .widget-container
 	width: 275px
