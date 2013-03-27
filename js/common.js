@@ -29,27 +29,40 @@ if ($('.datepicker-container').length > 0) {
       });
     }
     else {
-      $(this).removeClass('active');
-      $(this).next().fadeOut();
-    };
+
+    }
   });   
   $('.datepicker-detail__btn button').click(function() {
     var date_value = $(this).parent().prev().html();
     $(this).parent().parent().parent().prev().html(date_value);
     $(this).parent().parent().parent().fadeOut();
     $(this).parent().parent().parent().prev().removeClass('active');
-    $(this).parent().parent().parent().next().fadeOut();
+    $(this).parent().parent().parent().next().fadeOut(); 
+    $(this).parent().parent().parent().prev().addClass('selected');
     return false;
   });
   $('.datepicker-detail__btn a').click(function() {
-    $(this).parent().parent().parent().fadeOut();
-    $(this).parent().parent().parent().prev().removeClass('active');
-    $(this).parent().parent().parent().next().fadeOut();
+    if (!$(this).parent().parent().parent().prev().hasClass('selected')) {
+      $(this).parent().parent().parent().fadeOut();
+      $(this).parent().parent().parent().prev().removeClass('active');
+      $(this).parent().parent().parent().next().fadeOut();
+      var date_begin = $(this).parent().parent().parent().prev().html();
+      $(this).parent().prev().html(date_begin);    
+      $('.datepicker-container').DatePickerClear();
+    }
+    else {
+      $(this).parent().parent().parent().fadeOut();
+      $(this).parent().parent().parent().prev().removeClass('active');
+      $(this).parent().parent().parent().next().fadeOut();      
+    }
     return false;
   });
   $('.form__datepicker-close').click(function() {
+    var date_begin1 = $(this).prev().prev().html();
+    $(this).prev().children('.datepicker-detail').children('.datepicker-detail__date').html(date_begin1);
     $('.form__datepicker').fadeOut();
     $('.form__period').removeClass('active');
+    $('.datepicker-container').DatePickerClear();
     $(this).hide();
   });
 };

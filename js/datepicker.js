@@ -797,6 +797,18 @@
           }
         });
       },
+      clear: function(){
+        return this.each(function(){
+          if ($(this).data('datepickerId')) {
+            var cal = $('#' + $(this).data('datepickerId'));
+            var options = cal.data('datepicker');
+            if (options.mode != 'single') {
+              options.date = [];
+              fill(cal.get(0));
+            }
+          }
+        });
+      },
       hidePicker: function() {
         return this.each( function () {
           if ($(this).data('datepickerId')) {
@@ -849,6 +861,7 @@
     DatePicker: DatePicker.init,
     DatePickerHide: DatePicker.hide,
     DatePickerShow: DatePicker.show,
+    DatePickerClear: DatePicker.clear,
     DatePickerSetDate: DatePicker.setDate,
     DatePickerGetDate: DatePicker.getDate
   });
