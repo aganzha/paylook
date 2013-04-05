@@ -44,16 +44,16 @@
 .form-nav ul:before { left: 0px; width: 2px; border-width: 11px 5px; border-style: solid; border-color: transparent transparent transparent white; }
 .form-nav li { float: left; padding-right: 6px; }
 .form-nav a { position: relative; display: block; margin-right: -6px; border-style: solid; border-width: 1px 0 1px 0; border-color: #edcda4; color: black; z-index: 5; }
-.form-nav a:before, .form-nav a:after { content: ""; position: absolute; top: 0; width: 20px; height: 20px; -webkit-box-shadow: #edcda4 1px -1px 0; -moz-box-shadow: #edcda4 1px -1px 0; box-shadow: #edcda4 1px -1px 0; -webkit-transform: rotate(45deg) skew(20deg, 20deg); -moz-transform: rotate(45deg) skew(20deg, 20deg); -o-transform: rotate(45deg) skew(20deg, 20deg); -ms-transform: rotate(45deg) skew(20deg, 20deg); transform: rotate(45deg) skew(20deg, 20deg); }
+.form-nav a:before, .form-nav a:after { content: ""; position: absolute; top: -1px; width: 20px; height: 20px; border: 1px solid #edcda4; border-width: 1px 1px 0 0; -webkit-transform: rotate(45deg) skew(20deg, 20deg); -moz-transform: rotate(45deg) skew(20deg, 20deg); -o-transform: rotate(45deg) skew(20deg, 20deg); -ms-transform: rotate(45deg) skew(20deg, 20deg); transform: rotate(45deg) skew(20deg, 20deg); }
 .form-nav a:before { left: -14px; }
-.form-nav a:after { right: -6px; }
+.form-nav a:after { right: -7px; }
 .form-nav a:hover { color: #5a3338; }
 .form-nav a.active { border-color: #d5966d; color: #5a3338; z-index: 10; }
 .form-nav a.active:before { -webkit-box-shadow: #c6734a 7px -7px 5px; -moz-box-shadow: #c6734a 7px -7px 5px; box-shadow: #c6734a 7px -7px 5px; }
 .form-nav a.active:after { -webkit-box-shadow: #c6734a -5px 5px 5px inset; -moz-box-shadow: #c6734a -5px 5px 5px inset; box-shadow: #c6734a -5px 5px 5px inset; }
 .form-nav a.active span { -webkit-box-shadow: #c6734a 0 -8px 8px -6px inset, rgba(198, 115, 74, 0.75) 0 8px 8px -6px inset; -moz-box-shadow: #c6734a 0 -8px 8px -6px inset, rgba(198, 115, 74, 0.75) 0 8px 8px -6px inset; box-shadow: #c6734a 0 -8px 8px -6px inset, rgba(198, 115, 74, 0.75) 0 8px 8px -6px inset; }
 .form-nav a.disabled { border-color: #cfcfcf; cursor: default; z-index: 10; }
-.form-nav a.disabled:before, .form-nav a.disabled:after { -webkit-box-shadow: #cfcfcf 1px -1px 0; -moz-box-shadow: #cfcfcf 1px -1px 0; box-shadow: #cfcfcf 1px -1px 0; }
+.form-nav a.disabled:before, .form-nav a.disabled:after { border: 1px solid #cfcfcf; border-width: 1px 1px 0 0; }
 .form-nav a.disabled span { color: gray; }
 .form-nav span { display: block; height: 19px; padding: 0 10px; margin-left: 5px; line-height: 19px; }
 

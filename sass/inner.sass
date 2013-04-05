@@ -170,10 +170,11 @@
 		&:before, &:after
 			content: ""
 			position: absolute
-			top: 0
+			top: -1px
 			width: 20px
 			height: 20px
-			+box-shadow(#edcda4 1px -1px 0)
+			border: 1px solid #edcda4
+			border-width: 1px 1px 0 0
 			-webkit-transform: rotate(45deg) skew(20deg, 20deg)
 			-moz-transform: rotate(45deg) skew(20deg, 20deg)
 			-o-transform: rotate(45deg) skew(20deg, 20deg) 
@@ -182,7 +183,7 @@
 		&:before
 			left: -14px
 		&:after
-			right: -6px
+			right: -7px
 		&:hover
 			color: $brown
 		&.active
@@ -200,7 +201,8 @@
 			cursor: default
 			z-index: 10
 			&:before, &:after
-				+box-shadow(#cfcfcf 1px -1px 0)
+				border: 1px solid #cfcfcf
+				border-width: 1px 1px 0 0
 			span
 				color: #808080
 	span
