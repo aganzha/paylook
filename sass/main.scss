@@ -1,0 +1,85 @@
+@import "base";
+
+//main styles
+//enter
+.main {
+  margin-bottom: 20px;
+  .logo {
+    position: relative;
+    float: none;
+    width: 410px;
+    margin: 0 auto;
+    overflow: hidden;
+    span {
+      float: left;
+      margin-top: 38px;
+      font-size: 28px;
+      font-weight: 700;
+      color: $brown; }
+    i {
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include sized-sprite($icons, logo); } } }
+
+.enter {
+  width: 410px;
+  margin: 0 auto;
+  border: 1px solid $orange;
+  @include box-shadow($orange 0 0 5px inset);
+  @include border-radius(3px); }
+
+.enter__fields {
+  padding: 12px 18px 3px 18px;
+  fieldset {
+    p {
+      display: none; }
+    &.error {
+      p {
+        display: block; }
+      label {
+        color: $red; }
+      input {
+        border-color: $red; } } }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: $brown; }
+  input {
+    width: 361px;
+    height: 26px;
+    margin-bottom: 15px;
+    padding: 0 5px;
+    border: 1px solid $gray;
+    @include border-radius(3px); }
+  p {
+    margin-bottom: 10px; }
+  strong {
+    margin-right: 5px; } }
+
+.enter__info {
+  margin: -8px 0 8px 0;
+  a {
+    text-decoration: underline; } }
+
+.enter__bottom {
+  border-top: 1px solid $orange;
+  overflow: hidden; }
+
+.enter__btn {
+  padding: 14px 0 12px 15px;
+  background: $yellow;
+  margin-top: -5px;
+  @include border-radius(0 0 3px 3px);
+  @include box-shadow($orange 0 0 5px inset);
+  overflow: hidden;
+  button, a, span {
+    float: left; }
+  button {
+    margin-right: 13px; }
+  a {
+    margin-top: 8px;
+    text-decoration: underline; }
+  span {
+    margin: 8px 5px 0 5px;
+    font-weight: normal; } }
